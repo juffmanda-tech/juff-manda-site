@@ -56,11 +56,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
    NAVIGATION
    ============================================================ */
 .nav{
-  position:sticky;top:0;z-index:200;
+  position:fixed;top:0;left:0;right:0;z-index:200;
   background:var(--off);
   border-bottom:1px solid var(--bd);
   padding:0 var(--px);
 }
+body{padding-top:58px}
 .nav-inner{
   max-width:var(--max);margin:0 auto;
   height:58px;display:flex;
@@ -181,14 +182,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-ghost:hover{color:var(--ink)}
 .hero-img-wrap{
   width:100%;
-  aspect-ratio:4/3;
   border-radius:4px;overflow:hidden;
   background:var(--mid);position:relative;
 }
-@media(min-width:768px){
-  .hero-img-wrap{aspect-ratio:3/4}
-}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover}
+.hero-img-wrap img{width:100%;height:auto;display:block;object-fit:contain}
 .img-overlay{
   position:absolute;bottom:0;left:0;right:0;
   background:rgba(13,13,11,0.65);
@@ -228,7 +225,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   letter-spacing:0.14em;text-transform:uppercase;color:var(--h);
   margin-bottom:1.25rem;
 }
-.clients-row{display:flex;flex-wrap:wrap;gap:8px}
+.clients-row{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
 .cpill{
   font-family:var(--syne);font-size:11px;font-weight:600;
   letter-spacing:0.06em;color:var(--m);
@@ -315,11 +312,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 @media(min-width:768px){.about-hero{grid-template-columns:420px 1fr;gap:4rem;padding:4rem var(--px)}}
 .about-img{
-  width:100%;aspect-ratio:4/3;
+  width:100%;
   border-radius:4px;overflow:hidden;background:var(--mid);
 }
-@media(min-width:768px){.about-img{aspect-ratio:4/5}}
-.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img img{width:100%;height:auto;display:block;object-fit:contain}
 .about-name{
   font-family:var(--syne);
   font-size:clamp(2.2rem,6vw,4rem);
@@ -367,8 +363,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   font-weight:800;letter-spacing:-0.02em;line-height:1.05;margin-bottom:2rem;
 }
 .cs-img{
-  width:100%;max-height:420px;object-fit:cover;object-position:center top;
-  border-radius:4px;margin-bottom:2.5rem;background:var(--mid);
+  width:100%;height:auto;
+  border-radius:4px;margin-bottom:2.5rem;background:var(--mid);display:block;
 }
 .cs-grid{display:grid;grid-template-columns:1fr}
 @media(min-width:640px){.cs-grid{grid-template-columns:160px 1fr}}
@@ -421,8 +417,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   overflow:hidden;cursor:pointer;transition:all 0.25s;background:var(--off);
 }
 .ic:hover{border-color:var(--ink);transform:translateY(-2px)}
-.ic-img{width:100%;height:180px;object-fit:cover;background:var(--mid)}
-@media(min-width:640px){.ic-img{height:200px}}
+.ic-img{width:100%;height:auto;display:block;background:var(--mid)}
+@media(min-width:640px){.ic-img{height:auto}}
 .ic-body{padding:1.25rem}
 @media(min-width:640px){.ic-body{padding:1.5rem}}
 .ic-tag{font-family:var(--syne);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.6rem;display:block}
@@ -481,7 +477,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   margin-bottom:0.75rem;
 }
 .art-meta{font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:2.5rem;display:block}
-.art-img{width:100%;max-height:380px;object-fit:cover;border-radius:4px;margin-bottom:3rem;background:var(--mid)}
+.art-img{width:100%;height:auto;display:block;border-radius:4px;margin-bottom:3rem;background:var(--mid)}
 .art-content{max-width:680px}
 .art-content p{font-size:15px;line-height:1.9;color:var(--m);font-weight:300;margin-bottom:1.25rem}
 .art-content h3{font-family:var(--syne);font-size:1rem;font-weight:700;color:var(--ink);margin:2rem 0 0.65rem}
@@ -909,8 +905,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <p class="contact-sub">Tell me what you are working on and what you cannot currently solve. If there is a fit, we will speak. Engagements are taken on selectively.</p>
 
       <div class="contact-cta-row">
-        <!-- Email hidden from display; opens mailto link -->
-        <a class="email-btn" href="mailto:?subject=Let%27s%20Work%20Together&body=Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.%20Here%27s%20what%20I%27m%20working%20on%3A%0A%0A" aria-label="Send email to Juff Manda">Send an email</a>
+        <!-- Email: address assembled by JS to deter scrapers -->
+        <a class="email-btn" id="email-cta" href="#" aria-label="Send email to Juff Manda" onclick="openMail(event)">Send an email</a>
         <a class="li-link" href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer">
           <svg class="li-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Connect on LinkedIn
@@ -929,7 +925,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
      ============================================================ -->
 <footer class="footer">
   <div class="footer-inner">
-    <span class="footer-copy">&copy; 2025 Juff Manda</span>
+    <span class="footer-copy">&copy; 2026 Juff Manda</span>
     <nav class="footer-links" aria-label="Footer navigation">
       <button class="footer-link" onclick="go('home')">Home</button>
       <button class="footer-link" onclick="go('work')">Work</button>
@@ -944,6 +940,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </footer>
 
 <script>
+/* ============================================================
+   EMAIL — assembled at runtime to deter address scrapers
+   ============================================================ */
+function openMail(e){
+  e.preventDefault();
+  var u='juffmanda',d='gmail.com';
+  var s='Let%27s%20Work%20Together';
+  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.%20Here%27s%20what%20I%27m%20working%20on%3A%0A%0A';
+  window.location.href='mailto:'+u+'@'+d+'?subject='+s+'&body='+b;
+}
+
 /* ============================================================
    ARTICLE DATA
    ============================================================ */
