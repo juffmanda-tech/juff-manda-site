@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting... | Juff Manda</title>
+<script>
+/* GitHub Pages 404 fallback — redirect bare paths to hash routes
+   e.g. /work  →  /#/work
+        /insight/slug  →  /#/insight/slug  */
+var path=window.location.pathname.replace(/\/$/,'');
+var seg=path.replace(/^\//,''); /* e.g. "work" or "insight/slug" */
+if(seg){
+  window.location.replace('/#/'+seg);
+}else{
+  window.location.replace('/');
+}
+</script>
+<meta http-equiv="refresh" content="0;url=/">
+</head>
+<body></body>
+</html>

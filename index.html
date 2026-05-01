@@ -941,6 +941,86 @@ body{padding-top:58px}
 
 <script>
 /* ============================================================
+   ROUTE MAP  — hash → page id + meta
+   ============================================================ */
+const ROUTES={
+  '':           {id:'home',    title:'Juff Manda | Digital and Social Strategist · South Africa',
+                  desc:'Juff Manda is a Digital and Social Strategist based in Johannesburg. He builds strategic frameworks and content systems for South African brands.'},
+  'about':      {id:'about',   title:'About Juff Manda | Digital Strategist · Johannesburg',
+                  desc:'Juff Manda — Digital Marketing Manager and ExCo Member at House of Brave. Over nine years building strategy for South African and global brands.'},
+  'work':       {id:'work',    title:'Work | Juff Manda · Digital Strategy',
+                  desc:'Selected strategic work by Juff Manda. Frameworks built for MasterChef South Africa, GEPF, Nedbank, SodaStream, and more.'},
+  'methodology':{id:'method',  title:'Methodology | Juff Manda · How the Work is Structured',
+                  desc:'The six-stage strategic methodology Juff Manda applies across digital and social engagements — from human truth through to data loop.'},
+  'insight':    {id:'ins',     title:'Insights | Juff Manda · Strategy & Culture Writing',
+                  desc:'Writing on digital strategy, influencer marketing, AI workflow integration, and South African market culture by Juff Manda.'},
+  'work-with-me':{id:'wwm',   title:'Work With Me | Juff Manda · Digital Strategy Engagements',
+                  desc:'Engage Juff Manda for digital strategy, content system design, influencer programming, or senior strategic oversight. Johannesburg-based, select remote.'}
+};
+
+/* ============================================================
+   ARTICLE DATA
+   ============================================================ */
+const arts={
+  a1:{slug:'why-south-african-brands-produce-content-nobody-asked-for',
+      tag:'Strategy',date:'June 2025',
+      title:'Why most South African brands are producing content nobody asked for',
+      desc:'Volume is not the problem. The problem is no governing logic behind what gets published.',
+      img:'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>There is a particular kind of busyness in South African marketing right now. Brands are posting daily. Reels are being produced. Influencers are being briefed. The calendars are full. And yet, when you ask what all of it is building towards, the answer is often something close to silence.</p><h3>The volume problem is a thinking problem</h3><p>Most brands arrive at content production through a backwards process. Someone decides the brand needs to be more active on social media. A monthly calendar is built. Posts go out. The only question being asked is what to post next week, not what the brand is trying to do over the next twelve months. The result is content that is technically competent and strategically empty.</p><h3>A framework changes the question</h3><p>The shift happens when you stop asking what to post and start asking what the brand needs to mean to its audience. Once you have that understanding, a framework gives the team clear criteria for what to make and what to leave out. Ideas are evaluated on whether they serve the strategic intent, not on whether they seem on trend.</p><p>Brands that operate this way produce less content overall and reach their audience more consistently. The calendar becomes a consequence of the strategy, not a replacement for it.</p>`},
+  a2:{slug:'influencer-strategy-south-africa-done-backwards',
+      tag:'Influencer',date:'May 2025',
+      title:'Influencer strategy in South Africa is still being done backwards',
+      desc:'Most brands choose a creator and then figure out what to do with them. The brief should come first.',
+      img:'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>The standard influencer process in South Africa goes roughly like this. A brand decides it wants to work with influencers. Someone pulls a list of names based on follower count. A shortlist is approved. Creators are briefed. Content goes live. The brief is usually the last thing written and the least considered part of the process.</p><h3>Reach is not a strategy</h3><p>Follower count tells you how many people a creator can potentially reach. It tells you almost nothing about whether those people are the right people, or whether the association makes sense given what your brand is trying to mean. In a market as culturally specific as South Africa, this matters more than most brands acknowledge.</p><h3>The brief comes first</h3><p>Influencer strategy done properly works in the opposite direction. You start with what the brand needs to communicate and to whom. You define the kind of voice that can carry that message credibly. You build the selection criteria from there. The brief is then built for that specific partnership, not adapted from a generic template.</p>`},
+  a3:{slug:'ai-does-not-replace-strategic-thinking',
+      tag:'AI and systems',date:'April 2025',
+      title:'AI does not replace strategic thinking. It exposes the absence of it.',
+      desc:'When you give AI a clear framework, it scales efficiently. When there is no framework, it scales the confusion.',
+      img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>Every marketing team in South Africa is either using AI tools or being asked why they are not. The more important question is what AI reveals about how a team was already thinking.</p><h3>A tool that amplifies what is already there</h3><p>When you give an AI tool a clear strategic framework, it works efficiently. When there is no framework, the tool still produces output. It just scales the confusion. You get more content that sounds like it could belong to any brand, produced faster, published more frequently.</p><h3>Where AI actually belongs in the workflow</h3><p>The teams I work with use AI to handle the tasks that do not require human judgement: adapting approved copy for different platforms, generating first-draft variations within defined parameters, processing data sets. What AI does not do is decide what a brand should stand for, or make the call on whether an idea is worth producing. Those decisions require cultural literacy and strategic clarity.</p>`},
+  a4:{slug:'what-brands-get-wrong-about-south-african-audiences',
+      tag:'Culture',date:'March 2025',
+      title:'What brands get wrong about speaking to South African audiences',
+      desc:'Localisation is not a translation step at the end of the process. It is the process.',
+      img:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>There is a version of South African marketing that treats this country as one audience with minor regional variations. That version produces work that is broadly inoffensive and rarely remembered.</p><h3>The localisation myth</h3><p>Most brands treat localisation as a step that happens at the end of the process. The strategy is built, the campaign is conceptualised, and then someone adds vernacular copy before it goes live. The result is work that feels adapted rather than authored. Genuine cultural fluency is not an adaptation. It is a starting point.</p><h3>The practical consequence</h3><p>Brands that start with genuine cultural understanding build communication that accumulates. Brands that start with assumptions and localise at the end produce work that is always slightly off. Audiences notice. They may not articulate it, but they respond to it. Or they do not respond at all.</p>`},
+  b1:{slug:'turns-out-it-was-never-fong-kong',
+      author:'Juff Manda',tag:'Marketing and trade',date:'April 2025',
+      title:'Turns out it was never Fong Kong',
+      desc:'Most luxury goods are manufactured in China. What we actually pay for is the story, not the product.',
+      img:'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>When we talk about luxury brands and the high-end labels we associate with the best quality and exclusivity, there is an underlying truth that often gets overlooked. Most of these luxury items are made in China. Yes. Many of the products we pay thousands for are manufactured in Chinese factories, and yet they carry price tags that make us think they came from some European workshop.</p><h3>The real cost of production</h3><p>The cost of production in China is so low compared to what we pay at retail, it is almost laughable. A luxury handbag that costs roughly five dollars to produce in a Chinese factory can end up on a shelf with a price tag of thousands. The real difference is not the craftsmanship. It is the logo. And what the logo represents.</p><h3>Marketing shapes what we believe things are worth</h3><p>It all comes down to marketing. Marketing is not just about promoting a product. It is about convincing people that something is worth more than its production cost. Growing up, I believed, as many of us did, that luxury brands were inherently superior. What I later understood was that what I was actually paying for was not the craftsmanship. It was the story behind the brand. Perception, not production, is what commands the premium.</p><p>Brands establish themselves as exclusive over time. They craft a narrative, build a reputation, and use advertising to reinforce the idea that owning their product is a mark of status. That is the true power of marketing. And that is where the game is won or lost.</p>`},
+  b2:{slug:'from-fong-kong-to-global-giants-chinese-innovation',
+      author:'Juff Manda',tag:'Innovation and market shifts',date:'March 2025',
+      title:'From Fong Kong to global giants: the rise of Chinese innovation',
+      desc:'What once started as a joke about knockoffs has evolved into a story of global competition.',
+      img:'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80&auto=format&fit=crop',
+      body:`<p>Growing up in South Africa, across Kasi and the suburbs alike, there was a word most of us knew: Fong Kong. It described knockoffs, counterfeits, anything that looked like the real thing but was not. Chinese-made products were the primary target of that label.</p><h3>The shift nobody fully saw coming</h3><p>Fast forward to now and the Fong Kong label does not fit anymore. Not because we stopped caring about quality, but because Chinese manufacturing stopped being the shorthand for low quality. Look at the vehicle market. Brands like Haval, Omoda, and Jaecoo are serious contenders. They are not knockoffs of anything. They are originals. And they are competitive on both price and quality.</p><p>The tech picture is the same. Huawei, which many once dismissed as a second-tier brand, became a global giant. I worked as Senior Trainer in the creative and retail division at Huawei in 2019. I saw from the inside how far they had come, and how quickly they were moving.</p><h3>What this means for anyone thinking about markets</h3><p>The rise of Chinese brands is not just an interesting story about global trade. It is a lesson in how quickly a market position can shift. The labels we attach to countries of origin, to price points, to brands we consider aspirational versus aspirational alternatives — those labels are not permanent. They are a function of what the market has decided to believe at a given moment.</p>`}
+};
+
+/* slug → art key lookup */
+const slugMap={};
+Object.keys(arts).forEach(k=>{ slugMap[arts[k].slug]=k; });
+
+/* ============================================================
+   META UPDATER
+   ============================================================ */
+function setMeta(title,desc,canonical){
+  document.title=title;
+  document.querySelector('meta[name="description"]').setAttribute('content',desc);
+  document.querySelector('meta[property="og:title"]').setAttribute('content',title);
+  document.querySelector('meta[property="og:description"]').setAttribute('content',desc);
+  document.querySelector('meta[property="og:url"]').setAttribute('content',canonical);
+  document.querySelector('meta[name="twitter:title"]').setAttribute('content',title);
+  document.querySelector('meta[name="twitter:description"]').setAttribute('content',desc);
+  let canon=document.querySelector('link[rel="canonical"]');
+  if(!canon){canon=document.createElement('link');canon.rel='canonical';document.head.appendChild(canon);}
+  canon.href=canonical;
+}
+
+/* ============================================================
    EMAIL — assembled at runtime to deter address scrapers
    ============================================================ */
 function openMail(e){
@@ -952,42 +1032,70 @@ function openMail(e){
 }
 
 /* ============================================================
-   ARTICLE DATA
+   ROUTER — hash-based, GitHub Pages compatible
    ============================================================ */
-const arts={
-  a1:{tag:'Strategy',date:'June 2025',title:'Why most South African brands are producing content nobody asked for',img:'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop',body:`<p>There is a particular kind of busyness in South African marketing right now. Brands are posting daily. Reels are being produced. Influencers are being briefed. The calendars are full. And yet, when you ask what all of it is building towards, the answer is often something close to silence.</p><h3>The volume problem is a thinking problem</h3><p>Most brands arrive at content production through a backwards process. Someone decides the brand needs to be more active on social media. A monthly calendar is built. Posts go out. The only question being asked is what to post next week, not what the brand is trying to do over the next twelve months. The result is content that is technically competent and strategically empty.</p><h3>A framework changes the question</h3><p>The shift happens when you stop asking what to post and start asking what the brand needs to mean to its audience. Once you have that understanding, a framework gives the team clear criteria for what to make and what to leave out. Ideas are evaluated on whether they serve the strategic intent, not on whether they seem on trend.</p><p>Brands that operate this way produce less content overall and reach their audience more consistently. The calendar becomes a consequence of the strategy, not a replacement for it.</p>`},
-  a2:{tag:'Influencer',date:'May 2025',title:'Influencer strategy in South Africa is still being done backwards',img:'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80&auto=format&fit=crop',body:`<p>The standard influencer process in South Africa goes roughly like this. A brand decides it wants to work with influencers. Someone pulls a list of names based on follower count. A shortlist is approved. Creators are briefed. Content goes live. The brief is usually the last thing written and the least considered part of the process.</p><h3>Reach is not a strategy</h3><p>Follower count tells you how many people a creator can potentially reach. It tells you almost nothing about whether those people are the right people, or whether the association makes sense given what your brand is trying to mean. In a market as culturally specific as South Africa, this matters more than most brands acknowledge.</p><h3>The brief comes first</h3><p>Influencer strategy done properly works in the opposite direction. You start with what the brand needs to communicate and to whom. You define the kind of voice that can carry that message credibly. You build the selection criteria from there. The brief is then built for that specific partnership, not adapted from a generic template.</p>`},
-  a3:{tag:'AI and systems',date:'April 2025',title:'AI does not replace strategic thinking. It exposes the absence of it.',img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop',body:`<p>Every marketing team in South Africa is either using AI tools or being asked why they are not. The more important question is what AI reveals about how a team was already thinking.</p><h3>A tool that amplifies what is already there</h3><p>When you give an AI tool a clear strategic framework, it works efficiently. When there is no framework, the tool still produces output. It just scales the confusion. You get more content that sounds like it could belong to any brand, produced faster, published more frequently.</p><h3>Where AI actually belongs in the workflow</h3><p>The teams I work with use AI to handle the tasks that do not require human judgement: adapting approved copy for different platforms, generating first-draft variations within defined parameters, processing data sets. What AI does not do is decide what a brand should stand for, or make the call on whether an idea is worth producing. Those decisions require cultural literacy and strategic clarity.</p>`},
-  a4:{tag:'Culture',date:'March 2025',title:'What brands get wrong about speaking to South African audiences',img:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop',body:`<p>There is a version of South African marketing that treats this country as one audience with minor regional variations. That version produces work that is broadly inoffensive and rarely remembered.</p><h3>The localisation myth</h3><p>Most brands treat localisation as a step that happens at the end of the process. The strategy is built, the campaign is conceptualised, and then someone adds vernacular copy before it goes live. The result is work that feels adapted rather than authored. Genuine cultural fluency is not an adaptation. It is a starting point.</p><h3>The practical consequence</h3><p>Brands that start with genuine cultural understanding build communication that accumulates. Brands that start with assumptions and localise at the end produce work that is always slightly off. Audiences notice. They may not articulate it, but they respond to it. Or they do not respond at all.</p>`},
-  b1:{author:'Juff Manda',tag:'Marketing and trade',date:'April 2025',title:'Turns out it was never Fong Kong',img:'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&q=80&auto=format&fit=crop',body:`<p>When we talk about luxury brands and the high-end labels we associate with the best quality and exclusivity, there is an underlying truth that often gets overlooked. Most of these luxury items are made in China. Yes. Many of the products we pay thousands for are manufactured in Chinese factories, and yet they carry price tags that make us think they came from some European workshop.</p><h3>The real cost of production</h3><p>The cost of production in China is so low compared to what we pay at retail, it is almost laughable. A luxury handbag that costs roughly five dollars to produce in a Chinese factory can end up on a shelf with a price tag of thousands. The real difference is not the craftsmanship. It is the logo. And what the logo represents.</p><h3>Marketing shapes what we believe things are worth</h3><p>It all comes down to marketing. Marketing is not just about promoting a product. It is about convincing people that something is worth more than its production cost. Growing up, I believed, as many of us did, that luxury brands were inherently superior. What I later understood was that what I was actually paying for was not the craftsmanship. It was the story behind the brand. Perception, not production, is what commands the premium.</p><p>Brands establish themselves as exclusive over time. They craft a narrative, build a reputation, and use advertising to reinforce the idea that owning their product is a mark of status. That is the true power of marketing. And that is where the game is won or lost.</p>`},
-  b2:{author:'Juff Manda',tag:'Innovation and market shifts',date:'March 2025',title:'From Fong Kong to global giants: the rise of Chinese innovation',img:'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80&auto=format&fit=crop',body:`<p>Growing up in South Africa, across Kasi and the suburbs alike, there was a word most of us knew: Fong Kong. It described knockoffs, counterfeits, anything that looked like the real thing but was not. Chinese-made products were the primary target of that label.</p><h3>The shift nobody fully saw coming</h3><p>Fast forward to now and the Fong Kong label does not fit anymore. Not because we stopped caring about quality, but because Chinese manufacturing stopped being the shorthand for low quality. Look at the vehicle market. Brands like Haval, Omoda, and Jaecoo are serious contenders. They are not knockoffs of anything. They are originals. And they are competitive on both price and quality.</p><p>The tech picture is the same. Huawei, which many once dismissed as a second-tier brand, became a global giant. I worked as Senior Trainer in the creative and retail division at Huawei in 2019. I saw from the inside how far they had come, and how quickly they were moving.</p><h3>What this means for anyone thinking about markets</h3><p>The rise of Chinese brands is not just an interesting story about global trade. It is a lesson in how quickly a market position can shift. The labels we attach to countries of origin, to price points, to brands we consider aspirational versus aspirational alternatives — those labels are not permanent. They are a function of what the market has decided to believe at a given moment.</p>`}
-};
+const BASE='https://www.juffmanda.com';
 
-/* ============================================================
-   NAVIGATION LOGIC
-   ============================================================ */
-function go(id){
+function navigate(hash,pushState){
+  const raw=(hash||'').replace(/^#\/?/,'').replace(/\/$/,'').trim();
+  const parts=raw.split('/');
+  const section=parts[0];
+  const sub=parts[1]||'';
+
+  if(pushState!==false){
+    const newHash='#/'+(raw||'');
+    if(location.hash!==newHash) history.pushState(null,null,raw?newHash:'#/');
+  }
+
+  /* Blog article */
+  if(section==='insight'&&sub){
+    const key=slugMap[sub];
+    if(key){ _renderArt(key,false); return; }
+  }
+
+  /* Main sections */
+  const route=ROUTES[section]||ROUTES[''];
+  _showPage(route.id);
+  const canonical=BASE+(raw?'/#/'+raw:'/');
+  setMeta(route.title,route.desc,canonical);
+}
+
+function _showPage(id){
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.nl').forEach(l=>l.classList.remove('on'));
   const page=document.getElementById('pg-'+id);
-  if(page)page.classList.add('on');
+  if(page) page.classList.add('on');
   const link=document.querySelector('[data-p="'+id+'"]');
-  if(link)link.classList.add('on');
+  if(link) link.classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
-
-  // Update page title for each section
-  const titles={
-    home:'Juffmanda | Digital and Social Strategist · South Africa',
-    about:'About Juff Manda | Digital Strategist · Johannesburg',
-    work:'Work | Juff Manda · Digital Strategy',
-    method:'Methodology | Juff Manda · How the Work is Structured',
-    ins:'Insights | Juff Manda · Strategy & Culture Writing',
-    wwm:'Work With Me | Juff Manda · Digital Strategy Engagements',
-    art:document.title
-  };
-  if(titles[id])document.title=titles[id];
 }
 
+function _renderArt(key,push){
+  const a=arts[key];
+  const byline=a.author
+    ?`<span style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--h);display:block;margin-bottom:2.5rem">Written by ${a.author}</span>`
+    :'';
+  document.getElementById('art-out').innerHTML=
+    `<span class="art-meta">${a.tag} &middot; ${a.date}</span>`+
+    `<h1 class="art-h">${a.title}</h1>${byline}`+
+    `<img class="art-img" src="${a.img}" alt="${a.title}" loading="lazy">`+
+    `<div class="art-content">${a.body}</div>`;
+  _showPage('art');
+  const slug='insight/'+a.slug;
+  if(push!==false) history.pushState(null,null,'#/'+slug);
+  setMeta(a.title+' | Juff Manda',a.desc,BASE+'/#/'+slug);
+}
+
+/* Public API — keeps all onclick="go(...)" and onclick="art(...)" intact */
+function go(id){
+  const map={home:'',about:'about',work:'work',method:'methodology',ins:'insight',wwm:'work-with-me',art:'insight'};
+  navigate(map[id]!==undefined?map[id]:id,true);
+}
+function art(key){ _renderArt(key,true); }
+
+/* ============================================================
+   MENU HELPERS
+   ============================================================ */
 function toggleMenu(){
   const menu=document.getElementById('mob-menu');
   const ham=document.getElementById('ham');
@@ -1002,20 +1110,12 @@ function closeMenu(){
   ham.setAttribute('aria-expanded','false');
 }
 
-document.querySelectorAll('.nl').forEach(l=>l.addEventListener('click',()=>go(l.dataset.p)));
-
 /* ============================================================
-   ARTICLE RENDERING
+   BOOT
    ============================================================ */
-function art(id){
-  const a=arts[id];
-  const byline=a.author?`<span style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--h);display:block;margin-bottom:2.5rem">Written by ${a.author}</span>`:'';
-  document.getElementById('art-out').innerHTML=`<span class="art-meta">${a.tag} &middot; ${a.date}</span><h1 class="art-h">${a.title}</h1>${byline}<img class="art-img" src="${a.img}" alt="${a.title}" loading="lazy"><div class="art-content">${a.body}</div>`;
-  document.title=`${a.title} | Juff Manda`;
-  go('art');
-}
-
-
+document.querySelectorAll('.nl').forEach(l=>l.addEventListener('click',()=>go(l.dataset.p)));
+window.addEventListener('popstate',()=>navigate(location.hash,false));
+navigate(location.hash,false);
 </script>
 </body>
 </html>
