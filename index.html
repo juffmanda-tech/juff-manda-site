@@ -1022,18 +1022,30 @@ body{padding-top:58px}
    ROUTE MAP , hash → page id + meta
    ============================================================ */
 const ROUTES={
-  '':           {id:'home',    title:'Juff Manda | Digital Strategy, Creative Direction and Team Leadership',
-                  desc:'Juff Manda leads the digital department at House of Brave. Digital strategy, creative direction, team building, and platform performance across South African brands.'},
-  'about':      {id:'about',   title:'About Juff Manda | Digital Department Lead · Johannesburg',
-                  desc:'Juff Manda leads the digital department at House of Brave as ExCo Member. Over nine years building digital strategy, leading teams, and shaping creative output across South African and global brands.'},
-  'work':       {id:'work',    title:'Selected Work and Involvement | Juff Manda · Digital Strategy',
-                  desc:'Strategic leadership, creative direction, and team involvement across MasterChef South Africa, GEPF, Tiger Brands, Nedbank, SodaStream, and more.'},
-  'methodology':{id:'method',  title:'Methodology | Juff Manda · How the Work Gets Done',
-                  desc:'A six-stage methodology covering strategy, creative frameworks, team and workflow design, amplification, and the data loop that improves everything over time.'},
-  'insight':    {id:'ins',     title:'Insights | Juff Manda · Strategy, Creative and Culture',
-                  desc:'Writing on digital strategy, creative direction, influencer marketing, AI workflow integration, and South African market culture by Juff Manda.'},
-  'work-with-me':{id:'wwm',   title:'Work With Me | Juff Manda · Digital Strategy and Creative Direction',
-                  desc:'Engage Juff Manda for digital strategy, creative direction, content system design, team capability development, or senior digital oversight. Johannesburg-based, select remote.'}
+  '':           {id:'home',
+                  title:'Juff Manda | Digital Strategy, Creative Direction and Team Leadership',
+                  desc:'Juff Manda leads the digital department at House of Brave, Johannesburg. He drives digital strategy, shapes creative direction, builds teams, and stays close to how content performs across South African platforms.',
+                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
+  'about':      {id:'about',
+                  title:'About Juff Manda | Digital Department Lead and ExCo Member at House of Brave',
+                  desc:'Juff Manda leads the digital department at House of Brave as an ExCo Member reporting to the CEO. Nine years across digital strategy, creative direction, team leadership, and platform performance for enterprise South African brands.',
+                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
+  'work':       {id:'work',
+                  title:'Selected Work | Juff Manda · MasterChef SA, GEPF, Nedbank, Tiger Brands and More',
+                  desc:'Strategic leadership, creative direction, and team involvement across MasterChef South Africa Season 6, GEPF, Nedbank, SodaStream, All Gold, Mrs Balls, Purity, and Wits Business School.',
+                  img:'https://www.juffmanda.com/masterchef_season_6_kv_launch.jpg'},
+  'methodology':{id:'method',
+                  title:'Methodology | Juff Manda · How Digital Strategy Gets Built and Executed',
+                  desc:'A six-stage methodology: human truth, strategic direction, creative framework, team and workflow design, amplification through paid media and influencer programmes, and the data loop that sharpens everything over time.',
+                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
+  'insight':    {id:'ins',
+                  title:'Insights | Juff Manda · Strategy, Culture and the South African Digital Market',
+                  desc:'Writing on digital strategy, creative direction, influencer marketing, AI in marketing workflows, social commerce, and the South African market by Juff Manda. Updated weekly.',
+                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
+  'work-with-me':{id:'wwm',
+                  title:'Work With Me | Juff Manda · Digital Strategy, Creative Direction and Team Leadership',
+                  desc:'Engage Juff Manda for digital and social strategy, creative direction and content oversight, team capability development, influencer strategy, content system design, or senior digital oversight. Johannesburg-based. Select remote engagements considered.',
+                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'}
 };
 
 /* ============================================================
@@ -1115,7 +1127,7 @@ Object.keys(arts).forEach(k=>{ slugMap[arts[k].slug]=k; });
 /* ============================================================
    META UPDATER
    ============================================================ */
-function setMeta(title,desc,canonical){
+function setMeta(title,desc,canonical,img){
   document.title=title;
   document.querySelector('meta[name="description"]').setAttribute('content',desc);
   document.querySelector('meta[property="og:title"]').setAttribute('content',title);
@@ -1123,6 +1135,10 @@ function setMeta(title,desc,canonical){
   document.querySelector('meta[property="og:url"]').setAttribute('content',canonical);
   document.querySelector('meta[name="twitter:title"]').setAttribute('content',title);
   document.querySelector('meta[name="twitter:description"]').setAttribute('content',desc);
+  if(img){
+    document.querySelector('meta[property="og:image"]').setAttribute('content',img);
+    document.querySelector('meta[name="twitter:image"]').setAttribute('content',img);
+  }
   let canon=document.querySelector('link[rel="canonical"]');
   if(!canon){canon=document.createElement('link');canon.rel='canonical';document.head.appendChild(canon);}
   canon.href=canonical;
@@ -1165,7 +1181,7 @@ function navigate(hash,pushState){
   const route=ROUTES[section]||ROUTES[''];
   _showPage(route.id);
   const canonical=BASE+(raw?'/#/'+raw:'/');
-  setMeta(route.title,route.desc,canonical);
+  setMeta(route.title,route.desc,canonical,route.img);
 }
 
 function _showPage(id){
@@ -1191,7 +1207,7 @@ function _renderArt(key,push){
   _showPage('art');
   const slug='insight/'+a.slug;
   if(push!==false) history.pushState(null,null,'#/'+slug);
-  setMeta(a.title+' | Juff Manda',a.desc,BASE+'/#/'+slug);
+  setMeta(a.title+' | Juff Manda',a.desc,BASE+'/#/'+slug,a.img);
 }
 
 /* Public API, keeps all onclick="go(...)" and onclick="art(...)" intact */
