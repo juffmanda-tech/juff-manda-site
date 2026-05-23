@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://www.juffmanda.com/">
 <meta property="og:title" content="Juff Manda | Digital Strategy, Creative Direction and Team Leadership">
 <meta property="og:description" content="Juff Manda leads the digital department at House of Brave. Strategy, creative direction, team building, and platform performance across South African brands.">
-<meta property="og:image" content="https://www.juffmanda.com/og-image.jpg">
+<meta property="og:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
 <meta property="og:site_name" content="Juff Manda">
 <meta property="og:locale" content="en_ZA">
 
@@ -20,591 +20,46 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Juff Manda | Digital Strategy, Creative Direction and Team Leadership">
 <meta name="twitter:description" content="Juff Manda leads the digital department at House of Brave. Strategy, creative oversight, team building, and platform performance across South African brands.">
-<meta name="twitter:image" content="https://www.juffmanda.com/og-image.jpg">
+<meta name="twitter:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
+
+<!-- Structured Data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Juff Manda",
+  "alternateName": "Japhet Manda",
+  "jobTitle": "Digital Department Lead",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "House of Brave",
+    "parentOrganization": {"@type":"Organization","name":"Brave Group"}
+  },
+  "address": {"@type":"PostalAddress","addressLocality":"Johannesburg","addressCountry":"ZA"},
+  "url": "https://www.juffmanda.com/",
+  "sameAs": ["https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/"],
+  "description": "Juff Manda leads the digital department at House of Brave, Johannesburg, driving digital strategy, creative direction, and team development for enterprise South African brands."
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-
-<style>
-/* ============================================================
-   RESET + VARIABLES
-   ============================================================ */
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#0D0D0B;
-  --off:#F5F3EE;
-  --mid:#EFEFEB;
-  --accent:#C8FF00;
-  --m:#6B6963;
-  --h:#A8A59E;
-  --bd:rgba(13,13,11,0.1);
-  --syne:'Syne',sans-serif;
-  --serif:'Instrument Serif',serif;
-  --body:'DM Sans',sans-serif;
-  --max:1100px;
-  --px:1.25rem;
-}
-@media(min-width:640px){:root{--px:2rem}}
-html{scroll-behavior:smooth}
-body{background:var(--off);color:var(--ink);font-family:var(--body);overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none}
-
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  background:var(--off);
-  border-bottom:1px solid var(--bd);
-  padding:0 var(--px);
-}
-body{padding-top:58px}
-.nav-inner{
-  max-width:var(--max);margin:0 auto;
-  height:58px;display:flex;
-  align-items:center;justify-content:space-between;
-}
-.logo{
-  font-family:var(--syne);font-size:15px;font-weight:700;
-  letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);
-}
-.nav-links{display:none;align-items:center;gap:2rem}
-@media(min-width:768px){.nav-links{display:flex}}
-.nl{
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--m);
-  transition:color 0.2s;
-}
-.nl:hover,.nl.on{color:var(--ink)}
-.nav-cta{
-  font-family:var(--syne);font-size:11px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;
-  background:var(--ink);color:var(--off);
-  padding:9px 18px;border-radius:2px;transition:background 0.2s;
-}
-.nav-cta:hover{background:var(--accent);color:var(--ink)}
-.nav-li-link{
-  display:flex;align-items:center;color:var(--m);
-  transition:color 0.2s;text-decoration:none;
-}
-.nav-li-link:hover{color:var(--ink)}
-
-/* Hamburger */
-.ham{
-  display:flex;flex-direction:column;gap:5px;
-  padding:4px;
-}
-@media(min-width:768px){.ham{display:none}}
-.ham span{width:22px;height:1.5px;background:var(--ink);transition:all 0.25s;display:block}
-.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-
-/* Mobile menu */
-.mob-menu{
-  display:none;
-  position:fixed;inset:58px 0 0 0;
-  background:var(--off);z-index:190;
-  flex-direction:column;
-  padding:2rem var(--px);gap:0;
-  border-top:1px solid var(--bd);
-  overflow-y:auto;
-}
-.mob-menu.open{display:flex}
-.mob-link{
-  font-family:var(--syne);font-size:14px;font-weight:600;
-  letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink);padding:1rem 0;
-  border-bottom:1px solid var(--bd);
-}
-
-/* ============================================================
-   PAGES
-   ============================================================ */
-.pg{display:none}.pg.on{display:block}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{
-  max-width:var(--max);margin:0 auto;
-  padding:3rem var(--px) 2.5rem;
-  display:grid;grid-template-columns:1fr;gap:2.5rem;
-  align-items:end;
-}
-@media(min-width:768px){
-  .hero{grid-template-columns:1fr 380px;gap:4rem;padding:5rem var(--px) 4rem}
-}
-@media(min-width:1024px){
-  .hero{grid-template-columns:1fr 400px}
-}
-.hero-l{order:2}
-.hero-r{order:1}
-@media(min-width:768px){
-  .hero-l{order:1}
-  .hero-r{order:2}
-}
-.hero-tag{
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--h);
-  margin-bottom:1.5rem;display:flex;align-items:center;gap:10px;
-}
-.hero-tag::before{content:'';width:28px;height:1px;background:var(--h)}
-.hero-h{
-  font-family:var(--syne);
-  font-size:clamp(2.4rem,8vw,5.5rem);
-  font-weight:800;line-height:0.95;
-  letter-spacing:-0.02em;color:var(--ink);
-  margin-bottom:1.5rem;
-}
-.hero-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--m)}
-.hero-sub{
-  font-size:15px;line-height:1.75;color:var(--m);
-  font-weight:300;max-width:420px;margin-bottom:2rem;
-}
-.hero-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
-.btn-primary{
-  font-family:var(--syne);font-size:12px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;
-  background:var(--ink);color:var(--off);
-  padding:13px 24px;border-radius:2px;
-  transition:all 0.2s;
-}
-.btn-primary:hover{background:var(--accent);color:var(--ink)}
-.btn-ghost{
-  font-family:var(--syne);font-size:12px;font-weight:600;
-  letter-spacing:0.08em;text-transform:uppercase;color:var(--m);
-  display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;
-}
-.btn-ghost:hover{color:var(--ink)}
-.hero-img-wrap{
-  width:100%;
-  border-radius:4px;overflow:hidden;
-  background:var(--mid);position:relative;
-}
-.hero-img-wrap img{width:100%;height:auto;display:block;object-fit:contain}
-.img-overlay{
-  position:absolute;bottom:0;left:0;right:0;
-  background:rgba(13,13,11,0.65);
-  color:rgba(255,255,255,0.75);
-  font-size:10px;letter-spacing:0.07em;text-transform:uppercase;
-  padding:8px 14px;font-family:var(--body);
-}
-.hero-badge{
-  position:absolute;top:1.25rem;right:0.75rem;
-  background:var(--accent);padding:10px 14px;border-radius:2px;
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink);transform:rotate(3deg);z-index:2;
-}
-@media(min-width:768px){.hero-badge{right:-1rem}}
-.hero-r-inner{position:relative}
-
-/* ============================================================
-   TICKER
-   ============================================================ */
-.ticker{background:var(--ink);padding:12px 0;overflow:hidden;white-space:nowrap}
-.ticker-inner{display:inline-flex;animation:tick 35s linear infinite}
-.ticker-item{
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--off);
-  display:inline-flex;align-items:center;
-}
-.ticker-dot{
-  color:var(--accent);font-size:6px;line-height:1;
-  display:inline-flex;align-items:center;
-  margin:0 1.5rem;
-  position:relative;top:0;
-}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ============================================================
-   CLIENTS
-   ============================================================ */
-.clients{max-width:var(--max);margin:0 auto;padding:2.5rem var(--px)}
-.clients-label{
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--h);
-  margin-bottom:1.25rem;
-}
-.clients-row{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-.cpill{
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.06em;color:var(--m);
-  border:1px solid var(--bd);border-radius:2px;padding:6px 14px;
-  transition:all 0.2s;text-decoration:none;display:inline-block;
-  cursor:pointer;
-}
-.cpill:hover{border-color:var(--ink);color:var(--ink)}
-
-/* ============================================================
-   DARK SECTION
-   ============================================================ */
-.dark-sec{background:var(--ink);color:var(--off)}
-.dark-inner{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
-@media(min-width:640px){.dark-inner{padding:5rem var(--px)}}
-
-/* Stats */
-.stats{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:1px;background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.08);
-  margin-bottom:3rem;
-}
-@media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr);margin-bottom:4rem}}
-.stat{padding:1.5rem 1.25rem;background:var(--ink)}
-@media(min-width:640px){.stat{padding:2rem 1.5rem}}
-.stat-num{font-family:var(--syne);font-size:2.4rem;font-weight:800;color:var(--off);line-height:1;margin-bottom:0.3rem}
-@media(min-width:640px){.stat-num{font-size:2.8rem}}
-.stat-num span{color:var(--accent)}
-.stat-label{font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:0.04em}
-
-/* Approach */
-.approach-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
-@media(min-width:768px){.approach-grid{grid-template-columns:1fr 1fr;gap:4rem}}
-.sec-tag-light{
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:1rem;display:block;
-}
-.dark-h{
-  font-family:var(--syne);
-  font-size:clamp(1.8rem,4vw,3rem);
-  font-weight:800;line-height:1;letter-spacing:-0.02em;
-  color:var(--off);margin-bottom:1.5rem;
-}
-.dark-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.35)}
-.dark-body{font-size:14.5px;line-height:1.85;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:1rem}
-.stages{display:flex;flex-direction:column}
-.stage-row{
-  display:flex;align-items:flex-start;gap:1rem;
-  padding:1.1rem 0;border-top:1px solid rgba(255,255,255,0.08);
-}
-.stage-num{font-family:var(--syne);font-size:11px;font-weight:700;color:var(--accent);min-width:24px;padding-top:2px}
-.stage-name{font-family:var(--syne);font-size:13px;font-weight:600;color:var(--off);margin-bottom:0.2rem}
-.stage-desc{font-size:12.5px;line-height:1.65;color:rgba(255,255,255,0.4)}
-
-/* ============================================================
-   LIGHT SECTIONS
-   ============================================================ */
-.light-sec{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
-@media(min-width:640px){.light-sec{padding:5rem var(--px)}}
-.sec-tag{
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--h);
-  margin-bottom:1rem;display:flex;align-items:center;gap:10px;
-}
-.sec-tag::before{content:'';width:20px;height:1px;background:var(--h)}
-.sec-h{
-  font-family:var(--syne);
-  font-size:clamp(1.75rem,4vw,3rem);
-  font-weight:800;line-height:1;letter-spacing:-0.02em;
-  color:var(--ink);margin-bottom:1.5rem;
-}
-.sec-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--m)}
-.sec-body{font-size:14.5px;line-height:1.85;color:var(--m);font-weight:300;max-width:580px}
-.sec-body p+p{margin-top:1rem}
-
-/* ============================================================
-   ABOUT
-   ============================================================ */
-.about-hero{
-  max-width:var(--max);margin:0 auto;
-  padding:3rem var(--px);
-  display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;
-}
-@media(min-width:768px){.about-hero{grid-template-columns:420px 1fr;gap:4rem;padding:4rem var(--px)}}
-.about-img{
-  width:100%;
-  border-radius:4px;overflow:hidden;background:var(--mid);
-}
-.about-img img{width:100%;height:auto;display:block;object-fit:contain}
-.about-name{
-  font-family:var(--syne);
-  font-size:clamp(2.2rem,6vw,4rem);
-  font-weight:800;letter-spacing:-0.02em;line-height:0.95;
-  margin-bottom:0.75rem;
-}
-.about-title{
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--h);
-  margin-bottom:0.5rem;display:block;
-}
-.about-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;
-  background:var(--accent);color:var(--ink);
-  padding:5px 12px;border-radius:2px;margin-bottom:2rem;
-}
-.about-badge::before{content:'';width:6px;height:6px;background:var(--ink);border-radius:50%}
-.about-body{font-size:14.5px;line-height:1.85;color:var(--m);font-weight:300}
-.about-body p+p{margin-top:1rem}
-.about-aside{
-  font-family:var(--syne);font-size:11px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);
-  margin:2rem 0 0.75rem;display:block;
-  padding-left:0.75rem;border-left:3px solid var(--accent);
-}
-
-/* ============================================================
-   WORK
-   ============================================================ */
-.work-hero{max-width:var(--max);margin:0 auto;padding:3rem var(--px) 2rem}
-@media(min-width:640px){.work-hero{padding:4rem var(--px) 2rem}}
-.cs-block{max-width:var(--max);margin:0 auto;padding:2.5rem var(--px) 3.5rem;border-top:1px solid var(--bd)}
-@media(min-width:640px){.cs-block{padding:3rem var(--px) 4rem}}
-.cs-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.cs-tag{
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  background:var(--ink);color:var(--off);padding:4px 10px;border-radius:2px;
-}
-.cs-title{
-  font-family:var(--syne);
-  font-size:clamp(1.4rem,3vw,2.4rem);
-  font-weight:800;letter-spacing:-0.02em;line-height:1.05;margin-bottom:2rem;
-}
-.cs-img{
-  width:100%;height:auto;
-  border-radius:4px;margin-bottom:2.5rem;background:var(--mid);display:block;
-}
-.cs-grid{display:grid;grid-template-columns:1fr}
-@media(min-width:640px){.cs-grid{grid-template-columns:160px 1fr}}
-.cs-k{
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  color:var(--accent);padding:0.75rem 0;
-}
-@media(min-width:640px){
-  .cs-k{color:var(--h);border-top:1px solid var(--bd);padding:1.1rem 0}
-}
-.cs-v{
-  font-size:14px;line-height:1.8;color:var(--m);font-weight:300;
-  padding:0.25rem 0 1rem;
-}
-@media(min-width:640px){
-  .cs-v{border-top:1px solid var(--bd);padding:1.1rem 0}
-}
-.further{max-width:var(--max);margin:0 auto;padding:1.5rem var(--px) 3.5rem;opacity:0.45}
-.further-label{
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--h);
-  margin-bottom:0.75rem;display:block;
-}
-
-/* ============================================================
-   METHODOLOGY GRID
-   ============================================================ */
-.method-grid{
-  display:grid;grid-template-columns:1fr;
-  gap:1px;background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.06);
-}
-@media(min-width:640px){.method-grid{grid-template-columns:1fr 1fr}}
-.method-card{background:var(--ink);padding:2rem 1.75rem}
-@media(min-width:640px){.method-card{padding:2.5rem}}
-.method-num{font-family:var(--syne);font-size:11px;font-weight:700;color:var(--accent);margin-bottom:0.75rem}
-.method-name{font-family:var(--syne);font-size:1.05rem;font-weight:700;color:var(--off);margin-bottom:0.5rem}
-.method-desc{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,0.4)}
-
-/* ============================================================
-   INSIGHTS
-   ============================================================ */
-.ins-wrap{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
-@media(min-width:640px){.ins-wrap{padding:4rem var(--px)}}
-.ins-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem}
-@media(min-width:640px){.ins-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
-.ic{
-  border:1px solid var(--bd);border-radius:4px;
-  overflow:hidden;cursor:pointer;transition:all 0.25s;background:var(--off);
-}
-.ic:hover{border-color:var(--ink);transform:translateY(-2px)}
-.ic-img{width:100%;height:auto;display:block;background:var(--mid)}
-@media(min-width:640px){.ic-img{height:auto}}
-.ic-body{padding:1.25rem}
-@media(min-width:640px){.ic-body{padding:1.5rem}}
-.ic-tag{font-family:var(--syne);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.6rem;display:block}
-.ic-h{font-family:var(--syne);font-size:0.95rem;font-weight:700;line-height:1.3;margin-bottom:0.5rem;color:var(--ink)}
-.ic-x{font-size:13px;line-height:1.7;color:var(--m);font-weight:300}
-.ic-date{font-size:11px;color:var(--h);margin-top:0.75rem;display:block;font-family:var(--syne);letter-spacing:0.06em}
-
-/* Insights section label */
-.ins-section-label{
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.12em;text-transform:uppercase;color:var(--h);
-  margin:2.5rem 0 1rem;
-  display:flex;align-items:center;gap:10px;
-}
-.ins-section-label::before{content:'';width:20px;height:1px;background:var(--h);display:inline-block}
-
-/* Press rows */
-.press-row{
-  display:grid;grid-template-columns:1fr 24px;
-  gap:1.25rem;align-items:start;
-  padding:1.25rem 0;border-top:1px solid var(--bd);
-  text-decoration:none;transition:background 0.2s;
-}
-@media(min-width:640px){
-  .press-row{grid-template-columns:140px 1fr 32px;gap:1.5rem;padding:1.5rem 0}
-}
-.press-row:last-child{border-bottom:1px solid var(--bd)}
-.press-row:hover{background:var(--mid);margin:0 -1rem;padding:1.25rem 1rem}
-@media(min-width:640px){.press-row:hover{margin:0 -1.5rem;padding:1.5rem}}
-.press-source{
-  font-family:var(--syne);font-size:11px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);
-  display:none;
-}
-@media(min-width:640px){.press-source{display:block;padding-top:3px}}
-.press-title{font-family:var(--syne);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:0.35rem;line-height:1.3}
-.press-desc{font-size:13px;line-height:1.7;color:var(--m);font-weight:300}
-.press-arrow{font-size:18px;color:var(--h);padding-top:2px;text-align:right}
-
-/* ============================================================
-   ARTICLE
-   ============================================================ */
-.art-wrap{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
-@media(min-width:640px){.art-wrap{padding:4rem var(--px)}}
-.art-back{
-  font-family:var(--syne);font-size:11px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--m);
-  display:inline-flex;align-items:center;gap:6px;
-  margin-bottom:2.5rem;transition:color 0.2s;
-}
-.art-back:hover{color:var(--ink)}
-.art-h{
-  font-family:var(--syne);
-  font-size:clamp(1.6rem,4vw,3rem);
-  font-weight:800;letter-spacing:-0.02em;line-height:1.05;
-  margin-bottom:0.75rem;
-}
-.art-meta{font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:2.5rem;display:block}
-.art-img{width:100%;height:auto;display:block;border-radius:4px;margin-bottom:3rem;background:var(--mid)}
-.art-content{max-width:680px}
-.art-content p{font-size:15px;line-height:1.9;color:var(--m);font-weight:300;margin-bottom:1.25rem}
-.art-content h3{font-family:var(--syne);font-size:1rem;font-weight:700;color:var(--ink);margin:2rem 0 0.65rem}
-.art-content a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color 0.2s}
-.art-content a:hover{color:var(--accent);text-decoration-color:var(--accent)}
-   ============================================================ */
-.wwm-hero{background:var(--ink);padding:3.5rem var(--px)}
-@media(min-width:640px){.wwm-hero{padding:5rem var(--px)}}
-.wwm-inner{max-width:var(--max);margin:0 auto}
-.wwm-h{
-  font-family:var(--syne);
-  font-size:clamp(2.2rem,6vw,4.5rem);
-  font-weight:800;letter-spacing:-0.03em;line-height:0.95;
-  color:var(--off);margin-bottom:1.5rem;
-}
-.wwm-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.3)}
-.wwm-sub{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:500px}
-.offers{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
-@media(min-width:640px){.offers{padding:4rem var(--px)}}
-.offer-grid{
-  display:grid;grid-template-columns:1fr;
-  gap:1px;background:var(--bd);border:1px solid var(--bd);
-}
-@media(min-width:640px){.offer-grid{grid-template-columns:1fr 1fr}}
-.offer{background:var(--off);padding:2rem 1.75rem;transition:background 0.2s}
-@media(min-width:640px){.offer{padding:2.5rem}}
-.offer:hover{background:var(--mid)}
-.offer-num{
-  font-family:var(--syne);font-size:11px;font-weight:700;
-  color:var(--accent);background:var(--ink);
-  display:inline-block;padding:3px 8px;border-radius:2px;margin-bottom:1rem;
-}
-.offer-name{font-family:var(--syne);font-size:1.05rem;font-weight:800;letter-spacing:-0.01em;margin-bottom:0.65rem;color:var(--ink)}
-.offer-desc{font-size:14px;line-height:1.75;color:var(--m);font-weight:300}
-.not-box{max-width:var(--max);margin:0 auto;padding:0 var(--px) 3rem}
-@media(min-width:640px){.not-box{padding:0 var(--px) 4rem}}
-.not-inner{
-  background:var(--mid);border-radius:4px;
-  padding:1.75rem 2rem;border-left:4px solid var(--accent);
-}
-.not-label{
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--ink);margin-bottom:0.65rem;display:block;
-}
-.not-text{font-size:14px;line-height:1.75;color:var(--m);font-weight:300}
-.contact-band{background:var(--ink);padding:3.5rem var(--px)}
-@media(min-width:640px){.contact-band{padding:4rem var(--px)}}
-
-/* ============================================================
-   CONTACT
-   ============================================================ */
-.contact-heading{
-  font-family:var(--syne);
-  font-size:clamp(1.8rem,4vw,3rem);
-  font-weight:800;letter-spacing:-0.02em;line-height:1;
-  color:var(--off);margin-bottom:0.75rem;
-}
-.contact-sub{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.45);font-weight:300;max-width:480px;margin-bottom:1.5rem}
-
-/* Email / LinkedIn buttons */
-.email-btn{
-  font-family:var(--syne);font-size:12px;font-weight:700;
-  letter-spacing:0.08em;text-transform:uppercase;
-  background:var(--accent);color:var(--ink);
-  padding:14px 24px;border-radius:2px;
-  display:inline-block;transition:opacity 0.2s;
-}
-.email-btn:hover{opacity:0.85}
-.li-link{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--syne);font-size:11px;font-weight:600;
-  letter-spacing:0.08em;text-transform:uppercase;
-  color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;
-}
-.li-link:hover{color:var(--accent)}
-.li-icon{width:16px;height:16px;flex-shrink:0}
-.contact-cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:2.5rem}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem var(--px)}
-.footer-inner{
-  max-width:var(--max);margin:0 auto;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:1rem;
-}
-.footer-copy{font-family:var(--syne);font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em}
-.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
-.footer-link{
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;
-  color:rgba(255,255,255,0.25);transition:color 0.2s;
-}
-.footer-link:hover{color:rgba(255,255,255,0.6)}
-.footer-li{
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;
-  color:rgba(255,255,255,0.25);text-decoration:none;transition:color 0.2s;
-}
-.footer-li:hover{color:rgba(200,255,0,0.8)}
-</style>
+<link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
 
-<!-- ============================================================
-     NAVIGATION
-     ============================================================ -->
+<!-- NAVIGATION -->
 <header>
   <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <button class="logo" onclick="go('home')" aria-label="Go to homepage">Juff Manda</button>
+      <a href="/" class="logo" aria-label="Juff Manda — homepage">Juff Manda</a>
       <div class="nav-links" role="menubar">
-        <button class="nl" data-p="about" role="menuitem">About</button>
-        <button class="nl" data-p="work" role="menuitem">Work</button>
-        <button class="nl" data-p="method" role="menuitem">Methodology</button>
-        <button class="nl" data-p="ins" role="menuitem">Insights</button>
-        <button class="nav-cta" onclick="go('wwm')">Work with me</button>
+        <a href="/about/" class="nl" role="menuitem">About</a>
+        <a href="/work/" class="nl" role="menuitem">Work</a>
+        <a href="/methodology/" class="nl" role="menuitem">Methodology</a>
+        <a href="/insights/" class="nl" role="menuitem">Insights</a>
+        <a href="/work-with-me/" class="nav-cta">Work with me</a>
         <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li-link" aria-label="LinkedIn profile">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -616,403 +71,121 @@ body{padding-top:58px}
   </nav>
 </header>
 
-<!-- Mobile menu -->
 <nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
-  <button class="mob-link" onclick="go('about');closeMenu()">About</button>
-  <button class="mob-link" onclick="go('work');closeMenu()">Work</button>
-  <button class="mob-link" onclick="go('method');closeMenu()">Methodology</button>
-  <button class="mob-link" onclick="go('ins');closeMenu()">Insights</button>
-  <button class="mob-link" onclick="go('wwm');closeMenu()">Work with me</button>
+  <a href="/about/" class="mob-link">About</a>
+  <a href="/work/" class="mob-link">Work</a>
+  <a href="/methodology/" class="mob-link">Methodology</a>
+  <a href="/insights/" class="mob-link">Insights</a>
+  <a href="/work-with-me/" class="mob-link">Work with me</a>
 </nav>
 
 <main>
 
-<!-- ============================================================
-     HOME PAGE
-     ============================================================ -->
-<div class="pg on" id="pg-home">
-  <section class="hero">
-    <div class="hero-l">
-      <p class="hero-tag">Johannesburg · Digital Department Lead</p>
-      <h1 class="hero-h">Strategy, teams,<br>and work that<br><em>actually performs.</em></h1>
-      <p class="hero-sub">I lead the digital department at House of Brave, build the frameworks that govern it, shape the quality of the work coming out of it, and develop the people delivering it. ExCo Member, reporting to the CEO.</p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="go('work')">See the work</button>
-        <button class="btn-ghost" onclick="go('about')">About Juff &rarr;</button>
-      </div>
-    </div>
-    <div class="hero-r">
-      <div class="hero-r-inner">
-        <div class="hero-badge" aria-label="Digital Department Lead, House of Brave">Digital Lead<br>House of Brave</div>
-        <div class="hero-img-wrap">
-          <img src="juff-manda-portrait.jpg" alt="Juff Manda, Digital Department Lead, House of Brave, Johannesburg" loading="eager" width="400" height="533">
-          <p class="img-overlay">Digital Lead · House of Brave · Johannesburg</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-inner">
-      <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
-      <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <p class="hero-tag">Johannesburg · Digital Department Lead</p>
+    <h1 class="hero-h">Strategy, teams,<br>and work that<br><em>actually performs.</em></h1>
+    <p class="hero-sub">I lead the digital department at House of Brave, build the frameworks that govern it, shape the quality of the work coming out of it, and develop the people delivering it. ExCo Member, reporting to the CEO.</p>
+    <div class="hero-actions">
+      <a href="/work/" class="btn-primary">See the work</a>
+      <a href="/about/" class="btn-ghost">About Juff &rarr;</a>
     </div>
   </div>
-
-  <div class="clients">
-    <p class="clients-label">Current work</p>
-    <ul class="clients-row" aria-label="Current clients">
-      <li><a class="cpill" href="https://www.gepf.co.za/" target="_blank" rel="noopener noreferrer">GEPF</a></li>
-      <li><a class="cpill" href="https://masterchefsa.tv/" target="_blank" rel="noopener noreferrer">MasterChef South Africa</a></li>
-      <li><a class="cpill" href="https://www.nedbank.co.za" target="_blank" rel="noopener noreferrer">Nedbank</a></li>
-      <li><a class="cpill" href="https://www.sodastream.co.za" target="_blank" rel="noopener noreferrer">SodaStream</a></li>
-      <li><a class="cpill" href="https://www.allgold.co.za/" target="_blank" rel="noopener noreferrer">All Gold</a></li>
-      <li><a class="cpill" href="https://www.mrsballs.com/" target="_blank" rel="noopener noreferrer">Mrs Balls</a></li>
-      <li><a class="cpill" href="https://www.purity.co.za" target="_blank" rel="noopener noreferrer">Purity</a></li>
-      <li><a class="cpill" href="https://www.wbs.ac.za" target="_blank" rel="noopener noreferrer">Wits Business School</a></li>
-      <li><a class="cpill" href="https://www.instagram.com/dermopal/" target="_blank" rel="noopener noreferrer">Dermopal</a></li>
-    </ul>
-  </div>
-
-  <div class="dark-sec" style="margin-top:3rem">
-    <div class="dark-inner">
-      <div class="stats" role="list" aria-label="Key statistics">
-        <div class="stat" role="listitem"><div class="stat-num">9<span>+</span></div><div class="stat-label">Years in digital leadership</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">9</div><div class="stat-label">Active client brands</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">6<span>+</span></div><div class="stat-label">Team members led and mentored</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">1</div><div class="stat-label">Agency founded and operated</div></div>
-      </div>
-      <div class="approach-grid">
-        <div>
-          <span class="sec-tag-light">What this is</span>
-          <h2 class="dark-h">Strategy, people,<br>and the quality<br><em>of what ships.</em></h2>
-          <p class="dark-body">Most organisations confuse activity with output. They have calendars, but not frameworks. Teams, but not direction. Content, but no governing logic for why any of it is being made.</p>
-          <p class="dark-body">The work I do sits across all three layers: the strategic foundation that determines what a brand should be doing, the team and system infrastructure that determines how it gets done, and the creative involvement that determines whether what ships is actually good enough to matter.</p>
-        </div>
-        <div class="stages" aria-label="Strategic stages">
-          <div class="stage-row"><span class="stage-num">01</span><div><div class="stage-name">Human truth</div><div class="stage-desc">What is actually true about the audience this brand needs to reach.</div></div></div>
-          <div class="stage-row"><span class="stage-num">02</span><div><div class="stage-name">Strategic direction</div><div class="stage-desc">What role this brand can credibly occupy in the lives of its audience.</div></div></div>
-          <div class="stage-row"><span class="stage-num">03</span><div><div class="stage-name">Framework and creative logic</div><div class="stage-desc">The operational logic that makes every decision consistent, including the criteria that determine whether an idea is good enough to use.</div></div></div>
-          <div class="stage-row"><span class="stage-num">04</span><div><div class="stage-name">Team, system, and workflow</div><div class="stage-desc">Structure, roles, workflow design, and AI integration. The team needs to be able to run this without a decision bottleneck at every step.</div></div></div>
-          <div class="stage-row"><span class="stage-num">05</span><div><div class="stage-name">Amplification</div><div class="stage-desc">Paid media integration and influencer programmes built on strategic fit, with creative direction on how the brand shows up in those environments.</div></div></div>
-          <div class="stage-row"><span class="stage-num">06</span><div><div class="stage-name">Data loop</div><div class="stage-desc">Performance signals return to sharpen the human truth. The system improves. The team gets better at knowing what to make.</div></div></div>
-        </div>
+  <div class="hero-r">
+    <div class="hero-r-inner">
+      <div class="hero-badge" aria-label="Digital Department Lead, House of Brave">Digital Lead<br>House of Brave</div>
+      <div class="hero-img-wrap">
+        <img src="/juff-manda-portrait.jpg" alt="Juff Manda, Digital Department Lead, House of Brave, Johannesburg" loading="eager" width="400" height="533">
+        <p class="img-overlay">Digital Lead · House of Brave · Johannesburg</p>
       </div>
     </div>
   </div>
+</section>
 
-  <section class="light-sec">
-    <p class="sec-tag">South Africa</p>
-    <h2 class="sec-h">The context is the <em>starting point,</em><br>not the complication.</h2>
-    <div class="sec-body">
-      <p>Strategies built for a generic South African consumer tend to reach no one in particular. Different communities relate to brands differently. A hook that works in one context lands flat in another. That is not a detail. It is the work.</p>
-      <p>Staying close to how content actually performs on South African platforms, what audiences are responding to, and what is earning attention in specific cultural contexts is part of what keeps strategy grounded. The data tells you what is happening. Understanding this market tells you why.</p>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================================
-     ABOUT PAGE
-     ============================================================ -->
-<div class="pg" id="pg-about">
-  <article class="about-hero">
-    <div class="about-img">
-      <img src="juff-manda-portrait.jpg" alt="Juff Manda, Digital Department Lead at House of Brave" loading="lazy" width="460" height="575">
-    </div>
-    <div>
-      <h1 class="about-name">Japhet<br>'Juff'<br>Manda</h1>
-      <span class="about-title">Digital Department Lead · ExCo Member</span>
-      <div class="about-badge" aria-label="House of Brave, Brave Group">House of Brave · Brave Group</div>
-      <div class="about-body">
-        <p>I lead the digital department at House of Brave. That means setting strategic direction, building the systems that govern how work is produced, shaping the quality of what comes out, and developing the people who deliver it. I sit on the executive committee and report directly to the CEO.</p>
-        <p>My current remit spans enterprise and institutional clients including SodaStream, All Gold, Purity, Mrs Balls, MasterChef South Africa, GEPF, Nedbank, and the Wits Business School. Across those accounts I am involved in strategy, creative direction and evaluation, content system design, influencer programming, and how the team operates.</p>
-        <span class="about-aside">Where I started</span>
-        <p>I came up through execution. Earlier in my career I worked in content creation, art direction, and digital production across brands including Telkom, Huawei, Garnier, Dark and Lovely, and SANRAL. That background matters. It means I understand how work is actually made, what makes it difficult to produce at volume, and where the quality tends to break down under pressure.</p>
-        <p>I also founded and ran Rosetta Digital as Managing Director, where I owned the business, the client relationships, and the output from strategy through to delivery. That experience shaped how I think about building and running a digital operation.</p>
-        <span class="about-aside">On leading teams</span>
-        <p>The part of the job I care about most, beyond the strategy itself, is the team. Building people's capabilities, giving them clarity on what good looks like, and creating a structure where they can do their best work is how you scale impact beyond what any one person can produce. That is what leading a digital department actually means.</p>
-        <span class="about-aside">On this market</span>
-        <p>The South African market is the starting point of my thinking, not a final adjustment. I stay close to how content performs on local platforms, what different communities respond to, and what it takes for a brand to feel like it belongs here rather than like it was adapted from somewhere else.</p>
-      </div>
-    </div>
-  </article>
-</div>
-
-<!-- ============================================================
-     WORK PAGE
-     ============================================================ -->
-<div class="pg" id="pg-work">
-  <section class="work-hero">
-    <p class="sec-tag">Selected work and involvement</p>
-    <h1 class="sec-h">Close to the work.<br><em>At every level.</em></h1>
-    <p class="sec-body">Strategy, creative involvement, team direction, and platform oversight. Each engagement below shows where and how I was involved. A significant portion of ongoing work operates under confidentiality and is available on request.</p>
-  </section>
-
-  <section class="cs-block" aria-label="Case study: MasterChef South Africa">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">MasterChef South Africa · Season 6</span>
-    </div>
-    <h2 class="cs-title">Building a content system<br>for a live broadcast brand.</h2>
-    <figure>
-      <img class="cs-img" src="masterchef_season_6_kv_launch.jpg" alt="MasterChef South Africa Season 6 official launch key visual, judges and branding on e.tv" loading="lazy" width="1100" height="420">
-      <figcaption style="font-size:11px;color:var(--h);font-family:var(--syne);letter-spacing:0.04em;margin-top:0.5rem">MasterChef South Africa Season 6. Image: Primedia Studios / e.tv. All rights reserved.</figcaption>
-    </figure>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic lead and creative oversight. I set the content direction, shaped the communication framework, evaluated creative ideas against the strategy, and directed how the brand showed up across social platforms throughout the broadcast season.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">MasterChef South Africa runs across a broadcast cycle with fixed air dates and an audience that spans different demographics with different relationships to food. The challenge was to build a content system that held engagement across the full broadcast window, not spike at launch and collapse by week three.</span>
-      <span class="cs-k">The problem</span><span class="cs-v">Live broadcast brands are often treated as events rather than ongoing conversations. A content calendar built around the broadcast schedule alone misses the points of genuine audience interest that exist between episodes. Ideas were being evaluated on novelty rather than strategic fit.</span>
-      <span class="cs-k">What was built</span><span class="cs-v">A content framework developed from mapping the audience's actual relationship with food culture in South Africa. The framework defined communication categories beyond the episode itself: the cast as people, the food culture behind the dishes, and the moments that generate participation rather than passive viewing. Creative ideas were evaluated against these categories, not instinct.</span>
-      <span class="cs-k">Creative direction</span><span class="cs-v">I shaped the hooks and angles that gave the content team clear criteria for what was worth making. This reduced the time spent debating individual pieces and increased the consistency of quality across the season.</span>
-      <span class="cs-k">The point</span><span class="cs-v">A broadcast window is not a content strategy. This worked because it treated the show as the context, the audience as the subject, and gave the team a framework they could use to make better decisions independently.</span>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="https://www.instagram.com/sa_masterchef/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @sa_masterchef on Instagram &#8599;
-      </a>
-    </div>
-  </section>
-
-  <section class="cs-block" aria-label="Case study: GEPF">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">GEPF · Government Employees Pension Fund</span>
-    </div>
-    <h2 class="cs-title">Digital strategy and team<br>structure for a public institution.</h2>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic lead, team structure design, and content system oversight. I built the framework that governed the digital operation, defined the team roles and workflow, and stayed involved in creative direction and platform performance review.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">GEPF needed a digital presence that could communicate clearly with a large and diverse membership base. The existing approach lacked consistency, strategic direction, and any governing logic for what got published and why.</span>
-      <span class="cs-k">The problem</span><span class="cs-v">Public institutions often default to broadcast communication. Content goes out because it needs to, not because it is designed to reach anyone in particular. The team had no clear criteria for what good looked like or what the digital presence was actually for.</span>
-      <span class="cs-k">What was built</span><span class="cs-v">A digital strategy framework built around what members actually need to know and when. Channel logic, content categories, a posting structure aligned to communication priorities, and a workflow that the team could operate with clarity. Team roles were defined to match the output requirements.</span>
-      <span class="cs-k">Team and capability</span><span class="cs-v">Part of the work involved building the team's confidence in making strategic decisions about content. That is not a training exercise. It happens through consistent direction, clear feedback on what is working and what is not, and giving people enough context to make better calls themselves.</span>
-    </div>
-  </section>
-
-  <section class="cs-block" aria-label="Case study: Tiger Brands portfolio">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">Tiger Brands · All Gold, Mrs Balls, Purity</span>
-    </div>
-    <h2 class="cs-title">Platform strategy and creative<br>oversight across an FMCG portfolio.</h2>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic and creative oversight across multiple brands within the portfolio. Platform strategy, content direction, influencer programme structure, and creative evaluation. Each brand required a distinct positioning while sharing operational infrastructure.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">Managing multiple FMCG brands simultaneously means the systems need to be strong enough that the team can operate independently while the strategic lead stays close enough to catch quality issues before they go out.</span>
-      <span class="cs-k">Creative involvement</span><span class="cs-v">I evaluated creative ideas, shaped hooks and campaign angles, and provided direction on what the content needed to do differently on each platform. The same idea rarely works the same way on Instagram, Facebook, and TikTok. Platform-specific thinking is part of the creative process, not an afterthought.</span>
-      <span class="cs-k">Influencer approach</span><span class="cs-v">Influencer programmes across the portfolio were structured around strategic fit rather than follower count. Who a brand is seen alongside in this market matters. The brief always came before the casting decision.</span>
-      <span class="cs-k">Team structure</span><span class="cs-v">A shared operational structure with brand-specific ownership built within the team. Specialists owned individual accounts but operated within a consistent framework. That is how you maintain quality at portfolio scale without a bottleneck at the top.</span>
-    </div>
-    <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1.25rem">
-      <a href="https://www.instagram.com/allgoldsa/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @allgoldsa on Instagram &#8599;
-      </a>
-      <a href="https://www.instagram.com/mrsballschutneysa/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @mrsballschutneysa on Instagram &#8599;
-      </a>
-      <a href="https://www.instagram.com/puritypromise/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @puritypromise on Instagram &#8599;
-      </a>
-    </div>
-  </section>
-
-  <div class="further">
-    <span class="further-label">Additional involvement</span>
-    <p style="font-size:14px;color:var(--m);font-weight:300;line-height:1.75">Nedbank · SodaStream · Knorrox · Wits Business School · Dermopal · Puma Energy · available on request under NDA.</p>
-    <p style="font-size:13px;color:var(--h);margin-top:0.5rem">Earlier work with Telkom, Huawei, Garnier, Dark and Lovely, and SANRAL is part of the record. Available on request.</p>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
+    <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
   </div>
 </div>
 
-<!-- ============================================================
-     METHODOLOGY PAGE
-     ============================================================ -->
-<div class="pg" id="pg-method">
-  <div class="dark-sec">
-    <div class="dark-inner">
-      <p class="sec-tag-light" style="display:flex;align-items:center;gap:10px"><span style="width:20px;height:1px;background:var(--accent);display:inline-block"></span>Methodology</p>
-      <h1 class="dark-h">How the work<br><em>gets done.</em></h1>
-      <p class="dark-body" style="max-width:540px;margin-bottom:3.5rem">A structure developed across sectors, audience types, and team sizes over more than a decade. Strategy, creative direction, and team capability are not separate concerns. They belong in the same structure.</p>
-      <div class="method-grid" role="list" aria-label="Methodology steps">
-        <div class="method-card" role="listitem"><div class="method-num">01</div><h2 class="method-name">Human truth</h2><p class="method-desc">The starting point is what is actually true about the people a brand needs to reach. Cultural literacy as much as data. What an audience is doing tells you the surface. Understanding why they do it tells you where a brand can credibly fit.</p></div>
-        <div class="method-card" role="listitem"><div class="method-num">02</div><h2 class="method-name">Strategic direction</h2><p class="method-desc">What role this brand can credibly occupy in the lives of its audience, and what it must consistently do to earn that position. This is the governing logic every subsequent decision gets tested against, including creative ideas.</p></div>
-        <div class="method-card" role="listitem"><div class="method-num">03</div><h2 class="method-name">Creative framework</h2><p class="method-desc">A framework defines what a brand communicates, to whom, in what register, and according to what criteria. It also defines what makes an idea good enough to use. Without that, creative decisions get made on instinct and reversed on preference.</p></div>
-        <div class="method-card" role="listitem"><div class="method-num">04</div><h2 class="method-name">Team, system, and workflow</h2><p class="method-desc">Structure, roles, workflow design, and AI integration. The team needs enough clarity to make good decisions without a bottleneck at the top. Building that capability in people is part of what makes an operation scalable.</p></div>
-        <div class="method-card" role="listitem"><div class="method-num">05</div><h2 class="method-name">Amplification</h2><p class="method-desc">Paid media integration and influencer programmes built on strategic fit. Creative direction on how the brand shows up in those environments. Who you are seen alongside, and what you say when you get there, both matter.</p></div>
-        <div class="method-card" role="listitem"><div class="method-num">06</div><h2 class="method-name">Data loop</h2><p class="method-desc">Performance data returns to the beginning. Reviewed to sharpen the human truth, improve the creative criteria, and build the team's collective understanding of what actually works for this audience. The system improves over time.</p></div>
+<div class="clients">
+  <p class="clients-label">Current work</p>
+  <ul class="clients-row" aria-label="Current clients">
+    <li><a class="cpill" href="https://www.gepf.co.za/" target="_blank" rel="noopener noreferrer">GEPF</a></li>
+    <li><a class="cpill" href="https://masterchefsa.tv/" target="_blank" rel="noopener noreferrer">MasterChef South Africa</a></li>
+    <li><a class="cpill" href="https://www.nedbank.co.za" target="_blank" rel="noopener noreferrer">Nedbank</a></li>
+    <li><a class="cpill" href="https://www.sodastream.co.za" target="_blank" rel="noopener noreferrer">SodaStream</a></li>
+    <li><a class="cpill" href="https://www.allgold.co.za/" target="_blank" rel="noopener noreferrer">All Gold</a></li>
+    <li><a class="cpill" href="https://www.mrsballs.com/" target="_blank" rel="noopener noreferrer">Mrs Balls</a></li>
+    <li><a class="cpill" href="https://www.purity.co.za" target="_blank" rel="noopener noreferrer">Purity</a></li>
+    <li><a class="cpill" href="https://www.wbs.ac.za" target="_blank" rel="noopener noreferrer">Wits Business School</a></li>
+    <li><a class="cpill" href="https://www.instagram.com/dermopal/" target="_blank" rel="noopener noreferrer">Dermopal</a></li>
+  </ul>
+</div>
+
+<div class="dark-sec" style="margin-top:3rem">
+  <div class="dark-inner">
+    <div class="stats" role="list" aria-label="Key statistics">
+      <div class="stat" role="listitem"><div class="stat-num">9<span>+</span></div><div class="stat-label">Years in digital leadership</div></div>
+      <div class="stat" role="listitem"><div class="stat-num">9</div><div class="stat-label">Active client brands</div></div>
+      <div class="stat" role="listitem"><div class="stat-num">6<span>+</span></div><div class="stat-label">Team members led and mentored</div></div>
+      <div class="stat" role="listitem"><div class="stat-num">1</div><div class="stat-label">Agency founded and operated</div></div>
+    </div>
+    <div class="approach-grid">
+      <div>
+        <span class="sec-tag-light">What this is</span>
+        <h2 class="dark-h">Strategy, people,<br>and the quality<br><em>of what ships.</em></h2>
+        <p class="dark-body">Most organisations confuse activity with output. They have calendars, but not frameworks. Teams, but not direction. Content, but no governing logic for why any of it is being made.</p>
+        <p class="dark-body">The work I do sits across all three layers: the strategic foundation that determines what a brand should be doing, the team and system infrastructure that determines how it gets done, and the creative involvement that determines whether what ships is actually good enough to matter.</p>
+      </div>
+      <div class="stages" aria-label="Strategic stages">
+        <div class="stage-row"><span class="stage-num">01</span><div><div class="stage-name">Human truth</div><div class="stage-desc">What is actually true about the audience this brand needs to reach.</div></div></div>
+        <div class="stage-row"><span class="stage-num">02</span><div><div class="stage-name">Strategic direction</div><div class="stage-desc">What role this brand can credibly occupy in the lives of its audience.</div></div></div>
+        <div class="stage-row"><span class="stage-num">03</span><div><div class="stage-name">Framework and creative logic</div><div class="stage-desc">The operational logic that makes every decision consistent, including the criteria that determine whether an idea is good enough to use.</div></div></div>
+        <div class="stage-row"><span class="stage-num">04</span><div><div class="stage-name">Team, system, and workflow</div><div class="stage-desc">Structure, roles, workflow design, and AI integration. The team needs to be able to run this without a decision bottleneck at every step.</div></div></div>
+        <div class="stage-row"><span class="stage-num">05</span><div><div class="stage-name">Amplification</div><div class="stage-desc">Paid media integration and influencer programmes built on strategic fit, with creative direction on how the brand shows up in those environments.</div></div></div>
+        <div class="stage-row"><span class="stage-num">06</span><div><div class="stage-name">Data loop</div><div class="stage-desc">Performance signals return to sharpen the human truth. The system improves. The team gets better at knowing what to make.</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ============================================================
-     INSIGHTS PAGE
-     ============================================================ -->
-<div class="pg" id="pg-ins">
-  <section class="ins-wrap">
-    <p class="sec-tag">Insights</p>
-    <h1 class="sec-h">Thinking <em>out loud.</em></h1>
-    <p style="font-size:14.5px;line-height:1.8;color:var(--m);font-weight:300;max-width:500px">Writing on strategy, culture, and the South African market. Some pieces published here, others on external platforms.</p>
-
-    <div class="ins-grid" style="margin-top:2rem">
-      <article class="ic" onclick="art('c6')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c6')" aria-label="Read article: Your phone is vertical. Your content is not.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&auto=format&fit=crop" alt="Vertical mobile phone content strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Content strategy</span><h2 class="ic-h">Your phone is vertical. Your content is not.</h2><p class="ic-x">Netflix, Disney Plus and Prime Video all went vertical in the first five months of 2026. At the same time. Most African brands have not noticed yet.</p><span class="ic-date">23 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('c5')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c5')" aria-label="Read article: Meta just passed Google in ad revenue. First time in history.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&auto=format&fit=crop" alt="Digital advertising and media strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Media strategy</span><h2 class="ic-h">Meta just passed Google in ad revenue. First time in history.</h2><p class="ic-x">And Celeste Ntuli winning Headliner of the Year explains exactly why attention is shifting.</p><span class="ic-date">16 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('c3')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c3')" aria-label="Read article: SA brands are drowning in data. Starving for humanity.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop" alt="Data and human insight in marketing" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Strategy</span><h2 class="ic-h">SA brands are drowning in data. Starving for humanity.</h2><p class="ic-x">The data tells us what. It has never told us why. And that gap is where most SA campaigns lose the room.</p><span class="ic-date">15 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('c2')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c2')" aria-label="Read article: Amapiano went global. No brand strategy built that.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80&auto=format&fit=crop" alt="Amapiano music and South African culture" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Culture</span><h2 class="ic-h">Amapiano went global. No brand strategy built that.</h2><p class="ic-x">Community did. And that is the most important marketing lesson in SA right now.</p><span class="ic-date">14 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('c4')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c4')" aria-label="Read article: TikTok is not an entertainment app. It is a shop.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80&auto=format&fit=crop" alt="Social commerce and online shopping" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Social commerce</span><h2 class="ic-h">TikTok is not an entertainment app. It is a shop.</h2><p class="ic-x">Social commerce hit $100 billion in 2026. The scroll and the purchase now happen in the same session.</p><span class="ic-date">14 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('c1')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('c1')" aria-label="Read article: Everyone has an AI tool. Almost nobody has an AI strategy.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="AI and marketing strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">AI and systems</span><h2 class="ic-h">Everyone has an AI tool. Almost nobody has an AI strategy.</h2><p class="ic-x">Gartner says AI automation in marketing doubles to 36% by 2028. The gap between ready and not is already opening.</p><span class="ic-date">13 May 2026 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('a1')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('a1')" aria-label="Read article: Why most South African brands are producing content nobody asked for">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80&auto=format&fit=crop" alt="Social media strategy and content planning" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Strategy</span><h2 class="ic-h">Why most South African brands are producing content nobody asked for</h2><p class="ic-x">Volume is not the problem. The problem is no governing logic behind what gets published.</p><span class="ic-date">June 2025</span></div>
-      </article>
-      <article class="ic" onclick="art('a2')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('a2')" aria-label="Read article: Influencer strategy in South Africa is still being done backwards">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80&auto=format&fit=crop" alt="Influencer and brand collaboration" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Influencer</span><h2 class="ic-h">Influencer strategy in South Africa is still being done backwards</h2><p class="ic-x">Most brands choose a creator and then figure out what to do with them. The brief should come first.</p><span class="ic-date">May 2025</span></div>
-      </article>
-      <article class="ic" onclick="art('b1')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('b1')" aria-label="Read article: Turns out it was never Fong Kong">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80&auto=format&fit=crop" alt="Luxury brand perception and marketing" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Marketing and trade</span><h2 class="ic-h">Turns out it was never Fong Kong</h2><p class="ic-x">Most luxury goods are manufactured in China. What we actually pay for is the story, not the product. And that is where marketing wins or loses.</p><span class="ic-date">Apr 2025 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('a3')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('a3')" aria-label="Read article: AI does not replace strategic thinking. It exposes the absence of it.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" alt="AI circuit board and technology systems" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">AI and systems</span><h2 class="ic-h">AI does not replace strategic thinking. It exposes the absence of it.</h2><p class="ic-x">When you give AI a clear framework, it scales efficiently. When there is no framework, it scales the confusion.</p><span class="ic-date">April 2025</span></div>
-      </article>
-      <article class="ic" onclick="art('b2')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('b2')" aria-label="Read article: From Fong Kong to global giants: the rise of Chinese innovation">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=800&q=80&auto=format&fit=crop" alt="Chinese innovation and global market shifts" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Innovation and market shifts</span><h2 class="ic-h">From Fong Kong to global giants: the rise of Chinese innovation</h2><p class="ic-x">What once started as a joke about knockoffs has evolved into a story of global competition. China did not just catch up. It changed the game.</p><span class="ic-date">Mar 2025 · Juff Manda</span></div>
-      </article>
-      <article class="ic" onclick="art('a4')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')art('a4')" aria-label="Read article: What brands get wrong about speaking to South African audiences">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&auto=format&fit=crop" alt="South African culture and community" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Culture</span><h2 class="ic-h">What brands get wrong about speaking to South African audiences</h2><p class="ic-x">Localisation is not a translation step at the end of the process. It is the process.</p><span class="ic-date">March 2025</span></div>
-      </article>
-    </div>
-
-    <p class="ins-section-label">Press and mentions</p>
-    <div>
-      <a href="https://www.bizcommunity.com/article/decoding-gen-z-the-first-post-brand-generation-174106a" target="_blank" rel="noopener noreferrer" class="press-row">
-        <div class="press-source">Bizcommunity</div>
-        <div class="press-detail">
-          <p class="press-title">Decoding Gen Z: The first post-brand generation</p>
-          <p class="press-desc">A piece published through Brave Group on how Gen Z relates to brands differently from every generation before them, and what that means for digital strategy.</p>
-        </div>
-        <div class="press-arrow" aria-hidden="true">&#8599;</div>
-      </a>
-      <a href="https://dailyentrepreneur.co.za/fnb-app-of-the-year-winner-announced/" target="_blank" rel="noopener noreferrer" class="press-row">
-        <div class="press-source">Daily Entrepreneur</div>
-        <div class="press-detail">
-          <p class="press-title">FNB App of the Year Award 2025</p>
-          <p class="press-desc">Served as a judge for the FNB App of the Year Award, one of the continent's premier celebrations of app development and digital innovation.</p>
-        </div>
-        <div class="press-arrow" aria-hidden="true">&#8599;</div>
-      </a>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================================
-     ARTICLE PAGE
-     ============================================================ -->
-<div class="pg" id="pg-art">
-  <div class="art-wrap">
-    <button class="art-back" onclick="go('ins')">&larr; Back to Insights</button>
-    <div id="art-out"></div>
+<section class="light-sec">
+  <p class="sec-tag">South Africa</p>
+  <h2 class="sec-h">The context is the <em>starting point,</em><br>not the complication.</h2>
+  <div class="sec-body">
+    <p>Strategies built for a generic South African consumer tend to reach no one in particular. Different communities relate to brands differently. A hook that works in one context lands flat in another. That is not a detail. It is the work.</p>
+    <p>Staying close to how content actually performs on South African platforms, what audiences are responding to, and what is earning attention in specific cultural contexts is part of what keeps strategy grounded. The data tells you what is happening. Understanding this market tells you why.</p>
   </div>
-</div>
-
-<!-- ============================================================
-     WORK WITH ME PAGE
-     ============================================================ -->
-<div class="pg" id="pg-wwm">
-  <section class="wwm-hero">
-    <div class="wwm-inner">
-      <h1 class="wwm-h">Working<br><em>together.</em></h1>
-      <p class="wwm-sub">The organisations I work well with have a gap somewhere in the chain between strategy, output quality, and team capability. That is where this work sits.</p>
-    </div>
-  </section>
-
-  <section class="offers" aria-label="Services offered">
-      <div class="offer-grid">
-        <div class="offer"><div class="offer-num">01</div><h2 class="offer-name">Digital and social strategy</h2><p class="offer-desc">For organisations that need a governing framework, not a content plan. Audience insight, strategic direction, channel logic, creative criteria, and the document that keeps the work coherent when briefs change and teams turn over.</p></div>
-        <div class="offer"><div class="offer-num">02</div><h2 class="offer-name">Creative direction and content oversight</h2><p class="offer-desc">For brands where the strategy exists but the output is not landing. Idea evaluation, hook development, platform-specific creative direction, and involvement in what gets made and why. Close to the work without replacing the team.</p></div>
-        <div class="offer"><div class="offer-num">03</div><h2 class="offer-name">Team building and capability development</h2><p class="offer-desc">For digital operations that need structure, clearer roles, and people who can make better decisions independently. Team design, workflow development, mentorship, and building the shared understanding of what good looks like.</p></div>
-        <div class="offer"><div class="offer-num">04</div><h2 class="offer-name">Senior strategic oversight</h2><p class="offer-desc">Ongoing strategic leadership applied to digital and social operations at Head of Department level. Inside an existing team structure or as a defined external scope. Strategy, creative accountability, and team direction combined.</p></div>
-        <div class="offer"><div class="offer-num">05</div><h2 class="offer-name">Influencer strategy</h2><p class="offer-desc">For brands that want influencer programmes built on strategic and creative logic rather than reach metrics. Partner selection, collaboration structure, brief development, creative direction, and performance accountability.</p></div>
-        <div class="offer"><div class="offer-num">06</div><h2 class="offer-name">Content system design</h2><p class="offer-desc">For brands producing content at volume without a clear operational structure. Framework development, workflow design, team configuration, platform logic, and AI integration that scales delivery without scaling confusion.</p></div>
-      </div>
-  </section>
-
-  <div class="not-box">
-    <div class="not-inner">
-      <span class="not-label">What I do not take on</span>
-      <p class="not-text">If the strategy, systems, and team are all functioning and the need is purely for content production or channel management, this is not the right fit. The value here sits at the level of direction, quality oversight, and capability building. If what you actually need is hands-on production, I will say so directly and point you somewhere more useful.</p>
-    </div>
-  </div>
-
-  <div class="contact-band">
-    <div class="wwm-inner">
-      <h2 class="contact-heading">Get in touch.</h2>
-      <p class="contact-sub">Tell me what you are working on and where the operation is not performing as it should. Strategy, creative, team, or a combination of all three. If there is a fit, we will speak. Engagements are taken on selectively.</p>
-
-      <div class="contact-cta-row">
-        <!-- Email: address assembled by JS to deter scrapers -->
-        <a class="email-btn" id="email-cta" href="#" aria-label="Send email to Juff Manda" onclick="openMail(event)">Send an email</a>
-        <a class="li-link" href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer">
-          <svg class="li-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Connect on LinkedIn
-        </a>
-      </div>
-
-      <p class="contact-note">Based in Johannesburg, South Africa. Select remote engagements considered.</p>
-    </div>
-  </div>
-</div>
+</section>
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-copy">&copy; 2026 Juff Manda</span>
     <nav class="footer-links" aria-label="Footer navigation">
-      <button class="footer-link" onclick="go('home')">Home</button>
-      <button class="footer-link" onclick="go('work')">Work</button>
-      <button class="footer-link" onclick="go('ins')">Insights</button>
-      <button class="footer-link" onclick="go('wwm')">Work with me</button>
+      <a href="/" class="footer-link">Home</a>
+      <a href="/work/" class="footer-link">Work</a>
+      <a href="/insights/" class="footer-link">Insights</a>
+      <a href="/work-with-me/" class="footer-link">Work with me</a>
       <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         LinkedIn
@@ -1021,235 +194,6 @@ body{padding-top:58px}
   </div>
 </footer>
 
-<script>
-/* ============================================================
-   ROUTE MAP , hash → page id + meta
-   ============================================================ */
-const ROUTES={
-  '':           {id:'home',
-                  title:'Juff Manda | Digital Strategy, Creative Direction and Team Leadership',
-                  desc:'Juff Manda leads the digital department at House of Brave, Johannesburg. He drives digital strategy, shapes creative direction, builds teams, and stays close to how content performs across South African platforms.',
-                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
-  'about':      {id:'about',
-                  title:'About Juff Manda | Digital Department Lead and ExCo Member at House of Brave',
-                  desc:'Juff Manda leads the digital department at House of Brave as an ExCo Member reporting to the CEO. Nine years across digital strategy, creative direction, team leadership, and platform performance for enterprise South African brands.',
-                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
-  'work':       {id:'work',
-                  title:'Selected Work | Juff Manda · MasterChef SA, GEPF, Nedbank, Tiger Brands and More',
-                  desc:'Strategic leadership, creative direction, and team involvement across MasterChef South Africa Season 6, GEPF, Nedbank, SodaStream, All Gold, Mrs Balls, Purity, and Wits Business School.',
-                  img:'https://www.juffmanda.com/masterchef_season_6_kv_launch.jpg'},
-  'methodology':{id:'method',
-                  title:'Methodology | Juff Manda · How Digital Strategy Gets Built and Executed',
-                  desc:'A six-stage methodology: human truth, strategic direction, creative framework, team and workflow design, amplification through paid media and influencer programmes, and the data loop that sharpens everything over time.',
-                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
-  'insight':    {id:'ins',
-                  title:'Insights | Juff Manda · Strategy, Culture and the South African Digital Market',
-                  desc:'Writing on digital strategy, creative direction, influencer marketing, AI in marketing workflows, social commerce, and the South African market by Juff Manda. Updated weekly.',
-                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'},
-  'work-with-me':{id:'wwm',
-                  title:'Work With Me | Juff Manda · Digital Strategy, Creative Direction and Team Leadership',
-                  desc:'Engage Juff Manda for digital and social strategy, creative direction and content oversight, team capability development, influencer strategy, content system design, or senior digital oversight. Johannesburg-based. Select remote engagements considered.',
-                  img:'https://www.juffmanda.com/juff-manda-portrait.jpg'}
-};
-
-/* ============================================================
-   ARTICLE DATA
-   ============================================================ */
-const arts={
-  a1:{slug:'why-south-african-brands-produce-content-nobody-asked-for',
-      tag:'Strategy',date:'June 2025',
-      title:'Why most South African brands are producing content nobody asked for',
-      desc:'Volume is not the problem. The problem is no governing logic behind what gets published.',
-      img:'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>There is a particular kind of busyness in South African marketing right now. Brands are posting daily. Reels are being produced. Influencers are being briefed. The calendars are full. And yet, when you ask what all of it is building towards, the answer is often something close to silence.</p><h3>The volume problem is a thinking problem</h3><p>Most brands arrive at content production through a backwards process. Someone decides the brand needs to be more active on social media. A monthly calendar is built. Posts go out. The only question being asked is what to post next week, not what the brand is trying to do over the next twelve months. The result is content that is technically competent and strategically empty.</p><h3>A framework changes the question</h3><p>The shift happens when you stop asking what to post and start asking what the brand needs to mean to its audience. Once you have that understanding, a framework gives the team clear criteria for what to make and what to leave out. Ideas are evaluated on whether they serve the strategic intent, not on whether they seem on trend.</p><p>Brands that operate this way produce less content overall and reach their audience more consistently. The calendar becomes a consequence of the strategy, not a replacement for it.</p>`},
-  a2:{slug:'influencer-strategy-south-africa-done-backwards',
-      tag:'Influencer',date:'May 2025',
-      title:'Influencer strategy in South Africa is still being done backwards',
-      desc:'Most brands choose a creator and then figure out what to do with them. The brief should come first.',
-      img:'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>The standard influencer process in South Africa goes roughly like this. A brand decides it wants to work with influencers. Someone pulls a list of names based on follower count. A shortlist is approved. Creators are briefed. Content goes live. The brief is usually the last thing written and the least considered part of the process.</p><h3>Reach is not a strategy</h3><p>Follower count tells you how many people a creator can potentially reach. It tells you almost nothing about whether those people are the right people, or whether the association makes sense given what your brand is trying to mean. In a market as culturally specific as South Africa, this matters more than most brands acknowledge. Industry data consistently shows that engagement rate and audience alignment outperform raw reach as predictors of campaign performance.</p><h3>The brief comes first</h3><p>Influencer strategy done properly works in the opposite direction. You start with what the brand needs to communicate and to whom. You define the kind of voice that can carry that message credibly. You build the selection criteria from there. The brief is then built for that specific partnership, not adapted from a generic template. The MMA's influencer marketing guidelines put it plainly: the creator should fit the strategy, not the other way around.</p>`},
-  a3:{slug:'ai-does-not-replace-strategic-thinking',
-      tag:'AI and systems',date:'April 2025',
-      title:'AI does not replace strategic thinking. It exposes the absence of it.',
-      desc:'When you give AI a clear framework, it scales efficiently. When there is no framework, it scales the confusion.',
-      img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>Every marketing team in South Africa is either using <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-survey-reveals-marketing-leaders-expect-ai-automation-of-marketing-work-to-double-to-36-percent-by-2028" target="_blank" rel="noopener noreferrer">AI tools</a> or being asked why they are not. The more important question is what AI reveals about how a team was already thinking.</p><h3>A tool that amplifies what is already there</h3><p>When you give an AI tool a clear strategic framework, it works efficiently. When there is no framework, the tool still produces output. It just scales the confusion. You get more content that sounds like it could belong to any brand, produced faster, published more frequently.</p><h3>Where AI actually belongs in the workflow</h3><p>The teams I work with use AI to handle the tasks that do not require human judgement: adapting approved copy for different platforms, generating first-draft variations within defined parameters, processing data sets. What AI does not do is decide what a brand should stand for, or make the call on whether an idea is worth producing. Those decisions require cultural literacy and strategic clarity. Harvard Business Review's ongoing AI coverage makes the same point, the organisations seeing returns from AI are the ones that treated it as an execution accelerator, not a strategy replacement.</p>`},
-  a4:{slug:'what-brands-get-wrong-about-south-african-audiences',
-      tag:'Culture',date:'March 2025',
-      title:'What brands get wrong about speaking to South African audiences',
-      desc:'Localisation is not a translation step at the end of the process. It is the process.',
-      img:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>There is a version of South African marketing that treats this country as one audience with minor regional variations. That version produces work that is broadly inoffensive and rarely remembered.</p><h3>The localisation myth</h3><p>Most brands treat localisation as a step that happens at the end of the process. The strategy is built, the campaign is conceptualised, and then someone adds vernacular copy before it goes live. The result is work that feels adapted rather than authored. Genuine cultural fluency is not an adaptation. It is a starting point. <a href="https://www.brandsouthafrica.com/" target="_blank" rel="noopener noreferrer">Brand South Africa's research</a> on how different communities relate to messaging consistently shows that authentic cultural relevance outperforms translated relevance every time.</p><h3>The practical consequence</h3><p>Brands that start with genuine cultural understanding build communication that accumulates. Brands that start with assumptions and localise at the end produce work that is always slightly off. Audiences notice. They may not articulate it, but they respond to it. Or they do not respond at all. The South African multicultural marketing conversation has been happening for years. Brands that have not entered it yet are not just behind, they are invisible to large sections of the market.</p>`},
-  b1:{slug:'turns-out-it-was-never-fong-kong',
-      author:'Juff Manda',tag:'Marketing and trade',date:'April 2025',
-      title:'Turns out it was never Fong Kong',
-      desc:'Most luxury goods are manufactured in China. What we actually pay for is the story, not the product.',
-      img:'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>When we talk about luxury brands and the high-end labels we associate with the best quality and exclusivity, there is an underlying truth that often gets overlooked. Most of these luxury items are made in China. Yes. Many of the products we pay thousands for are manufactured in Chinese factories, and yet they carry price tags that make us think they came from some European workshop.</p><h3>The real cost of production</h3><p>The cost of production in China is so low compared to what we pay at retail, it is almost laughable. A luxury handbag that costs roughly five dollars to produce in a Chinese factory can end up on a shelf with a price tag of thousands. The real difference is not the craftsmanship. It is the logo. And what the logo represents. Business of Fashion has explored this tension extensively, the gap between where something is made and what it is priced at is almost entirely a marketing construction.</p><h3>Marketing shapes what we believe things are worth</h3><p>It all comes down to marketing. Marketing is not just about promoting a product. It is about convincing people that something is worth more than its production cost. Growing up, I believed, as many of us did, that luxury brands were inherently superior. What I later understood was that what I was actually paying for was not the craftsmanship. It was the story behind the brand. Perception, not production, is what commands the premium.</p><p>Brands establish themselves as exclusive over time. They craft a narrative, build a reputation, and use advertising to reinforce the idea that owning their product is a mark of status. Harvard Business Review's branding research shows that perceived value and actual quality are almost entirely decoupled in the luxury segment. That is the true power of marketing. And that is where the game is won or lost.</p>`},
-  b2:{slug:'from-fong-kong-to-global-giants-chinese-innovation',
-      author:'Juff Manda',tag:'Innovation and market shifts',date:'March 2025',
-      title:'From Fong Kong to global giants: the rise of Chinese innovation',
-      desc:'What once started as a joke about knockoffs has evolved into a story of global competition.',
-      img:'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>Growing up in South Africa, across Kasi and the suburbs alike, there was a word most of us knew: Fong Kong. It described knockoffs, counterfeits, anything that looked like the real thing but was not. Chinese-made products were the primary target of that label.</p><h3>The shift nobody fully saw coming</h3><p>Fast forward to now and the Fong Kong label does not fit anymore. Not because we stopped caring about quality, but because Chinese manufacturing stopped being the shorthand for low quality. Look at the vehicle market. Brands like <a href="https://www.haval.co.za/" target="_blank" rel="noopener noreferrer">Haval</a>, <a href="https://www.omoda.co.za/" target="_blank" rel="noopener noreferrer">Omoda</a>, and Jaecoo are serious contenders. They are not knockoffs of anything. They are originals. And they are competitive on both price and quality.</p><p>The tech picture is the same. <a href="https://consumer.huawei.com/za/" target="_blank" rel="noopener noreferrer">Huawei</a>, which many once dismissed as a second-tier brand, became a global giant. I worked as Senior Trainer in the creative and retail division at Huawei in 2019. I saw from the inside how far they had come, and how quickly they were moving.</p><h3>What this means for anyone thinking about markets</h3><p>The rise of Chinese brands is not just an interesting story about global trade. It is a lesson in how quickly a market position can shift. McKinsey's analysis of Chinese brand globalisation maps exactly this trajectory, from price-competitive copycats to category-defining originals. The labels we attach to countries of origin, to price points, to brands we consider aspirational versus aspirational alternatives, those labels are not permanent. They are a function of what the market has decided to believe at a given moment.</p>`},
-  c1:{slug:'everyone-has-an-ai-tool-almost-nobody-has-an-ai-strategy',
-      author:'Juff Manda',tag:'AI and systems',date:'13 May 2026',
-      title:'Everyone has an AI tool. Almost nobody has an AI strategy.',
-      desc:'Gartner says AI automation in marketing doubles to 36% by 2028. The gap between who is ready and who is not is already opening.',
-      img:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>This week <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-survey-reveals-marketing-leaders-expect-ai-automation-of-marketing-work-to-double-to-36-percent-by-2028" target="_blank" rel="noopener noreferrer">Gartner confirmed</a> that AI automation in marketing is on track to double to 36% by 2028. The number sounds impressive. What it does not tell you is how many of those teams have a strategy that the AI is actually serving.</p><h3>The tool is not the problem</h3><p>The Super Bowl this year featured the first AI-generated national ad. The conversation that followed was almost entirely about the technology. Sam Altman and Anthropic publicly disagreed about it on social media. Sides were taken. But almost nobody asked the only question that actually matters: was the strategy behind it any good?</p><p>That is the pattern. The industry fixates on the tool and skips the question the tool is supposed to answer.</p><h3>What the data actually shows</h3><p><a href="https://www.growthloop.com/resources/blogs/new-research-marketing-s-ai-era-has-a-data-problem" target="_blank" rel="noopener noreferrer">GrowthLoop</a> released research showing that 87% of marketers are using AI, but only 23% can link their AI activity to measurable outcomes. That gap is not a technology problem. It is a strategy problem. Teams are running AI at the execution layer while the strategy layer stays broken. The result is faster content, faster campaigns, and faster confirmation that the brief was wrong from the start.</p><p>At POSSIBLE 2026, LUMA Partners described the AI shift as tectonic rather than incremental. The distinction matters: tectonic change does not reward the teams moving fastest. It rewards the teams moving with the clearest direction.</p><h3>Automation rewards clarity</h3><p>Heinz did not stumble into cultural relevance. They had a framework that told them when to move and how fast. AI works the same way. <a href="https://www.meta.com/business/ads/" target="_blank" rel="noopener noreferrer">Meta</a>, <a href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">Google</a>, and <a href="https://business.linkedin.com/marketing-solutions" target="_blank" rel="noopener noreferrer">LinkedIn</a> have all shifted ad execution into AI-driven systems this year. The brands winning are not the ones with the most access. They are the ones with clean data, sharp creative, and a clear brief going in.</p><p>Speed without direction is just expensive. GrowthLoop's research also found that 77% of winning experiments fail when scaled. Moving faster into the wrong thing is not a competitive advantage. It is a more efficient way to confirm a bad decision.</p><h3>What AI-ready actually looks like</h3><p>I have watched teams celebrate AI adoption while their strategy stayed stuck. New tools. Same broken brief. Same vague objective dressed in better-looking output. Ryan Coogler did not make Sinners by working things out as he went. He had a clear vision, a sharp framework, and then used every tool available to execute it precisely. That is what an AI-ready marketing team looks like. Not the team with the most tools. The team that knows exactly what they are trying to do before they open any of them.</p><p>The question worth sitting with: what is the one strategic question your team cannot answer clearly right now? That is where to start. Not the tools shortlist.</p>`},
-  c2:{slug:'amapiano-went-global-no-brand-strategy-built-that',
-      author:'Juff Manda',tag:'Culture',date:'14 May 2026',
-      title:'Amapiano went global. No brand strategy built that.',
-      desc:'Community did. And that is the most important marketing lesson in SA right now.',
-      img:'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>Nobody briefed <a href="https://open.spotify.com/artist/3qeAkyAHkDRbtVJiVXkxGC" target="_blank" rel="noopener noreferrer">Kabza De Small</a> on a target audience. Nobody ran a focus group before the log drum dropped. A community loved something deeply enough to share it, and that is how amapiano moved from Soweto backyards to global playlists. Brands spend millions trying to replicate that. Most of them miss it by the same margin, every time.</p><h3>SA's next cultural export is already building without you</h3><p><a href="https://www.okayafrica.com/" target="_blank" rel="noopener noreferrer">OkayAfrica</a> named lekompo and Bacardi house as South Africa's next export-ready sounds in 2026. Both grew from specific communities, not marketing campaigns. The <a href="https://www.mmaglobal.com/" target="_blank" rel="noopener noreferrer">MMA SA Next Conference</a> this year in Sandton put one central question on the table: how do brands align with culture before it peaks, not after? That timing is everything.</p><p>The brands that show up only when something trends have already missed it. Amapiano did not need a media plan. Your brand does. Culture moves on feel. Your strategy needs the framework to act on that feeling quickly, before the window closes.</p><h3>Proximity is not a campaign decision</h3><p>I watched amapiano go from Soweto backyards to global playlists in real time. I also watched brands arrive late, spend big, and miss the moment completely. By the time the campaign was approved, the community had already moved on.</p><p>Cultural relevance is not something you manufacture. You cannot engineer it from the outside looking in. What you can do is earn a place inside the community before you need it to work for you. The brands that figure this out are in the room before the campaign brief exists. The ones that do not are always chasing a moment that has already passed.</p><h3>The next sound is already there</h3><p>The next cultural export out of South Africa is already building somewhere right now. A Soweto garage. A Durban basement. A WhatsApp group that nobody in a boardroom has heard of. The question is not whether it will surface. It will. The question is whether your brand is close enough to the people to hear it moving before it peaks, or whether you are still waiting for the trend report to tell you what the street already knew six months ago.</p>`},
-  c3:{slug:'sa-brands-drowning-in-data-starving-for-humanity',
-      author:'Juff Manda',tag:'Strategy',date:'15 May 2026',
-      title:'SA brands are drowning in data. Starving for humanity.',
-      desc:'The data tells us what. It has never told us why. And that gap is where most SA campaigns lose the room.',
-      img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop',
-      body:`<p><a href="https://www.penquin.co.za/" target="_blank" rel="noopener noreferrer">Penquin</a>'s strategy director said something this week in <a href="https://themediaonline.co.za/" target="_blank" rel="noopener noreferrer">The Media Online</a> that is the most honest thing written about South African marketing in months: SA brands are drowning in data and starving for humanity. It landed because it is true in almost every planning room I have been in.</p><p>We sit in rooms full of dashboards. And somehow still miss the person we are supposed to be talking to. The data tells us what. It has never told us why.</p><h3>What the numbers actually confirm</h3><p><a href="https://www.adobe.com/creativecloud/design/discover/creative-trends.html" target="_blank" rel="noopener noreferrer">Adobe's 2026 Creative Trends Report</a> found that 70% of South African consumer decisions are driven by emotion, not logic. <a href="https://www.caxton.co.za/" target="_blank" rel="noopener noreferrer">Caxton Media</a>'s research this year gave it a name: connectioneering, engineering connection through instantly relatable, shared moments. The brands winning in this market are not the ones with the biggest data sets. They are the ones closest to the lived experience of their audience.</p><p>That distinction is critical. Data tells you what happened. Culture tells you what matters. The number tells you how many. The human truth tells you why they care.</p><h3>The brief comes before the dashboard</h3><p>Lead with observation, not metrics. Ask what is actually happening in your audience's life before you open the dashboard. The insight lives beneath the percentage.</p><p>The best briefs I have ever worked on started with a human observation, not a metric. Not a target audience description. An actual truth about how these people live. What they worry about on a Monday morning. What they celebrate on a Friday night. That is the brief. The data comes after, to validate and sharpen, not to generate the idea in the first place.</p><h3>Cultural proximity is a competitive advantage</h3><p>The brand closest to how its audience actually lives will always outperform the one closest to its own data. That is not a soft, feel-good principle. It is a practical competitive edge in a market as culturally specific as <a href="https://www.brandsouthafrica.com/" target="_blank" rel="noopener noreferrer">South Africa</a>.</p><p>The gap between what the data says and what the audience actually feels is where most SA campaigns lose the room before they even get started. Closing that gap is not a research problem. It is a proximity problem. And it starts with the brief.</p>`},
-  c4:{slug:'tiktok-is-not-an-entertainment-app-it-is-a-shop',
-      author:'Juff Manda',tag:'Social commerce',date:'14 May 2026',
-      title:'TikTok is not an entertainment app. It is a shop.',
-      desc:'Social commerce hit $100 billion in 2026. The scroll and the purchase now happen in the same session.',
-      img:'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>Social commerce crossed <a href="https://www.statista.com/topics/9922/social-commerce-worldwide/" target="_blank" rel="noopener noreferrer">$100 billion in 2026</a>. The scroll and the purchase now happen in the same session, on the same screen, without the audience ever leaving the app. If your brand is still treating TikTok as an awareness channel, you are operating on the wrong mental model.</p><h3>The Beyhive figured this out years ago</h3><p>One post from Beyoncé moves product in minutes. The community mobilises, the link gets shared, stock runs out. TikTok did not invent this behaviour. It industrialised it. It gave every brand access to the same mechanic, if they are willing to show up the way the platform actually works.</p><p><a href="https://www.ipsos.com/en-us/commerce-redefined-tiktoks-role-ushering-new-era" target="_blank" rel="noopener noreferrer">Ipsos ranked TikTok</a> as the most influential platform during consumer consideration this week. 93% of TikTok users research products on the app before buying. 31% of UK online shoppers have bought directly through the app. This is not a future trend to plan for. It is your audience right now.</p><h3>Social commerce is a new purchase journey, not a new channel</h3><p>The old funnel is gone. Awareness and conversion no longer happen in separate sessions weeks apart. They happen in the same moment. A creator posts something that feels honest, the audience trusts it, and they buy, right there, without leaving the app.</p><p>Polished brand content does not convert on <a href="https://www.tiktok.com/business/en" target="_blank" rel="noopener noreferrer">TikTok</a>. Content that feels human does. Creator-native content is the new product listing. Tight communities buy together. Earn a place inside one, and the commerce follows.</p><h3>The behind-the-scenes lesson</h3><p>A brand I know spent three months on TikTok with zero traction. Then a junior team member posted one honest behind-the-scenes clip. Products sold out within 48 hours. The brand had been optimising for polish. The audience wanted personality.</p><p>The question worth asking honestly: if your brand disappeared from TikTok tomorrow, would anyone notice? That answer tells you whether you have built a presence or just a posting schedule.</p>`},
-  c5:{slug:'meta-just-passed-google-in-ad-revenue',
-      author:'Juff Manda',tag:'Media strategy',date:'16 May 2026',
-      title:'Meta just passed Google in ad revenue. First time in history.',
-      desc:'And Celeste Ntuli winning Headliner of the Year explains exactly why attention is shifting.',
-      img:'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80&auto=format&fit=crop',
-      body:`<p><a href="https://www.emarketer.com/learningcenter/guides/meta-to-surpass-google-in-digital-ad-revenues-for-first-time-ever/" target="_blank" rel="noopener noreferrer">eMarketer</a> confirmed it this week. Meta hit $243.5 billion in ad revenue in 2026, overtaking Google at $239.5 billion. It is the first time in history that Meta has come out on top. Meta is growing at 24% annually. Google is at 12%. If your media plan still treats Meta as secondary, it is already behind.</p><h3>Attention follows people, not platforms</h3><p><a href="https://www.instagram.com/celestentuli/" target="_blank" rel="noopener noreferrer">Celeste Ntuli</a> won Headliner of the Year last Saturday. She did not build that through media budgets. She showed up consistently, in her own voice, until the room had no choice but to notice. That is the same dynamic driving Meta's numbers. Personal profiles drive eight times more engagement than company pages. Individual voices beat institutional ones, every time.</p><p>The shift is not really about Meta versus Google. It is about where attention has migrated and why. People are spending time with creators, with communities, with content that feels like it comes from a person rather than a brand. <a href="https://www.meta.com/business/ads/" target="_blank" rel="noopener noreferrer">Meta</a>, through Reels, AI creative, and Advantage Plus, has built the infrastructure to monetise that attention at scale.</p><h3>The media plan that worked in 2023 does not win in 2026</h3><p>AI creative on Meta is now table stakes, not an edge. What separates winners is clean data and a sharp brief going in. Every year someone defends a Google-heavy media split in the planning meeting. In 2026 that conversation needs to be harder. The attention data is pointing somewhere else. The brands I respect are rethinking the split before their results force them to.</p><p>Cultural authority is built through consistency. Not campaigns. Not budgets. Celeste Ntuli is the proof. The media plan that won three years ago was built for a different attention landscape. Optimising the wrong split faster is not progress. It is just more expensive.</p><h3>The question that matters</h3><p>When last did you challenge your media mix rather than just optimise it? There is a difference between improving execution on a flawed strategy and questioning whether the strategy still fits the market. The numbers this week suggest it is time to ask the second question.</p>`},
-  c6:{slug:'your-phone-is-vertical-your-content-is-not',
-      author:'Juff Manda',tag:'Content strategy',date:'23 May 2026',
-      title:'Your phone is vertical. Your content is not.',
-      desc:'Netflix, Disney Plus and Prime Video all went vertical in the first five months of 2026. At the same time. Most African brands have not noticed yet.',
-      img:'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80&auto=format&fit=crop',
-      body:`<p>Open Netflix on your phone right now. There is a new tab called Clips. It is a vertical, swipeable feed of short excerpts from films and series. It <a href="https://www.broadbandtvnews.com/2026/05/01/netflix-pushes-deeper-into-mobile-with-clips-feature/" target="_blank" rel="noopener noreferrer">launched on 1 May 2026</a> and it is already live in South Africa.</p><p><a href="https://techcrunch.com/2026/03/12/disney-is-rolling-out-its-tiktok-like-verts-short-form-video-feed/" target="_blank" rel="noopener noreferrer">Disney Plus launched Verts</a> in the US in March, with global rollout planned. <a href="https://9to5mac.com/2026/05/08/prime-video-just-launched-vertical-video-inside-its-iphone-app/" target="_blank" rel="noopener noreferrer">Prime Video launched its own Clips feature</a> on 11 May 2026. Issa Rae produced the first Hollywood micro-series for TikTok. It <a href="https://www.thewrap.com/creative-content/tv-shows/issa-rae-microdrama-screen-time-ratings-viewership-tiktok-pinedrama-exclusive/" target="_blank" rel="noopener noreferrer">hit 75 million views in its first week</a>.</p><p>Netflix, Disney Plus and Prime Video all went vertical in the first five months of 2026. At the same time. And most African brands are still producing content built for landscape.</p><h3>This is not the first time we have been here</h3><p>Print moved to television. Television moved to the web. The web moved to mobile. And now mobile has moved to vertical. Every single time this shift happened, African brands scrambled to catch up. Every single time, the opportunity existed months before the panic set in. The brands that moved early built a presence before the space became crowded. The ones that waited arrived into a conversation that had already formed without them. We are at that exact moment again. Right now.</p><h3>What is actually happening</h3><p>Netflix did not add Clips because it thought vertical was an interesting experiment. It added Clips because <a href="https://variety.com/2026/digital/news/netflix-new-mobile-app-vertical-video-feed-clips-1236734258/" target="_blank" rel="noopener noreferrer">90 percent of mobile users hold their phones vertically</a> and the platform was losing discovery time to TikTok, Instagram Reels and YouTube Shorts. Disney Plus followed in March with Verts. Prime Video followed in May. Every major streaming platform is making the same structural bet at the same time. That is not a coincidence. That is a signal.</p><p><a href="https://www.thewrap.com/creative-content/tv-shows/issa-rae-microdrama-screen-time-tiktok-partnership-pinedrama/" target="_blank" rel="noopener noreferrer">Issa Rae put it plainly</a> when she announced her TikTok micro-series Screen Time: the opportunity was to tell stories that are premium and elevated, but concise and available to audiences directly. Concise. Available. Vertical. That is the brief the biggest content platforms in the world are now handing to creators.</p><h3>TVCs were built for television. What are you building for the phone?</h3><p>A TVC built for television still works on television. Nobody is saying otherwise. The question is what you are building for the screen your audience actually holds. Social media is not a distribution channel for your existing content anymore. It is its own medium, with its own language, its own format, its own attention span. Build content that is fit for the screen it will actually be seen on. That is not a creative constraint. That is just good strategy.</p><h3>The window is open. It will not stay open.</h3><p>The brands that build vertical-first content frameworks in Africa right now will own a significant advantage when the rest of the market catches up. That moment is coming. Vertical content will become the default expectation for digital content in this market within the next 18 to 24 months. The difference is you can see it coming this time.</p><p>Start producing for vertical now. Not as an experiment. As a strategic decision. Build content that works on a phone held the way your audience actually holds it. Develop a vertical content framework. Build the muscle before the whole market wakes up. Africa always catches up. The question is whether your brand is ready when it does.</p>`}
-};
-
-/* slug → art key lookup */
-const slugMap={};
-Object.keys(arts).forEach(k=>{ slugMap[arts[k].slug]=k; });
-
-/* ============================================================
-   META UPDATER
-   ============================================================ */
-function setMeta(title,desc,canonical,img){
-  document.title=title;
-  document.querySelector('meta[name="description"]').setAttribute('content',desc);
-  document.querySelector('meta[property="og:title"]').setAttribute('content',title);
-  document.querySelector('meta[property="og:description"]').setAttribute('content',desc);
-  document.querySelector('meta[property="og:url"]').setAttribute('content',canonical);
-  document.querySelector('meta[name="twitter:title"]').setAttribute('content',title);
-  document.querySelector('meta[name="twitter:description"]').setAttribute('content',desc);
-  if(img){
-    document.querySelector('meta[property="og:image"]').setAttribute('content',img);
-    document.querySelector('meta[name="twitter:image"]').setAttribute('content',img);
-  }
-  let canon=document.querySelector('link[rel="canonical"]');
-  if(!canon){canon=document.createElement('link');canon.rel='canonical';document.head.appendChild(canon);}
-  canon.href=canonical;
-}
-
-/* ============================================================
-   EMAIL, assembled at runtime to deter address scrapers
-   ============================================================ */
-function openMail(e){
-  e.preventDefault();
-  var u='juffmanda',d='gmail.com';
-  var s='Let%27s%20Work%20Together';
-  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.%20Here%27s%20what%20I%27m%20working%20on%3A%0A%0A';
-  window.location.href='mailto:'+u+'@'+d+'?subject='+s+'&body='+b;
-}
-
-/* ============================================================
-   ROUTER, hash-based, GitHub Pages compatible
-   ============================================================ */
-const BASE='https://www.juffmanda.com';
-
-function navigate(hash,pushState){
-  const raw=(hash||'').replace(/^#\/?/,'').replace(/\/$/,'').trim();
-  const parts=raw.split('/');
-  const section=parts[0];
-  const sub=parts[1]||'';
-
-  if(pushState!==false){
-    const newHash='#/'+(raw||'');
-    if(location.hash!==newHash) history.pushState(null,null,raw?newHash:'#/');
-  }
-
-  /* Blog article */
-  if(section==='insight'&&sub){
-    const key=slugMap[sub];
-    if(key){ _renderArt(key,false); return; }
-  }
-
-  /* Main sections */
-  const route=ROUTES[section]||ROUTES[''];
-  _showPage(route.id);
-  const canonical=BASE+(raw?'/#/'+raw:'/');
-  setMeta(route.title,route.desc,canonical,route.img);
-}
-
-function _showPage(id){
-  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
-  document.querySelectorAll('.nl').forEach(l=>l.classList.remove('on'));
-  const page=document.getElementById('pg-'+id);
-  if(page) page.classList.add('on');
-  const link=document.querySelector('[data-p="'+id+'"]');
-  if(link) link.classList.add('on');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function _renderArt(key,push){
-  const a=arts[key];
-  const byline=a.author
-    ?`<span style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--h);display:block;margin-bottom:2.5rem">Written by ${a.author}</span>`
-    :'';
-  document.getElementById('art-out').innerHTML=
-    `<span class="art-meta">${a.tag} &middot; ${a.date}</span>`+
-    `<h1 class="art-h">${a.title}</h1>${byline}`+
-    `<img class="art-img" src="${a.img}" alt="${a.title}" loading="lazy">`+
-    `<div class="art-content">${a.body}</div>`;
-  _showPage('art');
-  const slug='insight/'+a.slug;
-  if(push!==false) history.pushState(null,null,'#/'+slug);
-  setMeta(a.title+' | Juff Manda',a.desc,BASE+'/#/'+slug,a.img);
-}
-
-/* Public API, keeps all onclick="go(...)" and onclick="art(...)" intact */
-function go(id){
-  const map={home:'',about:'about',work:'work',method:'methodology',ins:'insight',wwm:'work-with-me',art:'insight'};
-  navigate(map[id]!==undefined?map[id]:id,true);
-}
-function art(key){ _renderArt(key,true); }
-
-/* ============================================================
-   MENU HELPERS
-   ============================================================ */
-function toggleMenu(){
-  const menu=document.getElementById('mob-menu');
-  const ham=document.getElementById('ham');
-  const open=menu.classList.toggle('open');
-  ham.classList.toggle('open',open);
-  ham.setAttribute('aria-expanded',open?'true':'false');
-}
-function closeMenu(){
-  document.getElementById('mob-menu').classList.remove('open');
-  const ham=document.getElementById('ham');
-  ham.classList.remove('open');
-  ham.setAttribute('aria-expanded','false');
-}
-
-/* ============================================================
-   BOOT
-   ============================================================ */
-document.querySelectorAll('.nl').forEach(l=>l.addEventListener('click',()=>go(l.dataset.p)));
-window.addEventListener('popstate',()=>navigate(location.hash,false));
-navigate(location.hash,false);
-</script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

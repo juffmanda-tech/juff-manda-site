@@ -2,20 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Redirecting... | Juff Manda</title>
-<script>
-/* GitHub Pages 404 fallback — redirect bare paths to hash routes
-   e.g. /work  →  /#/work
-        /insight/slug  →  /#/insight/slug  */
-var path=window.location.pathname.replace(/\/$/,'');
-var seg=path.replace(/^\//,''); /* e.g. "work" or "insight/slug" */
-if(seg){
-  window.location.replace('/#/'+seg);
-}else{
-  window.location.replace('/');
-}
-</script>
-<meta http-equiv="refresh" content="0;url=/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Juff Manda</title>
+<meta name="description" content="The page you're looking for doesn't exist. Return to Juff Manda's digital strategy portfolio.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.juffmanda.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0D0D0B;
+    --off: #F5F3EE;
+    --mid: #EFEFEB;
+    --accent: #C8FF00;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: var(--off);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  .err-label {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(6rem, 20vw, 14rem);
+    line-height: 1;
+    color: var(--mid);
+    letter-spacing: -0.04em;
+    user-select: none;
+  }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    letter-spacing: -0.02em;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+  }
+  .home-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+  .home-btn:hover { opacity: 0.8; }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background: var(--off);
+    border-bottom: 1px solid var(--mid);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+</style>
 </head>
-<body></body>
+<body>
+  <nav>
+    <a href="/" class="logo">Juff Manda</a>
+  </nav>
+
+  <div class="err-label" aria-hidden="true">404</div>
+  <h1>Page not found.</h1>
+  <p>This page doesn't exist or may have moved. The work, the thinking, and the strategy are all still here — just one click away.</p>
+  <a href="/" class="home-btn">Back to home</a>
+</body>
 </html>
