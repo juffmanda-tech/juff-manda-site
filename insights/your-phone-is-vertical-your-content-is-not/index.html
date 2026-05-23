@@ -576,6 +576,9 @@ body{padding-top:58px}
   color:rgba(255,255,255,0.25);text-decoration:none;transition:color 0.2s;
 }
 .footer-li:hover{color:rgba(200,255,0,0.8)}
+
+.art-content a{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(13,13,11,0.3);transition:text-decoration-color 0.2s;}
+.art-content a:hover{text-decoration-color:var(--ink);}
 </style>
 </head>
 <body>
@@ -619,11 +622,15 @@ body{padding-top:58px}
 
 <h3>The numbers have been obvious for years</h3>
 
-<p>Mobile accounts for the overwhelming majority of social media consumption in South Africa. TikTok is portrait-native by design. Instagram Reels are portrait-native. WhatsApp Status, one of the most underestimated content surfaces in this country, is portrait-native. YouTube consumption has shifted significantly toward vertical on mobile. The screens people are actually looking at are tall, not wide.</p>
+<p>Mobile accounts for the overwhelming majority of social media consumption in South Africa. <a href="https://datareportal.com/reports/digital-2025-south-africa" target="_blank" rel="noopener noreferrer">DataReportal's 2025 South Africa report</a> shows that 99.3% of South African internet users own smartphones, and mobile connections in the country now stand at 193% of the total population. The screens people are looking at are phones. And those phones are held vertically.</p>
+
+<p>According to <a href="https://www.pwc.co.za/en/publications/entertainment-and-media-outlook.html" target="_blank" rel="noopener noreferrer">PwC's Africa Entertainment and Media Outlook</a>, video accounts for 76% of total data usage in South Africa, with TikTok and Instagram leading consumption. TikTok is portrait-native by design. Instagram Reels are portrait-native. WhatsApp Status, one of the most underestimated content surfaces in this country, is portrait-native too. <a href="https://www.ycloud.com/blog/whatsapp-statistics-for-businesses" target="_blank" rel="noopener noreferrer">96% of South African internet users are on WhatsApp</a>, making it the single most penetrated platform in the market. Its Status feature runs at 9:16. Full stop.</p>
 
 <p>And yet brands continue to brief horizontal. Shoot horizontal. Edit horizontal. Then crop the sides off and call it a Reel. The result is content that fits the platform technically but does not belong there aesthetically. Audiences feel that difference even when they cannot name it.</p>
 
 <h3>The real cost is not production. It is attention.</h3>
+
+<p><a href="https://themediaonline.co.za/2026/05/video-trends-that-matter-why-2026-changes-everything/" target="_blank" rel="noopener noreferrer">The Media Online reports that 75% of video consumption now happens on mobile</a>, with attention spans shrinking to 8.2 seconds in 2025. Vertical video has overtaken horizontal viewing globally, and South Africa is not an exception to that trend.</p>
 
 <p>When a viewer has to rotate their phone to make sense of your content, or when a vertical video shows letterbox bars because it was cropped from a wider frame, there is a moment of friction. That friction is small. But on a platform where the next piece of content is one swipe away, small friction is the difference between a view and a skip.</p>
 
@@ -631,13 +638,13 @@ body{padding-top:58px}
 
 <h3>The South African context makes this worse</h3>
 
-<p>Data costs in South Africa are still meaningful to large sections of the population. People are selective about what they watch and for how long. A piece of content that does not immediately feel relevant, in the right format, on the right platform, gets skipped faster here than in markets where data is cheaper and patience is longer.</p>
+<p>Data costs in South Africa remain meaningful to large sections of the population. <a href="https://www.meltwater.com/en/blog/2025-social-media-statistics-south-africa" target="_blank" rel="noopener noreferrer">The average South African internet user spends 3 hours 36 minutes on social media per day</a>, more than one and a half times the global average, but they are still selective about what they watch and for how long. A piece of content that does not immediately feel relevant, in the right format, on the right platform, gets skipped faster here than in markets where data is cheaper and patience is longer.</p>
 
 <p>The brands winning attention in this market are not always the ones with the biggest production budgets. They are the ones whose content feels like it was made for the feed it appears in. That is a briefing decision before it is a production decision.</p>
 
 <h3>What the fix actually looks like</h3>
 
-<p>It is not a technology problem. Phones shoot better vertical video than most brands deserve. It is a briefing problem. The solution starts when the brief specifies the platform before it specifies the idea. When the format is not an afterthought applied at the end of the process but a constraint that shapes the concept from the beginning.</p>
+<p>It is not a technology problem. Phones shoot better vertical video than most brands deserve. It is a briefing problem. The solution starts when the brief specifies the platform before it specifies the idea. When the format is a constraint that shapes the concept from the beginning, not an afterthought applied at the end.</p>
 
 <p>When the director of photography knows the primary output is 9:16 before they set up a single light. When the editor is cutting for a vertical timeline, not repurposing a horizontal edit and hoping the crop lands somewhere interesting. When the social team is in the room when the concept is being made, not receiving assets after the shoot is wrapped.</p>
 
@@ -682,10 +689,12 @@ body{padding-top:58px}
 </footer>
 <script>function toggleMenu(){
   const menu=document.getElementById('mob-menu');
-  const ham=document.getElementById('ham');
-  const open=menu.classList.toggle('open');
-  ham.classList.toggle('open',open);
-  ham.setAttribute('aria-expanded',open?'true':'false');
+  const ham=document.getElementById('mob-menu');
+  const menu2=document.getElementById('mob-menu');
+  const ham2=document.getElementById('ham');
+  const open=menu2.classList.toggle('open');
+  ham2.classList.toggle('open',open);
+  ham2.setAttribute('aria-expanded',open?'true':'false');
 }
 function closeMenu(){
   document.getElementById('mob-menu').classList.remove('open');
