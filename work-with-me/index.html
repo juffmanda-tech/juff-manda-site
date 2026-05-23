@@ -577,18 +577,52 @@ body{padding-top:58px}
 }
 .footer-li:hover{color:rgba(200,255,0,0.8)}
 
-/* Work With Me full dark page */
-body.wwm-page { background: var(--ink); }
-body.wwm-page .nav { background: var(--ink); border-bottom-color: rgba(255,255,255,0.08); }
-body.wwm-page .logo { color: var(--off); }
-body.wwm-page .nl { color: rgba(255,255,255,0.5); }
-body.wwm-page .nl:hover, body.wwm-page .nl.on { color: var(--off); }
-body.wwm-page .ham span { background: var(--off); }
-body.wwm-page .mob-menu { background: var(--ink); border-color: rgba(255,255,255,0.08); }
-body.wwm-page .mob-link { color: var(--off); }
-body.wwm-page .footer { background: #111110; border-top-color: rgba(255,255,255,0.08); }
-body.wwm-page .footer-copy, body.wwm-page .footer-link, body.wwm-page .footer-li { color: rgba(255,255,255,0.35); }
-body.wwm-page .footer-link:hover, body.wwm-page .footer-li:hover { color: var(--off); }
+/* ── Full page black override ── */
+body.wwm-page{background:var(--ink);}
+body.wwm-page .nav{background:var(--ink);border-bottom-color:rgba(255,255,255,0.08);}
+body.wwm-page .logo{color:var(--off);}
+body.wwm-page .nl{color:rgba(255,255,255,0.45);}
+body.wwm-page .nl:hover{color:var(--off);}
+body.wwm-page .nav-cta{background:var(--off);color:var(--ink);}
+body.wwm-page .nav-cta:hover{background:var(--accent);color:var(--ink);}
+body.wwm-page .nav-li svg{color:rgba(255,255,255,0.45);}
+body.wwm-page .nav-li:hover svg{color:var(--off);}
+body.wwm-page .ham span{background:var(--off);}
+body.wwm-page .mob-menu{background:#111110;border-bottom-color:rgba(255,255,255,0.08);}
+body.wwm-page .mob-link{color:rgba(255,255,255,0.6);border-bottom-color:rgba(255,255,255,0.08);}
+body.wwm-page .mob-link:hover{color:var(--off);}
+/* Hero */
+body.wwm-page .wwm-hero{background:var(--ink);}
+body.wwm-page .wwm-h{color:var(--off);}
+body.wwm-page .wwm-h em{color:rgba(255,255,255,0.25);}
+body.wwm-page .wwm-sub{color:rgba(255,255,255,0.45);}
+/* Offers section */
+body.wwm-page .offers{background:var(--ink);}
+body.wwm-page .sec-tag{color:rgba(255,255,255,0.4);}
+body.wwm-page .sec-tag::before{background:var(--accent);}
+body.wwm-page .offer-grid{background:var(--ink);}
+body.wwm-page .offer{background:#111110 !important;border:1px solid rgba(255,255,255,0.08);transition:border-color 0.2s;}
+body.wwm-page .offer:hover{background:#161614 !important;border-color:rgba(255,255,255,0.18);}
+body.wwm-page .offer-num{color:var(--accent);background:rgba(200,255,0,0.12);}
+body.wwm-page .offer-name{color:var(--off);}
+body.wwm-page .offer-desc{color:rgba(255,255,255,0.4);}
+/* Contact band */
+body.wwm-page .contact-band{background:#111110;border-top:1px solid rgba(255,255,255,0.08);}
+body.wwm-page .contact-heading{color:var(--off);}
+body.wwm-page .contact-sub{color:rgba(255,255,255,0.45);}
+body.wwm-page .contact-note{color:rgba(255,255,255,0.2);font-size:12px;margin-top:1.5rem;}
+body.wwm-page .email-btn{background:transparent;color:var(--off);border:1.5px solid rgba(255,255,255,0.25);}
+body.wwm-page .email-btn:hover{border-color:var(--accent);color:var(--accent);}
+body.wwm-page .li-link{color:rgba(255,255,255,0.45);}
+body.wwm-page .li-link:hover{color:var(--off);}
+body.wwm-page .li-icon{stroke:currentColor;}
+/* Footer */
+body.wwm-page .footer{background:#0a0a09;border-top-color:rgba(255,255,255,0.06);}
+body.wwm-page .footer-copy{color:rgba(255,255,255,0.2);}
+body.wwm-page .footer-link{color:rgba(255,255,255,0.3);}
+body.wwm-page .footer-link:hover{color:var(--off);}
+body.wwm-page .footer-li{color:rgba(255,255,255,0.3);}
+body.wwm-page .footer-li:hover{color:var(--off);}
 </style>
 </head>
 <body class="wwm-page">
@@ -638,12 +672,7 @@ body.wwm-page .footer-link:hover, body.wwm-page .footer-li:hover { color: var(--
       </div>
   </section>
 
-  <div class="not-box">
-    <div class="not-inner">
-      <span class="not-label">What I do not take on</span>
-      <p class="not-text">If the strategy, systems, and team are all functioning and the need is purely for content production or channel management, this is not the right fit. The value here sits at the level of direction, quality oversight, and capability building. If what you actually need is hands-on production, I will say so directly and point you somewhere more useful.</p>
-    </div>
-  </div>
+  
 
   <div class="contact-band">
     <div class="wwm-inner">
