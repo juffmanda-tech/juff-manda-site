@@ -11,6 +11,8 @@
 <meta property="og:title" content="Juff Manda | Digital Strategy, Creative Direction and Team Leadership · South Africa">
 <meta property="og:description" content="Juff Manda leads the digital department at House of Brave, Johannesburg. Digital strategy, creative direction, team leadership and platform performance.">
 <meta property="og:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
@@ -578,13 +580,24 @@ body{padding-top:58px}
 </head>
 <body>
 <header>
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="logo">Juff Manda</a>
-    <div class="nav-links" role="menubar"><a href="/about/" class="nl">About</a><a href="/work/" class="nl">Work</a><a href="/methodology/" class="nl">Methodology</a><a href="/insights/" class="nl">Insights</a><a href="/work-with-me/" class="nav-cta">Work with me</a><a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li-link" aria-label="LinkedIn profile"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</nav>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Go to homepage">Juff Manda</a>
+      <div class="nav-links" role="menubar">
+        <a href="/about/" class="nl" data-p="about" role="menuitem">About</a>
+        <a href="/work/" class="nl" data-p="work" role="menuitem">Work</a>
+        <a href="/methodology/" class="nl" data-p="methodology" role="menuitem">Methodology</a>
+        <a href="/insights/" class="nl" data-p="insights" role="menuitem">Insights</a>
+        <a href="/work-with-me/" class="nl" data-p="wwm" role="menuitem">Work with me</a>
+        <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li" aria-label="LinkedIn profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 </header>
 <nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
   <a href="/about/" class="mob-link" onclick="closeMenu()">About</a>
@@ -594,109 +607,117 @@ body{padding-top:58px}
   <a href="/work-with-me/" class="mob-link" onclick="closeMenu()">Work with me</a>
 </nav>
 <main>
-
 <section class="hero">
-  <div class="hero-l">
-    <p class="hero-tag">Johannesburg &middot; Digital Department Lead</p>
-    <h1 class="hero-h">Strategy, teams,<br>and work that<br><em>actually performs.</em></h1>
-    <p class="hero-sub">I lead the digital department at House of Brave, build the frameworks that govern it, shape the quality of the work coming out of it, and develop the people delivering it. ExCo Member, reporting to the CEO.</p>
-    <div class="hero-actions">
-      <a href="/work/" class="btn-primary">See the work</a>
-      <a href="/about/" class="btn-ghost">About Juff &rarr;</a>
+    <div class="hero-l">
+      <p class="hero-tag">Johannesburg · Digital Department Lead</p>
+      <h1 class="hero-h">Strategy, teams,<br>and work that<br><em>actually performs.</em></h1>
+      <p class="hero-sub">I lead the digital department at House of Brave, build the frameworks that govern it, shape the quality of the work coming out of it, and develop the people delivering it. ExCo Member, reporting to the CEO.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">See the work</button>
+        <button class="btn-ghost">About Juff &rarr;</button>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="hero-r-inner">
+        <div class="hero-badge" aria-label="Digital Department Lead, House of Brave">Digital Lead<br>House of Brave</div>
+        <div class="hero-img-wrap">
+          <img src="juff-manda-portrait.jpg" alt="Juff Manda, Digital Department Lead, House of Brave, Johannesburg" loading="eager" width="400" height="533">
+          <p class="img-overlay">Digital Lead · House of Brave · Johannesburg</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Digital Leadership</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Strategic Frameworks</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Creative Direction</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Team Building</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Content Systems</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Platform Thinking</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">Influencer Programmes</span><span class="ticker-dot">&#9679;</span>
+      <span class="ticker-item">AI Workflow Integration</span><span class="ticker-dot">&#9679;</span>
     </div>
   </div>
-  <div class="hero-r">
-    <div class="hero-r-inner">
-      <div class="hero-badge">Digital Lead<br>House of Brave</div>
-      <div class="hero-img-wrap">
-        <img src="/juff-manda-portrait.jpg" alt="Juff Manda, Digital Department Lead, House of Brave, Johannesburg" loading="eager" width="400" height="533">
-        <p class="img-overlay">Digital Lead &middot; House of Brave &middot; Johannesburg</p>
+
+  <div class="clients">
+    <p class="clients-label">Current work</p>
+    <ul class="clients-row" aria-label="Current clients">
+      <li><a class="cpill" href="https://www.gepf.co.za/" target="_blank" rel="noopener noreferrer">GEPF</a></li>
+      <li><a class="cpill" href="https://masterchefsa.tv/" target="_blank" rel="noopener noreferrer">MasterChef South Africa</a></li>
+      <li><a class="cpill" href="https://www.nedbank.co.za" target="_blank" rel="noopener noreferrer">Nedbank</a></li>
+      <li><a class="cpill" href="https://www.sodastream.co.za" target="_blank" rel="noopener noreferrer">SodaStream</a></li>
+      <li><a class="cpill" href="https://www.allgold.co.za/" target="_blank" rel="noopener noreferrer">All Gold</a></li>
+      <li><a class="cpill" href="https://www.mrsballs.com/" target="_blank" rel="noopener noreferrer">Mrs Balls</a></li>
+      <li><a class="cpill" href="https://www.purity.co.za" target="_blank" rel="noopener noreferrer">Purity</a></li>
+      <li><a class="cpill" href="https://www.wbs.ac.za" target="_blank" rel="noopener noreferrer">Wits Business School</a></li>
+      <li><a class="cpill" href="https://www.instagram.com/dermopal/" target="_blank" rel="noopener noreferrer">Dermopal</a></li>
+    </ul>
+  </div>
+
+  <div class="dark-sec" style="margin-top:3rem">
+    <div class="dark-inner">
+      <div class="stats" role="list" aria-label="Key statistics">
+        <div class="stat" role="listitem"><div class="stat-num">9<span>+</span></div><div class="stat-label">Years in digital leadership</div></div>
+        <div class="stat" role="listitem"><div class="stat-num">9</div><div class="stat-label">Active client brands</div></div>
+        <div class="stat" role="listitem"><div class="stat-num">6<span>+</span></div><div class="stat-label">Team members led and mentored</div></div>
+        <div class="stat" role="listitem"><div class="stat-num">1</div><div class="stat-label">Agency founded and operated</div></div>
+      </div>
+      <div class="approach-grid">
+        <div>
+          <span class="sec-tag-light">What this is</span>
+          <h2 class="dark-h">Strategy, people,<br>and the quality<br><em>of what ships.</em></h2>
+          <p class="dark-body">Most organisations confuse activity with output. They have calendars, but not frameworks. Teams, but not direction. Content, but no governing logic for why any of it is being made.</p>
+          <p class="dark-body">The work I do sits across all three layers: the strategic foundation that determines what a brand should be doing, the team and system infrastructure that determines how it gets done, and the creative involvement that determines whether what ships is actually good enough to matter.</p>
+        </div>
+        <div class="stages" aria-label="Strategic stages">
+          <div class="stage-row"><span class="stage-num">01</span><div><div class="stage-name">Human truth</div><div class="stage-desc">What is actually true about the audience this brand needs to reach.</div></div></div>
+          <div class="stage-row"><span class="stage-num">02</span><div><div class="stage-name">Strategic direction</div><div class="stage-desc">What role this brand can credibly occupy in the lives of its audience.</div></div></div>
+          <div class="stage-row"><span class="stage-num">03</span><div><div class="stage-name">Framework and creative logic</div><div class="stage-desc">The operational logic that makes every decision consistent, including the criteria that determine whether an idea is good enough to use.</div></div></div>
+          <div class="stage-row"><span class="stage-num">04</span><div><div class="stage-name">Team, system, and workflow</div><div class="stage-desc">Structure, roles, workflow design, and AI integration. The team needs to be able to run this without a decision bottleneck at every step.</div></div></div>
+          <div class="stage-row"><span class="stage-num">05</span><div><div class="stage-name">Amplification</div><div class="stage-desc">Paid media integration and influencer programmes built on strategic fit, with creative direction on how the brand shows up in those environments.</div></div></div>
+          <div class="stage-row"><span class="stage-num">06</span><div><div class="stage-name">Data loop</div><div class="stage-desc">Performance signals return to sharpen the human truth. The system improves. The team gets better at knowing what to make.</div></div></div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-inner"><span class="ticker-item">Digital Strategy</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Social Media</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Content Systems</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Team Leadership</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Platform Architecture</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Brand Building</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">AI Transformation</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">South Africa</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Digital Strategy</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Social Media</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Content Systems</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Team Leadership</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Platform Architecture</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">Brand Building</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">AI Transformation</span><span class="ticker-dot" aria-hidden="true">&#9679;</span><span class="ticker-item">South Africa</span><span class="ticker-dot" aria-hidden="true">&#9679;</span></div>
+  <section class="light-sec">
+    <p class="sec-tag">South Africa</p>
+    <h2 class="sec-h">The context is the <em>starting point,</em><br>not the complication.</h2>
+    <div class="sec-body">
+      <p>Strategies built for a generic South African consumer tend to reach no one in particular. Different communities relate to brands differently. A hook that works in one context lands flat in another. That is not a detail. It is the work.</p>
+      <p>Staying close to how content actually performs on South African platforms, what audiences are responding to, and what is earning attention in specific cultural contexts is part of what keeps strategy grounded. The data tells you what is happening. Understanding this market tells you why.</p>
+    </div>
+  </section>
 </div>
 
-<section class="clients">
-  <p class="clients-label">Brands I&rsquo;ve led digital for</p>
-  <ul class="clients-row">
-    <li><a href="/work/" class="cpill">GEPF</a></li>
-    <li><a href="/work/" class="cpill">Nedbank</a></li>
-    <li><a href="/work/" class="cpill">Tiger Brands</a></li>
-    <li><a href="/work/" class="cpill">MasterChef SA</a></li>
-    <li><a href="/work/" class="cpill">Wits Business School</a></li>
-    <li><a href="/work/" class="cpill">SodaStream</a></li>
-    <li><a href="/work/" class="cpill">Purity</a></li>
-    <li><a href="/work/" class="cpill">Knorrox</a></li>
-  </ul>
-</section>
-
-<div class="dark-sec">
-  <div class="dark-inner">
-    <div class="stats">
-      <div class="stat"><p class="stat-num">9<span>+</span></p><p class="stat-label">Years in digital</p></div>
-      <div class="stat"><p class="stat-num">15<span>+</span></p><p class="stat-label">Brands led</p></div>
-      <div class="stat"><p class="stat-num">4</p><p class="stat-label">Specialists in my team</p></div>
-      <div class="stat"><p class="stat-num">1</p><p class="stat-label">Standard: excellence</p></div>
-    </div>
-    <div class="approach-grid">
-      <div>
-        <span class="sec-tag-light">How I work</span>
-        <h2 class="dark-h">Frameworks first.<br><em>Then execution.</em></h2>
-        <p class="dark-body">Most digital teams fail not because the people aren&rsquo;t talented&mdash;but because there&rsquo;s no system governing how work gets made, reviewed, and measured. I build the system first.</p>
-        <p class="dark-body">That means clear RACI structures, platform-specific content frameworks, social listening as a strategic input (not a reporting exercise), and a team that understands the brief before they open a single app.</p>
-        <a href="/methodology/" class="btn-primary" style="margin-top:1.5rem;display:inline-block">See my methodology &rarr;</a>
-      </div>
-      <div class="stages">
-        <div class="stage-row"><span class="stage-num">01</span><div><p class="stage-name">Audit &amp; diagnose</p><p class="stage-desc">Understand what&rsquo;s broken, what&rsquo;s working, and what&rsquo;s missing.</p></div></div>
-        <div class="stage-row"><span class="stage-num">02</span><div><p class="stage-name">Strategy &amp; architecture</p><p class="stage-desc">Build the framework that governs everything downstream.</p></div></div>
-        <div class="stage-row"><span class="stage-num">03</span><div><p class="stage-name">Team &amp; systems</p><p class="stage-desc">Structure the people and processes to deliver at scale.</p></div></div>
-        <div class="stage-row"><span class="stage-num">04</span><div><p class="stage-name">Execute &amp; measure</p><p class="stage-desc">Ship the work. Track what matters. Iterate fast.</p></div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="light-sec">
-  <span class="sec-tag">South African market</span>
-  <h2 class="sec-h">Built for this market.<br><em>Specifically.</em></h2>
-  <div class="sec-body">
-    <p>South African consumers are not a footnote in a global strategy deck. They are multilingual, platform-fluid, culturally specific, and deeply attuned to authenticity. Amapiano didn&rsquo;t go global because a brand decided it should. Spaza culture didn&rsquo;t become a movement because of a campaign.</p>
-    <p>I work in this market every day. I know where South African audiences live online, what they skip, what they save, and what makes them trust a brand enough to engage. That&rsquo;s not instinct. It&rsquo;s nine years of work.</p>
-  </div>
-</section>
-
-
-<section class="contact-band">
-  <div class="wwm-inner">
-    <h2 class="contact-heading">Let&rsquo;s work together.</h2>
-    <p class="contact-sub">Strategy, team leadership, digital audits, platform architecture, or AI transformation. If you need someone who thinks and builds&mdash;let&rsquo;s talk.</p>
-    <div class="contact-cta-row">
-      <a href="#" onclick="openMail(event)" class="email-btn">Send an email</a>
-      <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="li-link">
-        <svg class="li-icon" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Connect on LinkedIn
-      </a>
-    </div>
-  </div>
-</section>
-
+<!-- ============================================================
+     ABOUT PAGE
+     ============================================================ -->
 </main>
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-copy">&copy; 2026 Juff Manda</span>
-    <div class="footer-links">
-      <a href="/about/" class="footer-link">About</a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/home/" class="footer-link">Home</a>
       <a href="/work/" class="footer-link">Work</a>
-      <a href="/methodology/" class="footer-link">Methodology</a>
       <a href="/insights/" class="footer-link">Insights</a>
+      <a href="/work-with-me/" class="footer-link">Work with me</a>
       <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li">
-        <svg class="li-icon" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>LinkedIn
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        LinkedIn
       </a>
-    </div>
+    </nav>
   </div>
 </footer>
 <script>function toggleMenu(){
@@ -716,7 +737,7 @@ function openMail(e){
   e.preventDefault();
   var u='juffmanda',d='gmail.com';
   var s='Let%27s%20Work%20Together';
-  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.%20Here%27s%20what%20I%27m%20working%20on%3A%0A%0A';
+  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.';
   window.location.href='mailto:'+u+'@'+d+'?subject='+s+'&body='+b;
 }</script>
 </body>
