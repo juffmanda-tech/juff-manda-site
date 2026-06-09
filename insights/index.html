@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insights | Juff Manda</title>
 <meta name="description" content="Strategy, platform behaviour, South African consumer culture, and AI. Written from the front line.">
 <link rel="canonical" href="https://www.juffmanda.com/insights/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.juffmanda.com/insights/">
 <meta property="og:title" content="Insights | Juff Manda">
+<meta property="og:description" content="Strategy, platform behaviour, South African consumer culture, and AI. Written from the front line.">
 <meta property="og:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
+<meta property="og:site_name" content="Juff Manda">
 <meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights | Juff Manda">
+<meta name="twitter:description" content="Strategy, platform behaviour, South African consumer culture, and AI. Written from the front line.">
+<meta name="twitter:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
@@ -574,163 +579,1522 @@ body{padding-top:58px}
   color:rgba(255,255,255,0.25);text-decoration:none;transition:color 0.2s;
 }
 .footer-li:hover{color:rgba(200,255,0,0.8)}
+
+/* ============================================================
+   WORK PAGE
+   ============================================================ */
+
+/* Skills section */
+.w-skills{background:var(--ink);padding:3rem var(--px)}
+@media(min-width:640px){.w-skills{padding:4.5rem var(--px)}}
+.w-skills-inner{max-width:var(--max);margin:0 auto}
+.w-skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;
+  overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:560px){.w-skills-grid{grid-template-columns:repeat(4,1fr)}}
+.w-sk{
+  background:var(--ink);
+  padding:1.35rem 1.1rem;
+  display:flex;flex-direction:column;gap:0.4rem;
+  transition:background 0.2s;
+}
+.w-sk:hover{background:#151512}
+.w-sk-icon{
+  font-size:0.9rem;color:var(--accent);
+  width:28px;height:28px;border:1px solid rgba(200,255,0,0.2);
+  border-radius:2px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:0.25rem;flex-shrink:0;
+}
+.w-sk-name{font-family:var(--syne);font-size:11px;font-weight:700;color:var(--off);letter-spacing:-0.01em}
+.w-sk-tools{font-size:11px;color:rgba(255,255,255,0.27);line-height:1.5;font-weight:300}
+
+/* Campaign section wrapper */
+.w-campaigns{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+
+/* Individual campaign */
+.w-camp{
+  border-top:1px solid var(--bd);
+  padding:2.5rem 0;
+}
+.w-camp:last-of-type{border-bottom:1px solid var(--bd);margin-bottom:3rem}
+
+/* Campaign header */
+.w-camp-head{
+  display:flex;align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+  margin-bottom:1.1rem;
+}
+.w-camp-client{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--h);display:block;margin-bottom:0.3rem;
+}
+.w-camp-name{
+  font-family:var(--syne);
+  font-size:clamp(1.1rem,2.4vw,1.55rem);
+  font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--ink);
+}
+.w-camp-roles{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.6rem}
+.w-camp-role{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  border:1px solid var(--bd);border-radius:2px;
+  padding:3px 9px;color:var(--m);
+}
+.w-camp-badge{
+  display:inline-block;background:var(--accent);color:var(--ink);
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:5px 11px;border-radius:2px;white-space:nowrap;flex-shrink:0;
+  align-self:flex-start;
+}
+.w-camp-summary{
+  font-size:14px;line-height:1.85;color:var(--m);
+  font-weight:300;max-width:620px;margin-bottom:2rem;
+}
+
+/* Piece block inside campaign */
+.w-piece{margin-bottom:2.5rem}
+.w-piece:last-child{margin-bottom:0}
+.w-piece-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:0.75rem;
+}
+.w-piece-tag::after{content:'';flex:1;height:1px;background:var(--bd)}
+.w-piece-desc{
+  font-size:13px;line-height:1.7;color:var(--m);font-weight:300;
+  max-width:560px;margin-bottom:0.85rem;
+}
+
+/* Stats chips */
+.w-stats{
+  display:inline-flex;flex-wrap:wrap;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  margin-bottom:1.25rem;
+}
+.w-stat{background:var(--off);padding:0.7rem 1rem}
+.w-stat-n{
+  font-family:var(--syne);font-size:1.15rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-stat-n b{color:#E8621A;font-weight:inherit}
+.w-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Embed containers   the key to full-width, no overflow */
+.w-embed-wrap{
+  width:100%;
+  overflow:hidden; /* clips any embed overflow */
+  margin-bottom:0.5rem;
+}
+
+/* Instagram embed normalisation */
+.w-embed-wrap .instagram-media,
+.w-embed-wrap blockquote.instagram-media{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+  border-radius:3px !important;
+  box-shadow:0 0 0 1px var(--bd) !important;
+}
+
+/* TikTok embed normalisation */
+.w-embed-wrap .tiktok-embed,
+.w-embed-wrap blockquote.tiktok-embed{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+
+/* YouTube embed   true responsive 16:9 */
+.yt-wrap{
+  position:relative;width:100%;
+  padding-bottom:56.25%; /* 16:9 */
+  height:0;overflow:hidden;
+  border-radius:3px;
+  background:#000;
+}
+.yt-wrap iframe{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;border:0;
+}
+
+/* Embed grids */
+.w-eg{display:grid;gap:1.25rem;margin-bottom:1rem}
+.w-eg.c1{grid-template-columns:1fr;max-width:540px}
+.w-eg.c2{grid-template-columns:1fr}
+@media(min-width:500px){.w-eg.c2{grid-template-columns:repeat(2,1fr)}}
+.w-eg.c3{grid-template-columns:1fr}
+@media(min-width:500px){.w-eg.c3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:820px){.w-eg.c3{grid-template-columns:repeat(3,1fr)}}
+.w-eg.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){.w-eg.c4{grid-template-columns:repeat(4,1fr)}}
+
+/* Camp footer links */
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  margin-top:1.5rem;padding-top:1.5rem;
+  border-top:1px solid var(--bd);
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+.w-camp-link svg{width:10px;height:10px;flex-shrink:0}
+
+/* Written work */
+.w-written{background:var(--ink);padding:3rem var(--px)}
+@media(min-width:640px){.w-written{padding:4rem var(--px)}}
+.w-written-inner{max-width:var(--max);margin:0 auto}
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.5rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#151512}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.93rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+/* Work hero */
+.w-hero{max-width:var(--max);margin:0 auto;padding:3rem var(--px) 2rem}
+@media(min-width:640px){.w-hero{padding:4.5rem var(--px) 2rem}}
+
+
+/* Embed rows   posts side by side on desktop */
+.w-row{
+  display:grid;
+  gap:1.25rem;
+  margin-bottom:1.5rem;
+  grid-template-columns:1fr; /* mobile: stacked */
+}
+@media(min-width:600px){
+  .w-row.r2{grid-template-columns:repeat(2,1fr)}
+  .w-row.r3{grid-template-columns:repeat(2,1fr)}
+  .w-row.r4{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:900px){
+  .w-row.r3{grid-template-columns:repeat(3,1fr)}
+  .w-row.r4{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Each embed cell keeps consistent width */
+.w-row .w-embed-wrap{margin-bottom:0}
+.w-row .w-embed-wrap .instagram-media,
+.w-row .w-embed-wrap blockquote.instagram-media{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+.w-row .w-embed-wrap .tiktok-embed,
+.w-row .w-embed-wrap blockquote.tiktok-embed{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+
+/* YouTube thumbnail tile (fallback when embedding disabled) */
+.yt-tile{
+  position:relative;
+  border-radius:3px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#111;
+  aspect-ratio:16/9;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+}
+.yt-tile img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.yt-tile-play{
+  position:relative;z-index:1;
+  width:56px;height:56px;
+  background:rgba(0,0,0,0.7);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s, transform 0.2s;
+  flex-shrink:0;
+}
+.yt-tile:hover .yt-tile-play{background:#FF0000;transform:scale(1.08)}
+.yt-tile-play svg{width:22px;height:22px;fill:white;margin-left:3px}
+.yt-tile-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  font-family:var(--syne);font-size:11px;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:rgba(255,255,255,0.85);
+}
+.yt-note{
+  font-size:12px;color:var(--h);line-height:1.6;
+  margin-bottom:1rem;font-style:italic;
+}
+
+
+/* Stats strip   horizontal, inline, no grid */
+.w-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:1rem;
+  width:fit-content;
+  max-width:100%;
+}
+.w-stat{
+  background:var(--off);
+  padding:0.7rem 1rem;
+  min-width:80px;
+}
+.w-stat-n{
+  font-family:var(--syne);
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--ink);
+  line-height:1;
+  display:block;
+  margin-bottom:0.1rem;
+}
+.w-stat-n b{color:#E8621A;font-weight:inherit}
+.w-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em;white-space:nowrap}
+
+/* Campaign title stats header   3col for MC, 2col for Purity, 4col for Brave */
+.w-stats-header{
+  display:grid;
+  gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:1.25rem;
+}
+.w-stats-header.c3{grid-template-columns:repeat(3,1fr)}
+.w-stats-header.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:680px){.w-stats-header.c4{grid-template-columns:repeat(4,1fr)}}
+.w-stats-header.c2{grid-template-columns:repeat(2,1fr)}
+.w-sh-cell{background:var(--off);padding:1rem 1.1rem}
+.w-sh-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--h);margin-bottom:0.6rem;display:block;
+}
+.w-sh-nums{display:flex;flex-wrap:wrap;gap:1.25rem}
+.w-sh-num-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-sh-num-n b{color:#E8621A;font-weight:inherit}
+.w-sh-num-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Row grid   embeds side by side */
+.w-row{display:grid;gap:1.25rem;margin-bottom:0.75rem}
+.w-row.r1{grid-template-columns:1fr;max-width:480px}
+.w-row.r2{grid-template-columns:1fr}
+.w-row.r3{grid-template-columns:1fr}
+.w-row.r4{grid-template-columns:1fr 1fr}
+@media(min-width:560px){.w-row.r2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:560px){.w-row.r3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:860px){.w-row.r3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:860px){.w-row.r4{grid-template-columns:repeat(4,1fr)}}
+
+/* Ensure embeds fill their column and never overflow */
+.w-row .w-embed-wrap{margin-bottom:0;width:100%;overflow:hidden}
+.w-row .w-embed-wrap .instagram-media,
+.w-row .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+.w-row .w-embed-wrap .tiktok-embed,
+.w-row .w-embed-wrap blockquote.tiktok-embed{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+/* Row caption */
+.w-row-cap{
+  font-size:12px;color:var(--h);
+  margin-bottom:1.5rem;line-height:1.6;
+}
+
+/* Camp links */
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  padding-top:1.25rem;border-top:1px solid var(--bd);
+  margin-top:0.5rem;
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+
+/* YouTube tile */
+.yt-tile{
+  position:relative;border-radius:3px;overflow:hidden;
+  cursor:pointer;background:#111;
+  aspect-ratio:16/9;display:block;text-decoration:none;
+}
+.yt-tile img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.yt-tile-play{
+  position:absolute;inset:0;display:flex;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.3);transition:background 0.2s;
+}
+.yt-tile:hover .yt-tile-play{background:rgba(0,0,0,0.55)}
+.yt-tile-play svg{width:52px;height:52px}
+.yt-tile-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  font-family:var(--syne);font-size:11px;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:rgba(255,255,255,0.9);
+}
+.yt-note{
+  font-size:12px;color:var(--h);line-height:1.6;
+  margin-bottom:1rem;
+}
+
+/* Written work grid */
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.5rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#151512}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.93rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+
+/* TikTok embed: true 9:16 column, no cutoff */
+.tt-wrap {
+  width: 100%;
+  /* 9:16 = 177.78% padding trick */
+  position: relative;
+  padding-bottom: 177.78%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  min-width: unset !important;
+  margin: 0 !important;
+}
+/* TikTok injects an iframe   make it fill the wrapper */
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+/* On desktop, cap each TikTok column so 4 fit nicely */
+.w-row.r4 .tt-wrap {
+  max-width: 280px;
+  /* reset padding for fixed max-width scenario */
+}
+
+/* YouTube responsive wrapper */
+.yt-outer {
+  width: 100%;
+}
+.yt-frame-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+.yt-frame-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+/* Fallback tile   shown when embedding is blocked */
+.yt-fallback {
+  display: none; /* hidden until JS shows it */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  aspect-ratio: 16/9;
+  background: #111;
+}
+.yt-fallback img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.yt-fallback-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.55);
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.yt-fallback-play {
+  width: 56px; height: 56px;
+}
+.yt-fallback-label {
+  font-family: var(--syne);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff;
+}
+.yt-fallback-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+
+
+/* Skills icons */
+.w-sk-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(200,255,0,0.08);
+  border: 1px solid rgba(200,255,0,0.15);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.w-sk-icon svg { width: 18px; height: 18px; stroke: var(--accent); }
+
+/* TikTok   true 9:16, fills column, no cutoff */
+.tt-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.tt-wrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 177.78%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  max-width: 100% !important; min-width: unset !important;
+  margin: 0 !important;
+}
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  border: 0;
+}
+.tt-concept {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--m);
+  font-weight: 300;
+}
+.tt-concept strong {
+  font-family: var(--syne);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.tt-link {
+  font-family: var(--syne);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--h);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.tt-link:hover { color: var(--ink); }
+
+/* Piece explainer   above stats */
+.w-piece-explainer {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--m);
+  font-weight: 300;
+  max-width: 620px;
+  margin-bottom: 0.85rem;
+}
+.w-piece-concept-label {
+  font-family: var(--syne);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2, #E8621A);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* YouTube tiles   bigger, no error messaging */
+.yt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 680px;
+}
+@media(min-width: 560px) { .yt-grid { grid-template-columns: 1fr 1fr; } }
+.yt-tile-big {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #111;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+.yt-tile-big img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.yt-tile-big:hover img { transform: scale(1.03); }
+.yt-tile-big-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.38);
+  gap: 0.6rem;
+  transition: background 0.2s;
+}
+.yt-tile-big:hover .yt-tile-big-overlay { background: rgba(0,0,0,0.55); }
+.yt-play-btn {
+  width: 60px; height: 60px;
+}
+.yt-tile-big-title {
+  font-family: var(--syne);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+
+/* TikTok 2-per-row: explainer left, video right */
+.tt-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--bd);
+  align-items: start;
+}
+@media(min-width: 640px) {
+  .tt-pair {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+.tt-pair:last-child { border-bottom: 1px solid var(--bd); }
+
+/* Explainer side */
+.tt-explainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+.tt-explainer-num {
+  font-family: var(--syne);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.tt-explainer-title {
+  font-family: var(--syne);
+  font-size: 1.05rem; font-weight: 800;
+  line-height: 1.2; letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.tt-explainer-concept {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #E8621A; display: block;
+  margin-bottom: 0.1rem; margin-top: 0.25rem;
+}
+.tt-explainer-body {
+  font-size: 13.5px; line-height: 1.8;
+  color: var(--m); font-weight: 300;
+}
+.tt-explainer-stats {
+  display: flex; flex-wrap: wrap; gap: 1px;
+  background: var(--bd); border: 1px solid var(--bd);
+  border-radius: 3px; overflow: hidden;
+  width: fit-content; margin-top: 0.25rem;
+}
+.tt-explainer-stats .ts {
+  background: var(--off);
+  padding: 0.6rem 0.9rem;
+}
+.tt-explainer-stats .ts-n {
+  font-family: var(--syne); font-size: 1rem;
+  font-weight: 800; color: var(--ink);
+  line-height: 1; display: block; margin-bottom: 0.1rem;
+}
+.tt-explainer-stats .ts-n b { color: #E8621A; font-weight: inherit; }
+.tt-explainer-stats .ts-l {
+  font-size: 10px; color: var(--h);
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+
+/* TikTok video side   9:16, no overflow */
+.tt-video-side {
+  width: 100%;
+  max-width: 320px; /* natural TikTok width */
+  margin: 0 auto;
+}
+@media(min-width: 640px) {
+  .tt-video-side { max-width: 100%; margin: 0; }
+}
+.tt-wrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 177.78%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  /* Prevent TikTok iframe from scrolling/expanding */
+  contain: strict;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  max-width: 100% !important; min-width: unset !important;
+  margin: 0 !important;
+}
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  border: 0;
+  /* Disable autoplay via pointer-events trick is not needed  
+     TikTok embeds require a click to play by default */
+}
+
+/* Purity 2-row layout */
+.purity-row {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.purity-row.r2 { grid-template-columns: 1fr; }
+@media(min-width: 500px) {
+  .purity-row.r2 { grid-template-columns: 1fr 1fr; }
+}
+
+/* YouTube   stays on page, full click area */
+.yt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+}
+@media(min-width: 560px) {
+  .yt-grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+/* ============================================================
+   WORK PAGE - COMPLETE REDESIGN
+   ============================================================ */
+
+/* Hero */
+.w-hero{max-width:var(--max);margin:0 auto;padding:3.5rem var(--px) 2rem}
+@media(min-width:640px){.w-hero{padding:5rem var(--px) 2.5rem}}
+
+/* Skills dark section */
+.w-skills{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.w-skills{padding:5rem var(--px)}}
+.w-skills-inner{max-width:var(--max);margin:0 auto}
+.w-skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:4px;
+  overflow:hidden;
+  margin-top:2.5rem;
+}
+@media(min-width:560px){.w-skills-grid{grid-template-columns:repeat(4,1fr)}}
+.w-sk{
+  background:var(--ink);
+  padding:1.5rem 1.25rem;
+  display:flex;flex-direction:column;gap:0.5rem;
+  transition:background 0.2s;
+}
+.w-sk:hover{background:#131310}
+.w-sk-icon{
+  width:38px;height:38px;
+  background:rgba(200,255,0,0.07);
+  border:1px solid rgba(200,255,0,0.14);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:0.4rem;
+  flex-shrink:0;
+}
+.w-sk-icon svg{width:18px;height:18px;stroke:var(--accent)}
+.w-sk-name{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  color:var(--off);letter-spacing:-0.01em;
+}
+.w-sk-tools{
+  font-size:11px;color:rgba(255,255,255,0.28);
+  line-height:1.55;font-weight:300;
+}
+
+/* Campaign section */
+.w-campaigns{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+
+/* Campaign card */
+.w-camp{
+  border-top:1px solid var(--bd);
+  padding:3.5rem 0;
+}
+.w-camp:last-of-type{border-bottom:1px solid var(--bd);margin-bottom:4rem}
+.w-camp-head{
+  display:flex;align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+  margin-bottom:1.25rem;
+}
+.w-camp-client{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--h);display:block;margin-bottom:0.35rem;
+}
+.w-camp-name{
+  font-family:var(--syne);
+  font-size:clamp(1.2rem,2.5vw,1.65rem);
+  font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--ink);
+}
+.w-camp-roles{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.65rem}
+.w-camp-role{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  border:1px solid var(--bd);border-radius:2px;
+  padding:3px 9px;color:var(--m);
+}
+.w-camp-badge{
+  display:inline-block;background:var(--accent);color:var(--ink);
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:5px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0;
+  align-self:flex-start;
+}
+.w-camp-summary{
+  font-size:14px;line-height:1.85;color:var(--m);
+  font-weight:300;max-width:640px;margin-bottom:2rem;
+}
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  padding-top:1.5rem;border-top:1px solid var(--bd);
+  margin-top:1.5rem;
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+
+/* Section divider label */
+.w-piece-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;
+}
+.w-piece-tag::after{content:'';flex:1;height:1px;background:var(--bd)}
+
+/* ============================================================
+   CONTENT PIECE: LEFT EMBED + RIGHT INFO
+   Two-column layout: post on left, thinking + stats on right
+   ============================================================ */
+.content-piece{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  margin-bottom:3rem;
+}
+@media(min-width:680px){
+  .content-piece{
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem;
+    align-items:start;
+  }
+}
+.content-piece.reverse-mob{} /* future use */
+
+.cp-embed{
+  width:100%;
+  /* Centre the embed within its column */
+}
+.cp-embed .w-embed-wrap{margin-bottom:0}
+.cp-embed .w-embed-wrap .instagram-media,
+.cp-embed .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+.cp-info{
+  display:flex;flex-direction:column;gap:1rem;
+  padding-top:0.25rem;
+}
+.cp-info-label{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--accent);display:block;
+}
+/* On accent background, use accent for label */
+.cp-info-label.orange{color:#E8621A}
+.cp-info-title{
+  font-family:var(--syne);font-size:1.05rem;font-weight:800;
+  line-height:1.2;letter-spacing:-0.01em;color:var(--ink);
+}
+.cp-info-thinking-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.35rem;
+}
+.cp-info-body{
+  font-size:13.5px;line-height:1.8;
+  color:var(--m);font-weight:300;
+}
+
+/* Stats: vertical stack */
+.cp-stats-stack{
+  display:flex;flex-direction:column;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  width:fit-content;
+  margin-top:0.25rem;
+}
+.cp-stat-row{
+  background:var(--off);
+  padding:0.55rem 1.1rem;
+  display:flex;align-items:baseline;gap:0.75rem;
+}
+.cp-stat-n{
+  font-family:var(--syne);font-size:1.2rem;font-weight:800;
+  color:var(--ink);line-height:1;min-width:60px;
+}
+.cp-stat-n b{color:#E8621A;font-weight:inherit}
+.cp-stat-l{font-size:11px;color:var(--h);letter-spacing:0.03em}
+.cp-disclaimer{
+  font-size:11px;color:var(--h);margin-top:0.25rem;
+}
+
+/* ============================================================
+   TIKTOK: 2-per-row with explainer left, video right
+   ============================================================ */
+.tt-section{
+  background:var(--ink); /* dark bg = no colour clash */
+  margin:0 calc(-1 * var(--px));
+  padding:2.5rem var(--px);
+  border-radius:4px;
+  margin-bottom:0;
+}
+.tt-pair{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  padding:2rem 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+  align-items:start;
+}
+@media(min-width:640px){
+  .tt-pair{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+.tt-pair:first-child{border-top:none;padding-top:0}
+
+.tt-explainer{
+  display:flex;flex-direction:column;gap:0.75rem;
+  color:var(--ink);
+}
+.tt-exp-num{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#E8621A;
+}
+.tt-exp-title{
+  font-family:var(--syne);font-size:1rem;font-weight:800;
+  line-height:1.2;letter-spacing:-0.01em;color:var(--ink);
+}
+.tt-exp-concept{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.1rem;
+}
+.tt-exp-body{
+  font-size:13px;line-height:1.75;
+  color:var(--m);font-weight:300;
+}
+
+/* Stats on dark bg */
+.tt-stats-stack{
+  display:flex;flex-direction:column;gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  width:fit-content;
+}
+.tt-stat-row{
+  background:var(--off);
+  padding:0.5rem 1rem;
+  display:flex;align-items:baseline;gap:0.75rem;
+}
+.tt-stat-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;min-width:55px;
+}
+.tt-stat-n b{color:#E8621A;font-weight:inherit}
+.tt-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+.tt-link{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;
+  transition:color 0.2s;margin-top:0.25rem;
+}
+.tt-link:hover{color:var(--ink)}
+
+/* TikTok video: true 9:16 */
+.tt-video-col{
+  width:100%;
+  max-width:300px;
+  margin:0 auto;
+}
+@media(min-width:640px){.tt-video-col{max-width:100%;margin:0}}
+.tt-wrap{
+  position:relative;
+  padding-bottom:177.78%;
+  overflow:hidden;
+  border-radius:10px;
+  background:#111;
+  contain:strict;
+}
+.tt-wrap blockquote.tiktok-embed{
+  position:absolute!important;top:0!important;left:0!important;
+  width:100%!important;height:100%!important;
+  max-width:100%!important;min-width:unset!important;
+  margin:0!important;
+}
+.tt-wrap iframe{
+  position:absolute!important;top:0!important;left:0!important;
+  width:100%!important;height:100%!important;border:0;
+}
+
+/* ============================================================
+   PURITY: 2 posts side by side
+   ============================================================ */
+.purity-row{
+  display:grid;gap:1.25rem;margin-bottom:1rem;
+}
+.purity-row.r2{grid-template-columns:1fr}
+@media(min-width:500px){.purity-row.r2{grid-template-columns:1fr 1fr}}
+.purity-row .w-embed-wrap{margin-bottom:0}
+.purity-row .w-embed-wrap .instagram-media,
+.purity-row .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+/* ============================================================
+   SOLID SYSTEMS: YouTube tiles
+   ============================================================ */
+.yt-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  margin-bottom:1.5rem;
+}
+@media(min-width:560px){.yt-grid{grid-template-columns:1fr 1fr}}
+.yt-tile-big{
+  display:block;position:relative;
+  border-radius:8px;overflow:hidden;
+  text-decoration:none;background:#111;
+  aspect-ratio:16/9;cursor:pointer;
+}
+.yt-tile-big img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;transition:transform 0.3s ease;
+}
+.yt-tile-big:hover img{transform:scale(1.03)}
+.yt-tile-big-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.38);gap:0.6rem;
+  transition:background 0.2s;
+}
+.yt-tile-big:hover .yt-tile-big-overlay{background:rgba(0,0,0,0.55)}
+.yt-play-btn{width:60px;height:60px}
+.yt-tile-big-title{
+  font-family:var(--syne);font-size:12px;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:#fff;text-align:center;padding:0 1rem;
+}
+
+/* Solid series individual explainer */
+.yt-series-item{margin-bottom:2rem}
+.yt-series-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;
+}
+.yt-series-label::after{content:'';flex:1;height:1px;background:var(--bd)}
+.yt-series-thinking{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.35rem;
+}
+.yt-series-body{
+  font-size:13.5px;line-height:1.8;color:var(--m);
+  font-weight:300;max-width:640px;margin-bottom:1.25rem;
+}
+
+/* Stats header (for campaign-level stats) */
+.w-stats-header{
+  display:grid;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  margin-bottom:1.5rem;
+}
+.w-stats-header.c2{grid-template-columns:1fr 1fr}
+.w-stats-header.c3{grid-template-columns:repeat(3,1fr)}
+.w-stats-header.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:680px){.w-stats-header.c4{grid-template-columns:repeat(4,1fr)}}
+.w-sh-cell{background:var(--off);padding:1rem 1.1rem}
+.w-sh-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--h);margin-bottom:0.5rem;display:block;
+}
+.w-sh-nums{display:flex;flex-wrap:wrap;gap:1.25rem}
+.w-sh-num-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-sh-num-n b{color:#E8621A;font-weight:inherit}
+.w-sh-num-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Written work */
+.w-written{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.w-written{padding:5rem var(--px)}}
+.w-written-inner{max-width:var(--max);margin:0 auto}
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:4px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.75rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#131310}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.95rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+
+/* Solid Systems: 2-col   text left, video right */
+.yt-series-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+@media(min-width: 680px) {
+  .yt-series-item {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+.yt-series-text { display: flex; flex-direction: column; gap: 0.75rem; }
+.yt-series-video { width: 100%; }
+.yt-series-label {
+  font-family: var(--syne); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--h);
+  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0;
+}
+.yt-series-label::after { content:''; flex:1; height:1px; background:var(--bd); }
+.yt-series-thinking {
+  font-family: var(--syne); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #E8621A; display: block; margin-bottom: 0.25rem;
+}
+.yt-series-body {
+  font-size: 13.5px; line-height: 1.8; color: var(--m);
+  font-weight: 300; margin-bottom: 0;
+}
+/* YouTube tile fills its column */
+.yt-series-video .yt-tile-big {
+  display: block; position: relative;
+  border-radius: 8px; overflow: hidden;
+  text-decoration: none; background: #111;
+  aspect-ratio: 16/9; cursor: pointer;
+  width: 100%;
+}
+.yt-series-video .yt-tile-big img {
+  width:100%; height:100%; object-fit:cover;
+  display:block; transition:transform 0.3s ease;
+}
+.yt-series-video .yt-tile-big:hover img { transform:scale(1.03); }
+.yt-series-video .yt-tile-big-overlay {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background:rgba(0,0,0,0.38); gap:0.6rem; transition:background 0.2s;
+}
+.yt-series-video .yt-tile-big:hover .yt-tile-big-overlay { background:rgba(0,0,0,0.55); }
+
+
+/* Remove TikTok white placeholder box */
+.tt-wrap blockquote.tiktok-embed {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.tt-wrap blockquote.tiktok-embed > section {
+  display: none; /* hide fallback content */
+}
+/* Dark section keeps dark bg on all children */
+.tt-section { background: var(--mid); border-radius: 4px; overflow: hidden; }
+.tt-section .tt-pair { background: transparent; }
+
 </style>
 </head>
 <body>
 <header>
-  <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="/" class="logo" aria-label="Go to homepage">Juff Manda</a>
-      <div class="nav-links" role="menubar">
-        <a href="/about/" class="nl" data-p="about" role="menuitem">About</a>
-        <a href="/work/" class="nl" data-p="work" role="menuitem">Work</a>
-        <a href="/methodology/" class="nl" data-p="methodology" role="menuitem">Methodology</a>
-        <a href="/insights/" class="nl" data-p="insights" role="menuitem">Insights</a>
-        <a href="/work-with-me/" class="nl" data-p="wwm" role="menuitem">Work with me</a>
-        <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li" aria-label="LinkedIn profile">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="logo"><span class="logo-dot"></span>Juff Manda</a>
+<div class="nav-links"><a href="/about/" class="nl">About</a><a href="/work/" class="nl">Work</a><a href="/insights/" class="nl on">Insights</a><a href="/work-with-me/" class="nav-cta">Work with me</a><a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<button class="ham" id="ham" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></nav>
+<nav class="mob-menu" id="mob-menu"><a href="/about/" class="mob-link">About</a><a href="/work/" class="mob-link">Work</a><a href="/insights/" class="mob-link">Insights</a><a href="/work-with-me/" class="mob-link">Work with me</a></nav>
 </header>
-<nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
-  <a href="/about/" class="mob-link" onclick="closeMenu()">About</a>
-  <a href="/work/" class="mob-link" onclick="closeMenu()">Work</a>
-  <a href="/methodology/" class="mob-link" onclick="closeMenu()">Methodology</a>
-  <a href="/insights/" class="mob-link" onclick="closeMenu()">Insights</a>
-  <a href="/work-with-me/" class="mob-link" onclick="closeMenu()">Work with me</a>
-</nav>
-<main>
-<section class="ins-wrap">
-    <p class="sec-tag">Insights</p>
-    <h1 class="sec-h">Thinking <em>out loud.</em></h1>
-    <p style="font-size:14.5px;line-height:1.8;color:var(--m);font-weight:300;max-width:500px">Writing on strategy, culture, and the South African market. Some pieces published here, others on external platforms.</p>
-
-    <div class="ins-grid" style="margin-top:2rem">
-      <a href="/insights/your-phone-is-vertical-your-content-is-not/" class="ic" aria-label="Read article: Your phone is vertical. Your content is not.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&auto=format&fit=crop" alt="Vertical mobile phone content strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Content strategy</span><h2 class="ic-h">Your phone is vertical. Your content is not.</h2><p class="ic-x">Most brands are still producing landscape content for a portrait world. The brief has changed. The production has not.</p><span class="ic-date">23 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/meta-just-passed-google-in-ad-revenue/" class="ic" aria-label="Read article: Meta just passed Google in ad revenue. First time in history.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&auto=format&fit=crop" alt="Digital advertising and media strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Media strategy</span><h2 class="ic-h">Meta just passed Google in ad revenue. First time in history.</h2><p class="ic-x">And Celeste Ntuli winning Headliner of the Year explains exactly why attention is shifting.</p><span class="ic-date">16 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" class="ic" aria-label="Read article: SA brands are drowning in data. Starving for humanity.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop" alt="Data and human insight in marketing" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Strategy</span><h2 class="ic-h">SA brands are drowning in data. Starving for humanity.</h2><p class="ic-x">The data tells us what. It has never told us why. And that gap is where most SA campaigns lose the room.</p><span class="ic-date">15 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/amapiano-went-global-no-brand-strategy-built-that/" class="ic" aria-label="Read article: Amapiano went global. No brand strategy built that.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80&auto=format&fit=crop" alt="Amapiano music and South African culture" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Culture</span><h2 class="ic-h">Amapiano went global. No brand strategy built that.</h2><p class="ic-x">Community did. And that is the most important marketing lesson in SA right now.</p><span class="ic-date">14 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/tiktok-is-not-an-entertainment-app-it-is-a-shop/" class="ic" aria-label="Read article: TikTok is not an entertainment app. It is a shop.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80&auto=format&fit=crop" alt="Social commerce and online shopping" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Social commerce</span><h2 class="ic-h">TikTok is not an entertainment app. It is a shop.</h2><p class="ic-x">Social commerce hit $100 billion in 2026. The scroll and the purchase now happen in the same session.</p><span class="ic-date">14 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/everyone-has-an-ai-tool-almost-nobody-has-an-ai-strategy/" class="ic" aria-label="Read article: Everyone has an AI tool. Almost nobody has an AI strategy.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="AI and marketing strategy" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">AI and systems</span><h2 class="ic-h">Everyone has an AI tool. Almost nobody has an AI strategy.</h2><p class="ic-x">Gartner says AI automation in marketing doubles to 36% by 2028. The gap between ready and not is already opening.</p><span class="ic-date">13 May 2026 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/why-south-african-brands-produce-content-nobody-asked-for/" class="ic" aria-label="Read article: Why most South African brands are producing content nobody asked for">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80&auto=format&fit=crop" alt="Social media strategy and content planning" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Strategy</span><h2 class="ic-h">Why most South African brands are producing content nobody asked for</h2><p class="ic-x">Volume is not the problem. The problem is no governing logic behind what gets published.</p><span class="ic-date">June 2025</span></div>
-      </a>
-      <a href="/insights/influencer-strategy-south-africa-done-backwards/" class="ic" aria-label="Read article: Influencer strategy in South Africa is still being done backwards">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80&auto=format&fit=crop" alt="Influencer and brand collaboration" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Influencer</span><h2 class="ic-h">Influencer strategy in South Africa is still being done backwards</h2><p class="ic-x">Most brands choose a creator and then figure out what to do with them. The brief should come first.</p><span class="ic-date">May 2025</span></div>
-      </a>
-      <a href="/insights/turns-out-it-was-never-fong-kong/" class="ic" aria-label="Read article: Turns out it was never Fong Kong">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80&auto=format&fit=crop" alt="Luxury brand perception and marketing" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Marketing and trade</span><h2 class="ic-h">Turns out it was never Fong Kong</h2><p class="ic-x">Most luxury goods are manufactured in China. What we actually pay for is the story, not the product. And that is where marketing wins or loses.</p><span class="ic-date">Apr 2025 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/ai-does-not-replace-strategic-thinking/" class="ic" aria-label="Read article: AI does not replace strategic thinking. It exposes the absence of it.">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" alt="AI circuit board and technology systems" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">AI and systems</span><h2 class="ic-h">AI does not replace strategic thinking. It exposes the absence of it.</h2><p class="ic-x">When you give AI a clear framework, it scales efficiently. When there is no framework, it scales the confusion.</p><span class="ic-date">April 2025</span></div>
-      </a>
-      <a href="/insights/from-fong-kong-to-global-giants-chinese-innovation/" class="ic" aria-label="Read article: From Fong Kong to global giants: the rise of Chinese innovation">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=800&q=80&auto=format&fit=crop" alt="Chinese innovation and global market shifts" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Innovation and market shifts</span><h2 class="ic-h">From Fong Kong to global giants: the rise of Chinese innovation</h2><p class="ic-x">What once started as a joke about knockoffs has evolved into a story of global competition. China did not just catch up. It changed the game.</p><span class="ic-date">Mar 2025 · Juff Manda</span></div>
-      </a>
-      <a href="/insights/what-brands-get-wrong-about-south-african-audiences/" class="ic" aria-label="Read article: What brands get wrong about speaking to South African audiences">
-        <img class="ic-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&auto=format&fit=crop" alt="South African culture and community" loading="lazy">
-        <div class="ic-body"><span class="ic-tag">Culture</span><h2 class="ic-h">What brands get wrong about speaking to South African audiences</h2><p class="ic-x">Localisation is not a translation step at the end of the process. It is the process.</p><span class="ic-date">March 2025</span></div>
-      </a>
+<main><section class="ins-wrap">
+  <p class="sec-tag">Insights</p>
+  <h1 class="sec-h">Thinking <em>out loud.</em></h1>
+  <p style="font-size:14.5px;line-height:1.8;color:var(--m);font-weight:300;max-width:500px">Writing on strategy, culture, and the South African market. Some pieces published here, others on external platforms.</p>
+  <div class="ins-grid" style="margin-top:2rem">
+<article class="ic" role="article">
+  <a href="/insights/your-phone-is-vertical-your-content-is-not/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&auto=format&fit=crop" alt="Your phone is vertical. Your content is not." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Content strategy</span>
+      <h2 class="ic-h">Your phone is vertical. Your content is not.</h2>
+      <p class="ic-x">Most brands are still producing landscape content for a portrait world. The brief has changed. The production has not.</p>
+      <span class="ic-date">23 May 2026 &middot; Juff Manda</span>
     </div>
-
-    <p class="ins-section-label">Press and mentions</p>
-    <div>
-      <a href="https://www.bizcommunity.com/article/decoding-gen-z-the-first-post-brand-generation-174106a" target="_blank" rel="noopener noreferrer" class="press-row">
-        <div class="press-source">Bizcommunity</div>
-        <div class="press-detail">
-          <p class="press-title">Decoding Gen Z: The first post-brand generation</p>
-          <p class="press-desc">A piece published through Brave Group on how Gen Z relates to brands differently from every generation before them, and what that means for digital strategy.</p>
-        </div>
-        <div class="press-arrow" aria-hidden="true">&#8599;</div>
-      </a>
-      <a href="https://dailyentrepreneur.co.za/fnb-app-of-the-year-winner-announced/" target="_blank" rel="noopener noreferrer" class="press-row">
-        <div class="press-source">Daily Entrepreneur</div>
-        <div class="press-detail">
-          <p class="press-title">FNB App of the Year Award 2025</p>
-          <p class="press-desc">Served as a judge for the FNB App of the Year Award, one of the continent's premier celebrations of app development and digital innovation.</p>
-        </div>
-        <div class="press-arrow" aria-hidden="true">&#8599;</div>
-      </a>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/meta-just-passed-google-in-ad-revenue/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&auto=format&fit=crop" alt="Meta just passed Google in ad revenue. First time in history." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Media strategy</span>
+      <h2 class="ic-h">Meta just passed Google in ad revenue. First time in history.</h2>
+      <p class="ic-x">And Celeste Ntuli winning Headliner of the Year explains exactly why attention is shifting.</p>
+      <span class="ic-date">16 May 2026 &middot; Juff Manda</span>
     </div>
-  </section>
-</div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop" alt="SA brands are drowning in data. Starving for humanity." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Strategy</span>
+      <h2 class="ic-h">SA brands are drowning in data. Starving for humanity.</h2>
+      <p class="ic-x">The data tells us what. It has never told us why. That gap is where most SA campaigns lose the room.</p>
+      <span class="ic-date">15 May 2026 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/tiktok-is-not-an-entertainment-app-it-is-a-shop/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80&auto=format&fit=crop" alt="TikTok is not an entertainment app. It is a shop." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Social commerce</span>
+      <h2 class="ic-h">TikTok is not an entertainment app. It is a shop.</h2>
+      <p class="ic-x">Social commerce hit $100 billion in 2026. The scroll and the purchase now happen in the same session.</p>
+      <span class="ic-date">14 May 2026 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/amapiano-went-global-no-brand-strategy-built-that/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80&auto=format&fit=crop" alt="Amapiano went global. No brand strategy built that." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Culture</span>
+      <h2 class="ic-h">Amapiano went global. No brand strategy built that.</h2>
+      <p class="ic-x">Community did. And that is the most important marketing lesson in SA right now.</p>
+      <span class="ic-date">14 May 2026 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/everyone-has-an-ai-tool-almost-nobody-has-an-ai-strategy/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="Everyone has an AI tool. Almost nobody has an AI strategy." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">AI and systems</span>
+      <h2 class="ic-h">Everyone has an AI tool. Almost nobody has an AI strategy.</h2>
+      <p class="ic-x">Gartner says AI automation in marketing doubles to 36% by 2028. The gap between ready and not is already opening.</p>
+      <span class="ic-date">13 May 2026 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/why-south-african-brands-produce-content-nobody-asked-for/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80&auto=format&fit=crop" alt="Why most SA brands are producing content nobody asked for" loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Strategy</span>
+      <h2 class="ic-h">Why most SA brands are producing content nobody asked for</h2>
+      <p class="ic-x">Volume is not the problem. The problem is no governing logic behind what gets published.</p>
+      <span class="ic-date">June 2025</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/influencer-strategy-south-africa-done-backwards/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80&auto=format&fit=crop" alt="Influencer strategy in South Africa is still being done backwards" loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Influencer</span>
+      <h2 class="ic-h">Influencer strategy in South Africa is still being done backwards</h2>
+      <p class="ic-x">Most brands choose a creator and then figure out what to do with them. The brief should come first.</p>
+      <span class="ic-date">May 2025</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/ai-does-not-replace-strategic-thinking/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="AI does not replace strategic thinking. It exposes the absence of it." loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">AI and systems</span>
+      <h2 class="ic-h">AI does not replace strategic thinking. It exposes the absence of it.</h2>
+      <p class="ic-x">When you give AI a clear framework, it scales efficiently. When there is no framework, it scales the confusion.</p>
+      <span class="ic-date">April 2025</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/what-brands-get-wrong-about-south-african-audiences/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80&auto=format&fit=crop" alt="What brands get wrong about speaking to South African audiences" loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Culture</span>
+      <h2 class="ic-h">What brands get wrong about speaking to South African audiences</h2>
+      <p class="ic-x">Localisation is not a translation step at the end of the process. It is the process.</p>
+      <span class="ic-date">March 2025</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/turns-out-it-was-never-fong-kong/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1523474438810-b04a2480633c?w=800&q=80&auto=format&fit=crop" alt="Turns out it was never Fong Kong" loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Marketing and trade</span>
+      <h2 class="ic-h">Turns out it was never Fong Kong</h2>
+      <p class="ic-x">Most luxury goods are manufactured in China. What we actually pay for is the story, not the product.</p>
+      <span class="ic-date">April 2025 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
+<article class="ic" role="article">
+  <a href="/insights/from-fong-kong-to-global-giants-chinese-innovation/" style="display:contents;text-decoration:none">
+    <img class="ic-img" src="https://images.unsplash.com/photo-1547190994-a1a8e19f2fa3?w=800&q=80&auto=format&fit=crop" alt="From Fong Kong to global giants: the rise of Chinese innovation" loading="lazy">
+    <div class="ic-body">
+      <span class="ic-tag">Innovation and market shifts</span>
+      <h2 class="ic-h">From Fong Kong to global giants: the rise of Chinese innovation</h2>
+      <p class="ic-x">What once started as a joke about knockoffs has evolved into a story of global competition.</p>
+      <span class="ic-date">March 2025 &middot; Juff Manda</span>
+    </div>
+  </a>
+</article>
 
-<!-- ============================================================
-     ARTICLE PAGE
-     ============================================================ -->
-<div class="pg" id="pg-art">
-  <div class="art-wrap">
-    <button class="art-back">&larr; Back to Insights</button>
-    <div id="art-out"></div>
   </div>
-</div>
 
-<!-- ============================================================
-     WORK WITH ME PAGE
-     ============================================================ -->
-</main>
-<footer class="footer">
-  <div class="footer-inner">
-    <span class="footer-copy">&copy; 2026 Juff Manda</span>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/home/" class="footer-link">Home</a>
-      <a href="/work/" class="footer-link">Work</a>
-      <a href="/insights/" class="footer-link">Insights</a>
-      <a href="/work-with-me/" class="footer-link">Work with me</a>
-      <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        LinkedIn
-      </a>
-    </nav>
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--bd)">
+    <p class="sec-tag" style="margin-bottom:1.5rem">Press and mentions</p>
+
+    <a href="https://themediaonline.co.za/2026/06/the-backroom-beat-that-shook-the-world/" target="_blank" rel="noopener noreferrer" style="display:grid;grid-template-columns:180px 1fr auto;gap:1rem;align-items:start;padding:1.25rem 0;border-top:1px solid var(--bd);text-decoration:none;color:inherit">
+      <span style="font-family:var(--syne);font-size:11px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.04em;padding-top:2px">The Media Online</span>
+      <span>
+        <span style="font-family:var(--syne);font-size:14px;font-weight:700;color:var(--ink);display:block;margin-bottom:0.35rem">The backroom beat that shook the world</span>
+        <span style="font-size:13px;color:var(--m);font-weight:300;line-height:1.6">Published on The Media Online on the rise of Gqom and what every marketer can learn about authentic culture. June 2026.</span>
+      </span>
+      <span style="font-size:14px;color:var(--h)">&#8599;</span>
+    </a>
+
+    <a href="https://dailyentrepreneur.co.za/fnb-app-of-the-year-winner-announced/" target="_blank" rel="noopener noreferrer" style="display:grid;grid-template-columns:180px 1fr auto;gap:1rem;align-items:start;padding:1.25rem 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);text-decoration:none;color:inherit">
+      <span style="font-family:var(--syne);font-size:11px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.04em;padding-top:2px">Daily Entrepreneur</span>
+      <span>
+        <span style="font-family:var(--syne);font-size:14px;font-weight:700;color:var(--ink);display:block;margin-bottom:0.35rem">FNB App of the Year Award 2025</span>
+        <span style="font-size:13px;color:var(--m);font-weight:300;line-height:1.6">Served as a judge for the FNB App of the Year Award, one of the continent&#8217;s premier celebrations of app development and digital innovation.</span>
+      </span>
+      <span style="font-size:14px;color:var(--h)">&#8599;</span>
+    </a>
   </div>
-</footer>
-<script>function toggleMenu(){
-  const menu=document.getElementById('mob-menu');
-  const ham=document.getElementById('ham');
-  const open=menu.classList.toggle('open');
-  ham.classList.toggle('open',open);
-  ham.setAttribute('aria-expanded',open?'true':'false');
-}
-function closeMenu(){
-  document.getElementById('mob-menu').classList.remove('open');
-  const ham=document.getElementById('ham');
-  ham.classList.remove('open');
-  ham.setAttribute('aria-expanded','false');
-}
-function openMail(e){
-  e.preventDefault();
-  var u='juffmanda',d='gmail.com';
-  var s='Let%27s%20Work%20Together';
-  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.';
-  window.location.href='mailto:'+u+'@'+d+'?subject='+s+'&body='+b;
-}</script>
+</section></main>
+<footer class="footer"><div class="footer-inner">
+<span class="footer-copy">&#169; 2026 Juff Manda &middot; South Africa</span>
+<div class="footer-links">
+<a href="/work/" class="footer-link">Work</a>
+<a href="/insights/" class="footer-link">Insights</a>
+<a href="/work-with-me/" class="footer-link">Work with me</a>
+<a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> LinkedIn</a>
+</div></div></footer>
+<script>
+function toggleMenu(){var m=document.getElementById('mob-menu'),h=document.getElementById('ham');var o=m.classList.toggle('open');h.classList.toggle('open',o);h.setAttribute('aria-expanded',o?'true':'false');}
+document.querySelectorAll('.mob-menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mob-menu').classList.remove('open');var h=document.getElementById('ham');h.classList.remove('open');h.setAttribute('aria-expanded','false');});});
+</script>
+
 </body>
 </html>
