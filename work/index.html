@@ -4,16 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work | Juff Manda</title>
-<meta name="description" content="Selected digital strategy work and involvement. MasterChef SA, GEPF, Tiger Brands portfolio and more.">
+<meta name="description" content="Selected work across strategy, creative direction, content, influencer, and platform performance.">
 <link rel="canonical" href="https://www.juffmanda.com/work/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.juffmanda.com/work/">
 <meta property="og:title" content="Work | Juff Manda">
-<meta property="og:description" content="Selected digital strategy work and involvement across South African brands.">
+<meta property="og:description" content="Selected work across strategy, creative direction, content, influencer, and platform performance.">
 <meta property="og:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
+<meta property="og:site_name" content="Juff Manda">
 <meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work | Juff Manda">
+<meta name="twitter:description" content="Selected work across strategy, creative direction, content, influencer, and platform performance.">
+<meta name="twitter:image" content="https://www.juffmanda.com/juff-manda-portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
 <style>
 /* ============================================================
    RESET + VARIABLES
@@ -577,179 +582,1734 @@ body{padding-top:58px}
 }
 .footer-li:hover{color:rgba(200,255,0,0.8)}
 
-/* Fix green label readability on mobile */
-.cs-k{
-  display:inline-block;
-  background:var(--ink);
-  color:var(--accent);
-  font-family:var(--syne);font-size:10px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  padding:4px 10px;border-radius:2px;
-  margin-bottom:0.4rem;
+/* ============================================================
+   WORK PAGE
+   ============================================================ */
+
+/* Skills section */
+.w-skills{background:var(--ink);padding:3rem var(--px)}
+@media(min-width:640px){.w-skills{padding:4.5rem var(--px)}}
+.w-skills-inner{max-width:var(--max);margin:0 auto}
+.w-skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;
+  overflow:hidden;
+  margin-top:2rem;
 }
-@media(min-width:640px){
-  .cs-k{
-    display:block;
-    background:none;
-    color:var(--h);
-    padding:1.1rem 0;
-    border-radius:0;
-    border-top:1px solid var(--bd);
-    margin-bottom:0;
+@media(min-width:560px){.w-skills-grid{grid-template-columns:repeat(4,1fr)}}
+.w-sk{
+  background:var(--ink);
+  padding:1.35rem 1.1rem;
+  display:flex;flex-direction:column;gap:0.4rem;
+  transition:background 0.2s;
+}
+.w-sk:hover{background:#151512}
+.w-sk-icon{
+  font-size:0.9rem;color:var(--accent);
+  width:28px;height:28px;border:1px solid rgba(200,255,0,0.2);
+  border-radius:2px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:0.25rem;flex-shrink:0;
+}
+.w-sk-name{font-family:var(--syne);font-size:11px;font-weight:700;color:var(--off);letter-spacing:-0.01em}
+.w-sk-tools{font-size:11px;color:rgba(255,255,255,0.27);line-height:1.5;font-weight:300}
+
+/* Campaign section wrapper */
+.w-campaigns{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+
+/* Individual campaign */
+.w-camp{
+  border-top:1px solid var(--bd);
+  padding:2.5rem 0;
+}
+.w-camp:last-of-type{border-bottom:1px solid var(--bd);margin-bottom:3rem}
+
+/* Campaign header */
+.w-camp-head{
+  display:flex;align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+  margin-bottom:1.1rem;
+}
+.w-camp-client{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--h);display:block;margin-bottom:0.3rem;
+}
+.w-camp-name{
+  font-family:var(--syne);
+  font-size:clamp(1.1rem,2.4vw,1.55rem);
+  font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--ink);
+}
+.w-camp-roles{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.6rem}
+.w-camp-role{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  border:1px solid var(--bd);border-radius:2px;
+  padding:3px 9px;color:var(--m);
+}
+.w-camp-badge{
+  display:inline-block;background:var(--accent);color:var(--ink);
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:5px 11px;border-radius:2px;white-space:nowrap;flex-shrink:0;
+  align-self:flex-start;
+}
+.w-camp-summary{
+  font-size:14px;line-height:1.85;color:var(--m);
+  font-weight:300;max-width:620px;margin-bottom:2rem;
+}
+
+/* Piece block inside campaign */
+.w-piece{margin-bottom:2.5rem}
+.w-piece:last-child{margin-bottom:0}
+.w-piece-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:0.75rem;
+}
+.w-piece-tag::after{content:'';flex:1;height:1px;background:var(--bd)}
+.w-piece-desc{
+  font-size:13px;line-height:1.7;color:var(--m);font-weight:300;
+  max-width:560px;margin-bottom:0.85rem;
+}
+
+/* Stats chips */
+.w-stats{
+  display:inline-flex;flex-wrap:wrap;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  margin-bottom:1.25rem;
+}
+.w-stat{background:var(--off);padding:0.7rem 1rem}
+.w-stat-n{
+  font-family:var(--syne);font-size:1.15rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-stat-n b{color:#E8621A;font-weight:inherit}
+.w-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Embed containers   the key to full-width, no overflow */
+.w-embed-wrap{
+  width:100%;
+  overflow:hidden; /* clips any embed overflow */
+  margin-bottom:0.5rem;
+}
+
+/* Instagram embed normalisation */
+.w-embed-wrap .instagram-media,
+.w-embed-wrap blockquote.instagram-media{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+  border-radius:3px !important;
+  box-shadow:0 0 0 1px var(--bd) !important;
+}
+
+/* TikTok embed normalisation */
+.w-embed-wrap .tiktok-embed,
+.w-embed-wrap blockquote.tiktok-embed{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+
+/* YouTube embed   true responsive 16:9 */
+.yt-wrap{
+  position:relative;width:100%;
+  padding-bottom:56.25%; /* 16:9 */
+  height:0;overflow:hidden;
+  border-radius:3px;
+  background:#000;
+}
+.yt-wrap iframe{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;border:0;
+}
+
+/* Embed grids */
+.w-eg{display:grid;gap:1.25rem;margin-bottom:1rem}
+.w-eg.c1{grid-template-columns:1fr;max-width:540px}
+.w-eg.c2{grid-template-columns:1fr}
+@media(min-width:500px){.w-eg.c2{grid-template-columns:repeat(2,1fr)}}
+.w-eg.c3{grid-template-columns:1fr}
+@media(min-width:500px){.w-eg.c3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:820px){.w-eg.c3{grid-template-columns:repeat(3,1fr)}}
+.w-eg.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){.w-eg.c4{grid-template-columns:repeat(4,1fr)}}
+
+/* Camp footer links */
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  margin-top:1.5rem;padding-top:1.5rem;
+  border-top:1px solid var(--bd);
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+.w-camp-link svg{width:10px;height:10px;flex-shrink:0}
+
+/* Written work */
+.w-written{background:var(--ink);padding:3rem var(--px)}
+@media(min-width:640px){.w-written{padding:4rem var(--px)}}
+.w-written-inner{max-width:var(--max);margin:0 auto}
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.5rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#151512}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.93rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+/* Work hero */
+.w-hero{max-width:var(--max);margin:0 auto;padding:3rem var(--px) 2rem}
+@media(min-width:640px){.w-hero{padding:4.5rem var(--px) 2rem}}
+
+
+/* Embed rows   posts side by side on desktop */
+.w-row{
+  display:grid;
+  gap:1.25rem;
+  margin-bottom:1.5rem;
+  grid-template-columns:1fr; /* mobile: stacked */
+}
+@media(min-width:600px){
+  .w-row.r2{grid-template-columns:repeat(2,1fr)}
+  .w-row.r3{grid-template-columns:repeat(2,1fr)}
+  .w-row.r4{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:900px){
+  .w-row.r3{grid-template-columns:repeat(3,1fr)}
+  .w-row.r4{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Each embed cell keeps consistent width */
+.w-row .w-embed-wrap{margin-bottom:0}
+.w-row .w-embed-wrap .instagram-media,
+.w-row .w-embed-wrap blockquote.instagram-media{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+.w-row .w-embed-wrap .tiktok-embed,
+.w-row .w-embed-wrap blockquote.tiktok-embed{
+  margin:0 !important;
+  min-width:unset !important;
+  width:100% !important;
+  max-width:100% !important;
+}
+
+/* YouTube thumbnail tile (fallback when embedding disabled) */
+.yt-tile{
+  position:relative;
+  border-radius:3px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#111;
+  aspect-ratio:16/9;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+}
+.yt-tile img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.yt-tile-play{
+  position:relative;z-index:1;
+  width:56px;height:56px;
+  background:rgba(0,0,0,0.7);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s, transform 0.2s;
+  flex-shrink:0;
+}
+.yt-tile:hover .yt-tile-play{background:#FF0000;transform:scale(1.08)}
+.yt-tile-play svg{width:22px;height:22px;fill:white;margin-left:3px}
+.yt-tile-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  font-family:var(--syne);font-size:11px;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:rgba(255,255,255,0.85);
+}
+.yt-note{
+  font-size:12px;color:var(--h);line-height:1.6;
+  margin-bottom:1rem;font-style:italic;
+}
+
+
+/* Stats strip   horizontal, inline, no grid */
+.w-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:1rem;
+  width:fit-content;
+  max-width:100%;
+}
+.w-stat{
+  background:var(--off);
+  padding:0.7rem 1rem;
+  min-width:80px;
+}
+.w-stat-n{
+  font-family:var(--syne);
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--ink);
+  line-height:1;
+  display:block;
+  margin-bottom:0.1rem;
+}
+.w-stat-n b{color:#E8621A;font-weight:inherit}
+.w-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em;white-space:nowrap}
+
+/* Campaign title stats header   3col for MC, 2col for Purity, 4col for Brave */
+.w-stats-header{
+  display:grid;
+  gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:1.25rem;
+}
+.w-stats-header.c3{grid-template-columns:repeat(3,1fr)}
+.w-stats-header.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:680px){.w-stats-header.c4{grid-template-columns:repeat(4,1fr)}}
+.w-stats-header.c2{grid-template-columns:repeat(2,1fr)}
+.w-sh-cell{background:var(--off);padding:1rem 1.1rem}
+.w-sh-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--h);margin-bottom:0.6rem;display:block;
+}
+.w-sh-nums{display:flex;flex-wrap:wrap;gap:1.25rem}
+.w-sh-num-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-sh-num-n b{color:#E8621A;font-weight:inherit}
+.w-sh-num-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Row grid   embeds side by side */
+.w-row{display:grid;gap:1.25rem;margin-bottom:0.75rem}
+.w-row.r1{grid-template-columns:1fr;max-width:480px}
+.w-row.r2{grid-template-columns:1fr}
+.w-row.r3{grid-template-columns:1fr}
+.w-row.r4{grid-template-columns:1fr 1fr}
+@media(min-width:560px){.w-row.r2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:560px){.w-row.r3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:860px){.w-row.r3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:860px){.w-row.r4{grid-template-columns:repeat(4,1fr)}}
+
+/* Ensure embeds fill their column and never overflow */
+.w-row .w-embed-wrap{margin-bottom:0;width:100%;overflow:hidden}
+.w-row .w-embed-wrap .instagram-media,
+.w-row .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+.w-row .w-embed-wrap .tiktok-embed,
+.w-row .w-embed-wrap blockquote.tiktok-embed{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+/* Row caption */
+.w-row-cap{
+  font-size:12px;color:var(--h);
+  margin-bottom:1.5rem;line-height:1.6;
+}
+
+/* Camp links */
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  padding-top:1.25rem;border-top:1px solid var(--bd);
+  margin-top:0.5rem;
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+
+/* YouTube tile */
+.yt-tile{
+  position:relative;border-radius:3px;overflow:hidden;
+  cursor:pointer;background:#111;
+  aspect-ratio:16/9;display:block;text-decoration:none;
+}
+.yt-tile img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.yt-tile-play{
+  position:absolute;inset:0;display:flex;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.3);transition:background 0.2s;
+}
+.yt-tile:hover .yt-tile-play{background:rgba(0,0,0,0.55)}
+.yt-tile-play svg{width:52px;height:52px}
+.yt-tile-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  font-family:var(--syne);font-size:11px;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:rgba(255,255,255,0.9);
+}
+.yt-note{
+  font-size:12px;color:var(--h);line-height:1.6;
+  margin-bottom:1rem;
+}
+
+/* Written work grid */
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:3px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.5rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#151512}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.93rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+
+/* TikTok embed: true 9:16 column, no cutoff */
+.tt-wrap {
+  width: 100%;
+  /* 9:16 = 177.78% padding trick */
+  position: relative;
+  padding-bottom: 177.78%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  min-width: unset !important;
+  margin: 0 !important;
+}
+/* TikTok injects an iframe   make it fill the wrapper */
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+/* On desktop, cap each TikTok column so 4 fit nicely */
+.w-row.r4 .tt-wrap {
+  max-width: 280px;
+  /* reset padding for fixed max-width scenario */
+}
+
+/* YouTube responsive wrapper */
+.yt-outer {
+  width: 100%;
+}
+.yt-frame-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+.yt-frame-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+/* Fallback tile   shown when embedding is blocked */
+.yt-fallback {
+  display: none; /* hidden until JS shows it */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  aspect-ratio: 16/9;
+  background: #111;
+}
+.yt-fallback img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.yt-fallback-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.55);
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.yt-fallback-play {
+  width: 56px; height: 56px;
+}
+.yt-fallback-label {
+  font-family: var(--syne);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff;
+}
+.yt-fallback-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+
+
+/* Skills icons */
+.w-sk-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(200,255,0,0.08);
+  border: 1px solid rgba(200,255,0,0.15);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.w-sk-icon svg { width: 18px; height: 18px; stroke: var(--accent); }
+
+/* TikTok   true 9:16, fills column, no cutoff */
+.tt-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.tt-wrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 177.78%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  max-width: 100% !important; min-width: unset !important;
+  margin: 0 !important;
+}
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  border: 0;
+}
+.tt-concept {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--m);
+  font-weight: 300;
+}
+.tt-concept strong {
+  font-family: var(--syne);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.tt-link {
+  font-family: var(--syne);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--h);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.tt-link:hover { color: var(--ink); }
+
+/* Piece explainer   above stats */
+.w-piece-explainer {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--m);
+  font-weight: 300;
+  max-width: 620px;
+  margin-bottom: 0.85rem;
+}
+.w-piece-concept-label {
+  font-family: var(--syne);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2, #E8621A);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* YouTube tiles   bigger, no error messaging */
+.yt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 680px;
+}
+@media(min-width: 560px) { .yt-grid { grid-template-columns: 1fr 1fr; } }
+.yt-tile-big {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #111;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+.yt-tile-big img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.yt-tile-big:hover img { transform: scale(1.03); }
+.yt-tile-big-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.38);
+  gap: 0.6rem;
+  transition: background 0.2s;
+}
+.yt-tile-big:hover .yt-tile-big-overlay { background: rgba(0,0,0,0.55); }
+.yt-play-btn {
+  width: 60px; height: 60px;
+}
+.yt-tile-big-title {
+  font-family: var(--syne);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+
+/* TikTok 2-per-row: explainer left, video right */
+.tt-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--bd);
+  align-items: start;
+}
+@media(min-width: 640px) {
+  .tt-pair {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
+.tt-pair:last-child { border-bottom: 1px solid var(--bd); }
+
+/* Explainer side */
+.tt-explainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+.tt-explainer-num {
+  font-family: var(--syne);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.tt-explainer-title {
+  font-family: var(--syne);
+  font-size: 1.05rem; font-weight: 800;
+  line-height: 1.2; letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.tt-explainer-concept {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #E8621A; display: block;
+  margin-bottom: 0.1rem; margin-top: 0.25rem;
+}
+.tt-explainer-body {
+  font-size: 13.5px; line-height: 1.8;
+  color: var(--m); font-weight: 300;
+}
+.tt-explainer-stats {
+  display: flex; flex-wrap: wrap; gap: 1px;
+  background: var(--bd); border: 1px solid var(--bd);
+  border-radius: 3px; overflow: hidden;
+  width: fit-content; margin-top: 0.25rem;
+}
+.tt-explainer-stats .ts {
+  background: var(--off);
+  padding: 0.6rem 0.9rem;
+}
+.tt-explainer-stats .ts-n {
+  font-family: var(--syne); font-size: 1rem;
+  font-weight: 800; color: var(--ink);
+  line-height: 1; display: block; margin-bottom: 0.1rem;
+}
+.tt-explainer-stats .ts-n b { color: #E8621A; font-weight: inherit; }
+.tt-explainer-stats .ts-l {
+  font-size: 10px; color: var(--h);
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+
+/* TikTok video side   9:16, no overflow */
+.tt-video-side {
+  width: 100%;
+  max-width: 320px; /* natural TikTok width */
+  margin: 0 auto;
+}
+@media(min-width: 640px) {
+  .tt-video-side { max-width: 100%; margin: 0; }
+}
+.tt-wrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 177.78%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  /* Prevent TikTok iframe from scrolling/expanding */
+  contain: strict;
+}
+.tt-wrap blockquote.tiktok-embed {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  max-width: 100% !important; min-width: unset !important;
+  margin: 0 !important;
+}
+.tt-wrap iframe {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important;
+  border: 0;
+  /* Disable autoplay via pointer-events trick is not needed  
+     TikTok embeds require a click to play by default */
+}
+
+/* Purity 2-row layout */
+.purity-row {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.purity-row.r2 { grid-template-columns: 1fr; }
+@media(min-width: 500px) {
+  .purity-row.r2 { grid-template-columns: 1fr 1fr; }
+}
+
+/* YouTube   stays on page, full click area */
+.yt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+}
+@media(min-width: 560px) {
+  .yt-grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+/* ============================================================
+   WORK PAGE - COMPLETE REDESIGN
+   ============================================================ */
+
+/* Hero */
+.w-hero{max-width:var(--max);margin:0 auto;padding:3.5rem var(--px) 2rem}
+@media(min-width:640px){.w-hero{padding:5rem var(--px) 2.5rem}}
+
+/* Skills dark section */
+.w-skills{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.w-skills{padding:5rem var(--px)}}
+.w-skills-inner{max-width:var(--max);margin:0 auto}
+.w-skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:4px;
+  overflow:hidden;
+  margin-top:2.5rem;
+}
+@media(min-width:560px){.w-skills-grid{grid-template-columns:repeat(4,1fr)}}
+.w-sk{
+  background:var(--ink);
+  padding:1.5rem 1.25rem;
+  display:flex;flex-direction:column;gap:0.5rem;
+  transition:background 0.2s;
+}
+.w-sk:hover{background:#131310}
+.w-sk-icon{
+  width:38px;height:38px;
+  background:rgba(200,255,0,0.07);
+  border:1px solid rgba(200,255,0,0.14);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:0.4rem;
+  flex-shrink:0;
+}
+.w-sk-icon svg{width:18px;height:18px;stroke:var(--accent)}
+.w-sk-name{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  color:var(--off);letter-spacing:-0.01em;
+}
+.w-sk-tools{
+  font-size:11px;color:rgba(255,255,255,0.28);
+  line-height:1.55;font-weight:300;
+}
+
+/* Campaign section */
+.w-campaigns{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+
+/* Campaign card */
+.w-camp{
+  border-top:1px solid var(--bd);
+  padding:3.5rem 0;
+}
+.w-camp:last-of-type{border-bottom:1px solid var(--bd);margin-bottom:4rem}
+.w-camp-head{
+  display:flex;align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+  margin-bottom:1.25rem;
+}
+.w-camp-client{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--h);display:block;margin-bottom:0.35rem;
+}
+.w-camp-name{
+  font-family:var(--syne);
+  font-size:clamp(1.2rem,2.5vw,1.65rem);
+  font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--ink);
+}
+.w-camp-roles{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.65rem}
+.w-camp-role{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  border:1px solid var(--bd);border-radius:2px;
+  padding:3px 9px;color:var(--m);
+}
+.w-camp-badge{
+  display:inline-block;background:var(--accent);color:var(--ink);
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:5px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0;
+  align-self:flex-start;
+}
+.w-camp-summary{
+  font-size:14px;line-height:1.85;color:var(--m);
+  font-weight:300;max-width:640px;margin-bottom:2rem;
+}
+.w-camp-links{
+  display:flex;flex-wrap:wrap;gap:1.25rem;
+  padding-top:1.5rem;border-top:1px solid var(--bd);
+  margin-top:1.5rem;
+}
+.w-camp-link{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);display:inline-flex;align-items:center;
+  gap:5px;transition:color 0.2s;text-decoration:none;
+}
+.w-camp-link:hover{color:var(--ink)}
+
+/* Section divider label */
+.w-piece-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;
+}
+.w-piece-tag::after{content:'';flex:1;height:1px;background:var(--bd)}
+
+/* ============================================================
+   CONTENT PIECE: LEFT EMBED + RIGHT INFO
+   Two-column layout: post on left, thinking + stats on right
+   ============================================================ */
+.content-piece{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  margin-bottom:3rem;
+}
+@media(min-width:680px){
+  .content-piece{
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem;
+    align-items:start;
+  }
+}
+.content-piece.reverse-mob{} /* future use */
+
+.cp-embed{
+  width:100%;
+  /* Centre the embed within its column */
+}
+.cp-embed .w-embed-wrap{margin-bottom:0}
+.cp-embed .w-embed-wrap .instagram-media,
+.cp-embed .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+.cp-info{
+  display:flex;flex-direction:column;gap:1rem;
+  padding-top:0.25rem;
+}
+.cp-info-label{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--accent);display:block;
+}
+/* On accent background, use accent for label */
+.cp-info-label.orange{color:#E8621A}
+.cp-info-title{
+  font-family:var(--syne);font-size:1.05rem;font-weight:800;
+  line-height:1.2;letter-spacing:-0.01em;color:var(--ink);
+}
+.cp-info-thinking-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.35rem;
+}
+.cp-info-body{
+  font-size:13.5px;line-height:1.8;
+  color:var(--m);font-weight:300;
+}
+
+/* Stats: vertical stack */
+.cp-stats-stack{
+  display:flex;flex-direction:column;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  width:fit-content;
+  margin-top:0.25rem;
+}
+.cp-stat-row{
+  background:var(--off);
+  padding:0.55rem 1.1rem;
+  display:flex;align-items:baseline;gap:0.75rem;
+}
+.cp-stat-n{
+  font-family:var(--syne);font-size:1.2rem;font-weight:800;
+  color:var(--ink);line-height:1;min-width:60px;
+}
+.cp-stat-n b{color:#E8621A;font-weight:inherit}
+.cp-stat-l{font-size:11px;color:var(--h);letter-spacing:0.03em}
+.cp-disclaimer{
+  font-size:11px;color:var(--h);margin-top:0.25rem;
+}
+
+/* ============================================================
+   TIKTOK: 2-per-row with explainer left, video right
+   ============================================================ */
+.tt-section{
+  background:var(--ink); /* dark bg = no colour clash */
+  margin:0 calc(-1 * var(--px));
+  padding:2.5rem var(--px);
+  border-radius:4px;
+  margin-bottom:0;
+}
+.tt-pair{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  padding:2rem 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+  align-items:start;
+}
+@media(min-width:640px){
+  .tt-pair{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+.tt-pair:first-child{border-top:none;padding-top:0}
+
+.tt-explainer{
+  display:flex;flex-direction:column;gap:0.75rem;
+  color:var(--ink);
+}
+.tt-exp-num{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#E8621A;
+}
+.tt-exp-title{
+  font-family:var(--syne);font-size:1rem;font-weight:800;
+  line-height:1.2;letter-spacing:-0.01em;color:var(--ink);
+}
+.tt-exp-concept{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.1rem;
+}
+.tt-exp-body{
+  font-size:13px;line-height:1.75;
+  color:var(--m);font-weight:300;
+}
+
+/* Stats on dark bg */
+.tt-stats-stack{
+  display:flex;flex-direction:column;gap:1px;
+  background:var(--bd);
+  border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  width:fit-content;
+}
+.tt-stat-row{
+  background:var(--off);
+  padding:0.5rem 1rem;
+  display:flex;align-items:baseline;gap:0.75rem;
+}
+.tt-stat-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;min-width:55px;
+}
+.tt-stat-n b{color:#E8621A;font-weight:inherit}
+.tt-stat-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+.tt-link{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--m);text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;
+  transition:color 0.2s;margin-top:0.25rem;
+}
+.tt-link:hover{color:var(--ink)}
+
+/* TikTok video: true 9:16 */
+.tt-video-col{
+  width:100%;
+  max-width:300px;
+  margin:0 auto;
+}
+@media(min-width:640px){.tt-video-col{max-width:100%;margin:0}}
+.tt-wrap{
+  position:relative;
+  padding-bottom:177.78%;
+  overflow:hidden;
+  border-radius:10px;
+  background:#111;
+  contain:strict;
+}
+.tt-wrap blockquote.tiktok-embed{
+  position:absolute!important;top:0!important;left:0!important;
+  width:100%!important;height:100%!important;
+  max-width:100%!important;min-width:unset!important;
+  margin:0!important;
+}
+.tt-wrap iframe{
+  position:absolute!important;top:0!important;left:0!important;
+  width:100%!important;height:100%!important;border:0;
+}
+
+/* ============================================================
+   PURITY: 2 posts side by side
+   ============================================================ */
+.purity-row{
+  display:grid;gap:1.25rem;margin-bottom:1rem;
+}
+.purity-row.r2{grid-template-columns:1fr}
+@media(min-width:500px){.purity-row.r2{grid-template-columns:1fr 1fr}}
+.purity-row .w-embed-wrap{margin-bottom:0}
+.purity-row .w-embed-wrap .instagram-media,
+.purity-row .w-embed-wrap blockquote.instagram-media{
+  margin:0!important;min-width:unset!important;
+  width:100%!important;max-width:100%!important;
+}
+
+/* ============================================================
+   SOLID SYSTEMS: YouTube tiles
+   ============================================================ */
+.yt-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  margin-bottom:1.5rem;
+}
+@media(min-width:560px){.yt-grid{grid-template-columns:1fr 1fr}}
+.yt-tile-big{
+  display:block;position:relative;
+  border-radius:8px;overflow:hidden;
+  text-decoration:none;background:#111;
+  aspect-ratio:16/9;cursor:pointer;
+}
+.yt-tile-big img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;transition:transform 0.3s ease;
+}
+.yt-tile-big:hover img{transform:scale(1.03)}
+.yt-tile-big-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.38);gap:0.6rem;
+  transition:background 0.2s;
+}
+.yt-tile-big:hover .yt-tile-big-overlay{background:rgba(0,0,0,0.55)}
+.yt-play-btn{width:60px;height:60px}
+.yt-tile-big-title{
+  font-family:var(--syne);font-size:12px;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:#fff;text-align:center;padding:0 1rem;
+}
+
+/* Solid series individual explainer */
+.yt-series-item{margin-bottom:2rem}
+.yt-series-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--h);
+  display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;
+}
+.yt-series-label::after{content:'';flex:1;height:1px;background:var(--bd)}
+.yt-series-thinking{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#E8621A;display:block;margin-bottom:0.35rem;
+}
+.yt-series-body{
+  font-size:13.5px;line-height:1.8;color:var(--m);
+  font-weight:300;max-width:640px;margin-bottom:1.25rem;
+}
+
+/* Stats header (for campaign-level stats) */
+.w-stats-header{
+  display:grid;gap:1px;
+  background:var(--bd);border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;
+  margin-bottom:1.5rem;
+}
+.w-stats-header.c2{grid-template-columns:1fr 1fr}
+.w-stats-header.c3{grid-template-columns:repeat(3,1fr)}
+.w-stats-header.c4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:680px){.w-stats-header.c4{grid-template-columns:repeat(4,1fr)}}
+.w-sh-cell{background:var(--off);padding:1rem 1.1rem}
+.w-sh-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--h);margin-bottom:0.5rem;display:block;
+}
+.w-sh-nums{display:flex;flex-wrap:wrap;gap:1.25rem}
+.w-sh-num-n{
+  font-family:var(--syne);font-size:1.1rem;font-weight:800;
+  color:var(--ink);line-height:1;display:block;margin-bottom:0.1rem;
+}
+.w-sh-num-n b{color:#E8621A;font-weight:inherit}
+.w-sh-num-l{font-size:10px;color:var(--h);letter-spacing:0.03em}
+
+/* Written work */
+.w-written{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.w-written{padding:5rem var(--px)}}
+.w-written-inner{max-width:var(--max);margin:0 auto}
+.ww-grid{
+  display:grid;gap:1px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:4px;overflow:hidden;
+  margin-top:2rem;
+}
+@media(min-width:540px){.ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.ww-grid{grid-template-columns:repeat(3,1fr)}}
+.ww-card{
+  background:var(--ink);padding:1.75rem;
+  display:flex;flex-direction:column;gap:0.6rem;
+  cursor:pointer;transition:background 0.2s;text-decoration:none;
+}
+.ww-card:hover{background:#131310}
+.ww-tag{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.ww-h{
+  font-family:var(--syne);font-size:0.95rem;font-weight:700;
+  line-height:1.3;color:var(--off);
+}
+.ww-desc{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.36);font-weight:300}
+.ww-meta{
+  font-size:11px;color:rgba(255,255,255,0.22);
+  font-family:var(--syne);letter-spacing:0.04em;
+  margin-top:auto;padding-top:0.5rem;
+}
+.ww-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);text-decoration:none;
+  margin-top:2rem;transition:color 0.2s;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:1.5rem;
+}
+.ww-more:hover{color:var(--accent)}
+
+
+/* Solid Systems: 2-col   text left, video right */
+.yt-series-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+@media(min-width: 680px) {
+  .yt-series-item {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+.yt-series-text { display: flex; flex-direction: column; gap: 0.75rem; }
+.yt-series-video { width: 100%; }
+.yt-series-label {
+  font-family: var(--syne); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--h);
+  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0;
+}
+.yt-series-label::after { content:''; flex:1; height:1px; background:var(--bd); }
+.yt-series-thinking {
+  font-family: var(--syne); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #E8621A; display: block; margin-bottom: 0.25rem;
+}
+.yt-series-body {
+  font-size: 13.5px; line-height: 1.8; color: var(--m);
+  font-weight: 300; margin-bottom: 0;
+}
+/* YouTube tile fills its column */
+.yt-series-video .yt-tile-big {
+  display: block; position: relative;
+  border-radius: 8px; overflow: hidden;
+  text-decoration: none; background: #111;
+  aspect-ratio: 16/9; cursor: pointer;
+  width: 100%;
+}
+.yt-series-video .yt-tile-big img {
+  width:100%; height:100%; object-fit:cover;
+  display:block; transition:transform 0.3s ease;
+}
+.yt-series-video .yt-tile-big:hover img { transform:scale(1.03); }
+.yt-series-video .yt-tile-big-overlay {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background:rgba(0,0,0,0.38); gap:0.6rem; transition:background 0.2s;
+}
+.yt-series-video .yt-tile-big:hover .yt-tile-big-overlay { background:rgba(0,0,0,0.55); }
+
+
+/* Remove TikTok white placeholder box */
+.tt-wrap blockquote.tiktok-embed {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.tt-wrap blockquote.tiktok-embed > section {
+  display: none; /* hide fallback content */
+}
+/* Dark section keeps dark bg on all children */
+.tt-section { background: var(--mid); border-radius: 4px; overflow: hidden; }
+.tt-section .tt-pair { background: transparent; }
+
 </style>
 </head>
 <body>
 <header>
   <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="/" class="logo" aria-label="Go to homepage">Juff Manda</a>
+      <a href="/" class="logo"><span class="logo-dot"></span>Juff Manda</a>
       <div class="nav-links" role="menubar">
-        <a href="/about/" class="nl" data-p="about" role="menuitem">About</a>
-        <a href="/work/" class="nl" data-p="work" role="menuitem">Work</a>
-        <a href="/methodology/" class="nl" data-p="methodology" role="menuitem">Methodology</a>
-        <a href="/insights/" class="nl" data-p="insights" role="menuitem">Insights</a>
-        <a href="/work-with-me/" class="nl" data-p="wwm" role="menuitem">Work with me</a>
-        <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li" aria-label="LinkedIn profile">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="/about/" class="nl">About</a>
+        <a href="/work/" class="nl on">Work</a>
+        <a href="/insights/" class="nl">Insights</a>
+        <a href="/work-with-me/" class="nav-cta">Work with me</a>
+        <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="nav-li-link" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
+  <a href="/about/" class="mob-link">About</a>
+  <a href="/work/" class="mob-link">Work</a>
+  <a href="/insights/" class="mob-link">Insights</a>
+  <a href="/work-with-me/" class="mob-link">Work with me</a>
+  </nav>
 </header>
-<nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
-  <a href="/about/" class="mob-link" onclick="closeMenu()">About</a>
-  <a href="/work/" class="mob-link" onclick="closeMenu()">Work</a>
-  <a href="/methodology/" class="mob-link" onclick="closeMenu()">Methodology</a>
-  <a href="/insights/" class="mob-link" onclick="closeMenu()">Insights</a>
-  <a href="/work-with-me/" class="mob-link" onclick="closeMenu()">Work with me</a>
-</nav>
 <main>
-<section class="work-hero">
-    <p class="sec-tag">Selected work and involvement</p>
-    <h1 class="sec-h">Close to the work.<br><em>At every level.</em></h1>
-    <p class="sec-body">Strategy, creative involvement, team direction, and platform oversight. Each engagement below shows where and how I was involved. A significant portion of ongoing work operates under confidentiality and is available on request.</p>
-  </section>
+<div class="w-hero">
+  <p class="sec-tag">Work and involvement</p>
+  <h1 class="sec-h">Strategy, craft,<br><em>and what shipped.</em></h1>
+  <p style="font-size:14px;line-height:1.85;color:var(--m);font-weight:300;max-width:520px;margin-top:1rem">Each piece shows where and how I was involved. Strategy lead, creative director, content producer, or all three. Work under NDA is available on request.</p>
+</div>
 
-  <section class="cs-block" aria-label="Case study: MasterChef South Africa">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">MasterChef South Africa · Season 6</span>
+<!-- SKILLS -->
+<div class="w-skills">
+  <div class="w-skills-inner">
+    <p style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem">What I bring</p>
+    <h2 style="font-family:var(--syne);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--off)">Both ends of<br><em style="font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.28)">the craft.</em></h2>
+    <div class="w-skills-grid">
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg></div><div class="w-sk-name">Digital Strategy</div><div class="w-sk-tools">Content frameworks &middot; Campaign architecture &middot; Channel strategy &middot; B2B and B2C</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><div class="w-sk-name">Creative Direction</div><div class="w-sk-tools">Concept ideation &middot; Art direction &middot; Hook and angle development</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><div class="w-sk-name">Content Creation</div><div class="w-sk-tools">Copywriting &middot; Script writing &middot; Video editing &middot; Motion graphics</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M17 17l4 4M3 3l4 4"/><path d="M6.5 13.5C6.5 10 9 7 13.5 6.5"/></svg></div><div class="w-sk-name">Graphic Design</div><div class="w-sk-tools">Adobe CC &middot; Visual identity &middot; ATL and BTL production</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="w-sk-name">Influencer Strategy</div><div class="w-sk-tools">Programme design &middot; Brief-first casting &middot; Creator management</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="w-sk-name">Community Management</div><div class="w-sk-tools">Platform setup and audits &middot; Brandwatch &middot; Meltwater</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><div class="w-sk-name">Paid Media and SEO</div><div class="w-sk-tools">Paid social &middot; Google Ads &middot; SEO &middot; Search Console &middot; Analytics</div></div>
+      <div class="w-sk"><div class="w-sk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="w-sk-name">Team and AI Leadership</div><div class="w-sk-tools">Team building &middot; Workflow design &middot; AI integration &middot; ExCo &middot; Mentoring</div></div>
     </div>
-    <h2 class="cs-title">Building a content system<br>for a live broadcast brand.</h2>
-    <figure>
-      <img class="cs-img" src="masterchef_season_6_kv_launch.jpg" alt="MasterChef South Africa Season 6 official launch key visual, judges and branding on e.tv" loading="lazy" width="1100" height="420">
-      <figcaption style="font-size:11px;color:var(--h);font-family:var(--syne);letter-spacing:0.04em;margin-top:0.5rem">MasterChef South Africa Season 6. Image: Primedia Studios / e.tv. All rights reserved.</figcaption>
-    </figure>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic lead and creative oversight. I set the content direction, shaped the communication framework, evaluated creative ideas against the strategy, and directed how the brand showed up across social platforms throughout the broadcast season.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">MasterChef South Africa runs across a broadcast cycle with fixed air dates and an audience that spans different demographics with different relationships to food. The challenge was to build a content system that held engagement across the full broadcast window, not spike at launch and collapse by week three.</span>
-      <span class="cs-k">The problem</span><span class="cs-v">Live broadcast brands are often treated as events rather than ongoing conversations. A content calendar built around the broadcast schedule alone misses the points of genuine audience interest that exist between episodes. Ideas were being evaluated on novelty rather than strategic fit.</span>
-      <span class="cs-k">What was built</span><span class="cs-v">A content framework developed from mapping the audience's actual relationship with food culture in South Africa. The framework defined communication categories beyond the episode itself: the cast as people, the food culture behind the dishes, and the moments that generate participation rather than passive viewing. Creative ideas were evaluated against these categories, not instinct.</span>
-      <span class="cs-k">Creative direction</span><span class="cs-v">I shaped the hooks and angles that gave the content team clear criteria for what was worth making. This reduced the time spent debating individual pieces and increased the consistency of quality across the season.</span>
-      <span class="cs-k">The point</span><span class="cs-v">A broadcast window is not a content strategy. This worked because it treated the show as the context, the audience as the subject, and gave the team a framework they could use to make better decisions independently.</span>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="https://www.instagram.com/sa_masterchef/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @sa_masterchef on Instagram &#8599;
-      </a>
-    </div>
-  </section>
-
-  <section class="cs-block" aria-label="Case study: GEPF">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">GEPF · Government Employees Pension Fund</span>
-    </div>
-    <h2 class="cs-title">Digital strategy and team<br>structure for a public institution.</h2>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic lead, team structure design, and content system oversight. I built the framework that governed the digital operation, defined the team roles and workflow, and stayed involved in creative direction and platform performance review.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">GEPF needed a digital presence that could communicate clearly with a large and diverse membership base. The existing approach lacked consistency, strategic direction, and any governing logic for what got published and why.</span>
-      <span class="cs-k">The problem</span><span class="cs-v">Public institutions often default to broadcast communication. Content goes out because it needs to, not because it is designed to reach anyone in particular. The team had no clear criteria for what good looked like or what the digital presence was actually for.</span>
-      <span class="cs-k">What was built</span><span class="cs-v">A digital strategy framework built around what members actually need to know and when. Channel logic, content categories, a posting structure aligned to communication priorities, and a workflow that the team could operate with clarity. Team roles were defined to match the output requirements.</span>
-      <span class="cs-k">Team and capability</span><span class="cs-v">Part of the work involved building the team's confidence in making strategic decisions about content. That is not a training exercise. It happens through consistent direction, clear feedback on what is working and what is not, and giving people enough context to make better calls themselves.</span>
-    </div>
-  </section>
-
-  <section class="cs-block" aria-label="Case study: Tiger Brands portfolio">
-    <div class="cs-meta">
-      <span class="cs-tag">Work and Involvement</span>
-      <span style="font-family:var(--syne);font-size:11px;color:var(--h);letter-spacing:0.06em">Tiger Brands · All Gold, Mrs Balls, Purity</span>
-    </div>
-    <h2 class="cs-title">Platform strategy and creative<br>oversight across an FMCG portfolio.</h2>
-    <div class="cs-grid">
-      <span class="cs-k">My involvement</span><span class="cs-v">Strategic and creative oversight across multiple brands within the portfolio. Platform strategy, content direction, influencer programme structure, and creative evaluation. Each brand required a distinct positioning while sharing operational infrastructure.</span>
-      <span class="cs-k">The situation</span><span class="cs-v">Managing multiple FMCG brands simultaneously means the systems need to be strong enough that the team can operate independently while the strategic lead stays close enough to catch quality issues before they go out.</span>
-      <span class="cs-k">Creative involvement</span><span class="cs-v">I evaluated creative ideas, shaped hooks and campaign angles, and provided direction on what the content needed to do differently on each platform. The same idea rarely works the same way on Instagram, Facebook, and TikTok. Platform-specific thinking is part of the creative process, not an afterthought.</span>
-      <span class="cs-k">Influencer approach</span><span class="cs-v">Influencer programmes across the portfolio were structured around strategic fit rather than follower count. Who a brand is seen alongside in this market matters. The brief always came before the casting decision.</span>
-      <span class="cs-k">Team structure</span><span class="cs-v">A shared operational structure with brand-specific ownership built within the team. Specialists owned individual accounts but operated within a consistent framework. That is how you maintain quality at portfolio scale without a bottleneck at the top.</span>
-    </div>
-    <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1.25rem">
-      <a href="https://www.instagram.com/allgoldsa/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @allgoldsa on Instagram &#8599;
-      </a>
-      <a href="https://www.instagram.com/mrsballschutneysa/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @mrsballschutneysa on Instagram &#8599;
-      </a>
-      <a href="https://www.instagram.com/puritypromise/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--m)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @puritypromise on Instagram &#8599;
-      </a>
-    </div>
-  </section>
-
-  <div class="further">
-    <span class="further-label">Additional involvement</span>
-    <p style="font-size:14px;color:var(--m);font-weight:300;line-height:1.75">Nedbank · SodaStream · Knorrox · Wits Business School · Dermopal · Puma Energy · available on request under NDA.</p>
-    <p style="font-size:13px;color:var(--h);margin-top:0.5rem">Earlier work with Telkom, Huawei, Garnier, Dark and Lovely, and SANRAL is part of the record. Available on request.</p>
   </div>
 </div>
 
-<!-- ============================================================
-     METHODOLOGY PAGE
-     ============================================================ -->
+<div class="w-campaigns">
+  <p class="sec-tag" style="padding-top:3.5rem">Selected campaign work</p>
+
+  <!-- ═══ MASTERCHEF ═══════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Primedia &middot; e.tv</span>
+        <h2 class="w-camp-name">MasterChef South Africa</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Social Strategy</span>
+          <span class="w-camp-role">Creative Direction</span>
+          <span class="w-camp-role">Hook Development</span>
+          <span class="w-camp-role">Thumbnail Strategy</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Season 6 &middot; 2025</span>
+    </div>
+    <p class="w-camp-summary">Introduced two new content mechanics to the MasterChef SA account: audience-led carousels that made followers the judges, and curiosity-driven video thumbnails built to earn clicks. Both were my original concepts. Both delivered the account&#8217;s highest organic numbers of the season. No paid media on any of these.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Carousel</p>
+    <div class="content-piece">
+  <div class="cp-embed"><div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWQhWHtjD2T/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/p/DWQhWHtjD2T/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div></div>
+  <div class="cp-info">
+    <span class="cp-info-label orange">Original concept</span>
+    <div class="cp-info-title">Choose the Most Instagrammable Burger</div>
+    <div>
+      <span class="cp-info-thinking-label">The thinking</span>
+      <p class="cp-info-body">The idea was to bridge the gap between the show, social media, and the audience by letting them be the judges. Instead of pushing broadcast content, I introduced a format that gave the audience a stake in the outcome. Each slide showed a contestant&#8217;s burger. The question was simple: which one would you actually post? That framing made it shareable by design. Highest-performing organic post of the season.</p>
+    </div>
+    <div class="cp-stats-stack"><div class="cp-stat-row"><span class="cp-stat-n">35<b>K</b></span><span class="cp-stat-l">Views</span></div><div class="cp-stat-row"><span class="cp-stat-n">325</span><span class="cp-stat-l">Likes</span></div><div class="cp-stat-row"><span class="cp-stat-n">309</span><span class="cp-stat-l">Comments</span></div></div>
+    <p class="cp-disclaimer">Numbers reflect stats at time of reporting. Live post figures may vary.</p>
+  </div>
+</div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Carousel</p>
+    <div class="content-piece">
+  <div class="cp-embed"><div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXlmFu3jIfV/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/p/DXlmFu3jIfV/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div></div>
+  <div class="cp-info">
+    <span class="cp-info-label orange">Original concept</span>
+    <div class="cp-info-title">Build Your Ultimate Kota</div>
+    <div>
+      <span class="cp-info-thinking-label">The thinking</span>
+      <p class="cp-info-body">Applying the same audience-as-judge mechanic to a cultural icon. The kota is quintessentially South African and carries strong emotional attachment. The format deconstructed it ingredient by ingredient, building tension with each slide. The final slide forced a decision: you have to remove one. That structure drove comments because it gave people something worth arguing about. Same methodology, different cultural entry point.</p>
+    </div>
+    <div class="cp-stats-stack"><div class="cp-stat-row"><span class="cp-stat-n">17<b>K</b></span><span class="cp-stat-l">Views</span></div><div class="cp-stat-row"><span class="cp-stat-n">264</span><span class="cp-stat-l">Likes</span></div><div class="cp-stat-row"><span class="cp-stat-n">115</span><span class="cp-stat-l">Comments</span></div></div>
+    <p class="cp-disclaimer">Numbers reflect stats at time of reporting. Live post figures may vary.</p>
+  </div>
+</div>
+
+    <p class="w-piece-tag">Piece 3 &middot; Video &middot; Curiosity thumbnail</p>
+    <div class="content-piece">
+  <div class="cp-embed"><div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWednsQk9Kz/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/p/DWednsQk9Kz/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div></div>
+  <div class="cp-info">
+    <span class="cp-info-label orange">Curiosity-led thumbnail</span>
+    <div class="cp-info-title">Is This Real?</div>
+    <div>
+      <span class="cp-info-thinking-label">The thinking</span>
+      <p class="cp-info-body">Built around fan favourite Lethiwe. The thumbnail showed him on the floor, ambiguous enough to spark curiosity without revealing anything. Is he celebrating? Is he leaving? The vagueness was deliberate. The goal was to get the click before the viewer knew what they were clicking on. Once inside, the video resolved inside existing show content. No new production required. Just a smarter frame around footage already there.</p>
+    </div>
+    <div class="cp-stats-stack"><div class="cp-stat-row"><span class="cp-stat-n">7.9<b>K</b></span><span class="cp-stat-l">Views</span></div><div class="cp-stat-row"><span class="cp-stat-n">258</span><span class="cp-stat-l">Likes</span></div><div class="cp-stat-row"><span class="cp-stat-n">47</span><span class="cp-stat-l">Comments</span></div></div>
+    <p class="cp-disclaimer">Numbers reflect stats at time of reporting. Live post figures may vary.</p>
+  </div>
+</div>
+
+    <div class="w-camp-links">
+      <a class="w-camp-link" href="https://www.instagram.com/sa_masterchef/" target="_blank" rel="noopener noreferrer">@sa_masterchef on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ═══ PURITY ════════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Tiger Brands &middot; Purity</span>
+        <h2 class="w-camp-name">Mother&#8217;s Month Campaign</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Strategy</span>
+          <span class="w-camp-role">Content Pillars</span>
+          <span class="w-camp-role">Influencer Campaign</span>
+          <span class="w-camp-role">Live Posting</span>
+          <span class="w-camp-role">Community Management</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">May 2026</span>
+    </div>
+    <p class="w-camp-summary">The Mother&#8217;s Month campaign was built on a single human truth: moms need to be celebrated, not just marketed to. The entire month was structured around that. Our contribution was the event concept, pitched and delivered with an influencer integration to carry both the live activation and the always-on content that sat around it.</p>
+
+    <!-- Row 1: Competition + Event -->
+    <p class="w-piece-tag">Campaign activation &middot; Competition and event</p>
+    <p style="font-size:13.5px;line-height:1.8;color:var(--m);font-weight:300;max-width:640px;margin-bottom:1.25rem">The Moms in Bloom competition post was designed to build anticipation and drive organic reach before the event. The mechanic was simple: follow, like, reshare, and share a memory. No paid amplification. It reached the brand&#8217;s highest single-post organic numbers at the time. The event carousel followed on the day itself, with live posting timed and sequenced deliberately to capture the energy of the brunch as it happened.</p>
+    <div class="w-stats-header c2"><div class="w-sh-cell"><span class="w-sh-label">Moms in Bloom competition</span><div class="w-sh-nums"><div><span class="w-sh-num-n">52<b>K</b></span><span class="w-sh-num-l">Views</span></div><div><span class="w-sh-num-n">358</span><span class="w-sh-num-l">Likes</span></div><div><span class="w-sh-num-n">357</span><span class="w-sh-num-l">Comments</span></div></div></div><div class="w-sh-cell"><span class="w-sh-label">Event carousel</span><div class="w-sh-nums"><div><span class="w-sh-num-n">10.5<b>K</b></span><span class="w-sh-num-l">Views</span></div><div><span class="w-sh-num-n">296</span><span class="w-sh-num-l">Likes</span></div><div><span class="w-sh-num-n">30</span><span class="w-sh-num-l">Comments</span></div></div></div></div>
+    <div class="purity-row r2">
+      <div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYUhl-vjAW_/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/reel/DYUhl-vjAW_/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div>
+      <div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZASTWYAvdx/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/p/DZASTWYAvdx/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div>
+    </div>
+    <p style="font-size:11px;color:var(--h);margin-bottom:2.5rem">Left: Moms in Bloom competition &middot; Right: You Deserve This Seat event carousel. Numbers reflect stats at time of reporting.</p>
+
+    <!-- Row 2: Recipes -->
+    <p class="w-piece-tag">Content pillar &middot; Recipe series</p>
+    <p style="font-size:13.5px;line-height:1.8;color:var(--m);font-weight:300;max-width:640px;margin-bottom:1.5rem">A new content pillar I introduced to make the brand present in the day-to-day lives of moms and caregivers, not just during campaign moments. The insight: moms are always looking for quick, easy, relatable ideas that do not feel like advertising. The output was recipe content showcasing product in a lifestyle context, shot in real home environments. I brought in Foodies SA as a content partner to execute it. The concept originated internally. The series is now an ongoing pillar for the brand.</p>
+    <div class="purity-row r2">
+      <div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZKssbwCeub/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/p/DZKssbwCeub/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div>
+      <div class="w-embed-wrap"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXO9VLzjL5u/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:8px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:unset;padding:0;width:100%"><div style="padding:16px"><a href="https://www.instagram.com/reel/DXO9VLzjL5u/" target="_blank" rel="noopener noreferrer" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:550">View on Instagram</a></div></blockquote></div>
+    </div>
+    <p style="font-size:11px;color:var(--h);margin-bottom:2rem">Recipe series in partnership with Foodies SA.</p>
+
+    <div class="w-camp-links">
+      <a class="w-camp-link" href="https://www.instagram.com/puritypromise/" target="_blank" rel="noopener noreferrer">@puritypromise on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ═══ BRAVE GROUP ═══════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">House of Brave &middot; Brave Group</span>
+        <h2 class="w-camp-name">Internal Brand Content</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Content Creation</span>
+          <span class="w-camp-role">Video Production</span>
+          <span class="w-camp-role">Script Writing</span>
+          <span class="w-camp-role">On-Camera</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">2025 to 2026</span>
+    </div>
+    <p class="w-camp-summary">Office culture content built on insider archetypes every agency person recognises instantly. Scripted, produced, and appeared in each piece. Four videos, four strong performances. Most viral: 59.9K views with no paid amplification.</p>
+
+    <!-- Dark section for TikToks   no colour clash -->
+    <div class="tt-section">
+      <div class="tt-pair">
+  <div class="tt-explainer">
+    <span class="tt-exp-num">Video 01</span>
+    <div class="tt-exp-title">After 3pm on a Friday</div>
+    <div>
+      <span class="tt-exp-concept">The thinking</span>
+      <p class="tt-exp-body">The universal agency experience. Everyone knows that 3pm on a Friday is when productivity ends and survival mode begins. No brief required. It was lived, scripted, shot on a phone, and posted the same week. The caption asked for half-days on Fridays. The comment section agreed.</p>
+    </div>
+    <div class="tt-stats-stack">
+  <div class="tt-stat-row"><span class="tt-stat-n">59.9<b>K</b></span><span class="tt-stat-l">Views</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">4,080</span><span class="tt-stat-l">Likes</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">88</span><span class="tt-stat-l">Comments</span></div>
+</div>
+    <a class="tt-link" href="https://www.tiktok.com/@bravegroupsa/video/7564702431989271828" target="_blank" rel="noopener noreferrer">Watch on TikTok <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+  </div>
+  <div class="tt-video-col">
+    <div class="tt-wrap">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bravegroupsa/video/7564702431989271828" data-video-id="7564702431989271828" style="max-width:100%;min-width:unset;margin:0"><section></section></blockquote>
+    </div>
+  </div>
+</div>
+      <div class="tt-pair">
+  <div class="tt-explainer">
+    <span class="tt-exp-num">Video 02</span>
+    <div class="tt-exp-title">The office hoarder</div>
+    <div>
+      <span class="tt-exp-concept">The thinking</span>
+      <p class="tt-exp-body">That one colleague who carries everything to work. Stanley cup, tote bag, handbag, laptop bag, gym bag. The visual was the joke. The concept was: make people tag someone they know immediately. It worked because the archetype is so specific it feels personal.</p>
+    </div>
+    <div class="tt-stats-stack">
+  <div class="tt-stat-row"><span class="tt-stat-n">35.7<b>K</b></span><span class="tt-stat-l">Views</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">2,565</span><span class="tt-stat-l">Likes</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">98</span><span class="tt-stat-l">Comments</span></div>
+</div>
+    <a class="tt-link" href="https://www.tiktok.com/@bravegroupsa/video/7617842497888341268" target="_blank" rel="noopener noreferrer">Watch on TikTok <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+  </div>
+  <div class="tt-video-col">
+    <div class="tt-wrap">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bravegroupsa/video/7617842497888341268" data-video-id="7617842497888341268" style="max-width:100%;min-width:unset;margin:0"><section></section></blockquote>
+    </div>
+  </div>
+</div>
+      <div class="tt-pair">
+  <div class="tt-explainer">
+    <span class="tt-exp-num">Video 03</span>
+    <div class="tt-exp-title">The co-worker who never stops talking</div>
+    <div>
+      <span class="tt-exp-concept">The thinking</span>
+      <p class="tt-exp-body">Built around a universal office archetype. Tag-worthy by design. The goal was reach through recognition. Comments delivered exactly that. The specificity of the character is what makes the format repeatable.</p>
+    </div>
+    <div class="tt-stats-stack">
+  <div class="tt-stat-row"><span class="tt-stat-n">19.4<b>K</b></span><span class="tt-stat-l">Views</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">642</span><span class="tt-stat-l">Likes</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">22</span><span class="tt-stat-l">Comments</span></div>
+</div>
+    <a class="tt-link" href="https://www.tiktok.com/@bravegroupsa/video/7628228577070189845" target="_blank" rel="noopener noreferrer">Watch on TikTok <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+  </div>
+  <div class="tt-video-col">
+    <div class="tt-wrap">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bravegroupsa/video/7628228577070189845" data-video-id="7628228577070189845" style="max-width:100%;min-width:unset;margin:0"><section></section></blockquote>
+    </div>
+  </div>
+</div>
+      <div class="tt-pair">
+  <div class="tt-explainer">
+    <span class="tt-exp-num">Video 04</span>
+    <div class="tt-exp-title">The 5pm contract</div>
+    <div>
+      <span class="tt-exp-concept">The thinking</span>
+      <p class="tt-exp-body">If the contract says 5pm, that is exactly when you leave. Not 5:01. The concept exaggerated a real workplace behaviour that everyone relates to but nobody admits to out loud. The captions and comments section turned it into a conversation.</p>
+    </div>
+    <div class="tt-stats-stack">
+  <div class="tt-stat-row"><span class="tt-stat-n">18.5<b>K</b></span><span class="tt-stat-l">Views</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">653</span><span class="tt-stat-l">Likes</span></div>
+  <div class="tt-stat-row"><span class="tt-stat-n">7</span><span class="tt-stat-l">Comments</span></div>
+</div>
+    <a class="tt-link" href="https://www.tiktok.com/@bravegroupsa/video/7569908811046128916" target="_blank" rel="noopener noreferrer">Watch on TikTok <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+  </div>
+  <div class="tt-video-col">
+    <div class="tt-wrap">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bravegroupsa/video/7569908811046128916" data-video-id="7569908811046128916" style="max-width:100%;min-width:unset;margin:0"><section></section></blockquote>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <div class="w-camp-links" style="margin-top:1.5rem">
+      <a class="w-camp-link" href="https://www.tiktok.com/@bravegroupsa" target="_blank" rel="noopener noreferrer">@bravegroupsa on TikTok <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ═══ SOLID SYSTEMS ════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Solid Systems &middot; B2B Tech</span>
+        <h2 class="w-camp-name">Video Series, Web Content and Blog Archive</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Video Production</span>
+          <span class="w-camp-role">Script Writing</span>
+          <span class="w-camp-role">Web Content</span>
+          <span class="w-camp-role">Blog Writing</span>
+          <span class="w-camp-role">End to End</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">2024 to 2025</span>
+    </div>
+    <p class="w-camp-summary">Two original video series built concept to delivery on a minimal budget using a phone and the Adobe suite. Wrote all web content for the Solid Systems website and built the entire blog archive for solidsystems.co.uk. A series of content I wrote for their UK website also lives there, showcasing versatility and an understanding of working with markets abroad. The full content archive covering cybersecurity and productivity lives at solidsystems.co.uk.</p>
+
+    <div class="yt-series-item">
+  <div class="yt-series-text">
+    <div class="yt-series-label">Cyber Habits &middot; YouTube series</div>
+    <span class="yt-series-thinking">The thinking</span>
+    <p class="yt-series-body">The brief was to make cybersecurity accessible and relevant to a non-technical audience. Most cybersecurity content is either too technical or too alarming. The approach was to treat it as lifestyle content: here is what to look for, here is how to protect yourself, here is why it matters. Topics included phishing emails, AI-generated scams, identity theft, and digital hygiene. Shot on a phone, edited using the Adobe suite, with hooks and thumbnails written from scratch.</p>
+  </div>
+  <div class="yt-series-video"><a class="yt-tile-big" href="https://www.youtube.com/watch?v=So2YMLw-wAQ" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/So2YMLw-wAQ/hqdefault.jpg" alt="Cyber Habits" loading="lazy"><div class="yt-tile-big-overlay"><svg class="yt-play-btn" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C56.3 0 34 0 34 0S11.7 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 11.9 0 24 0 24s0 12.1 1.5 16.3a8.5 8.5 0 0 0 6 6C11.7 48 34 48 34 48s22.3 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 36.1 68 24 68 24s0-12.1-1.5-16.3z" fill="#FF0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg><span class="yt-tile-big-title">Cyber Habits</span></div></a></div>
+</div>
+
+    <div class="yt-series-item">
+  <div class="yt-series-text">
+    <div class="yt-series-label">Productivity Hacks &middot; YouTube series</div>
+    <span class="yt-series-thinking">The thinking</span>
+    <p class="yt-series-body">Positioned around the Microsoft ecosystem, this series was built to show business users how to get more done with tools they already have. Microsoft 365, OneDrive, Teams, and productivity workflows were the core subject matter. The format was short, practical, and applied. Same production approach: phone, Adobe suite, original hooks and scripts throughout.</p>
+  </div>
+  <div class="yt-series-video"><a class="yt-tile-big" href="https://www.youtube.com/watch?v=iYoXy4p8tp4" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/iYoXy4p8tp4/hqdefault.jpg" alt="Productivity Hacks" loading="lazy"><div class="yt-tile-big-overlay"><svg class="yt-play-btn" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C56.3 0 34 0 34 0S11.7 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 11.9 0 24 0 24s0 12.1 1.5 16.3a8.5 8.5 0 0 0 6 6C11.7 48 34 48 34 48s22.3 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 36.1 68 24 68 24s0-12.1-1.5-16.3z" fill="#FF0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg><span class="yt-tile-big-title">Productivity Hacks</span></div></a></div>
+</div>
+
+    <div class="w-camp-links">
+      <a class="w-camp-link" href="https://www.solidsystems.co.uk/blog" target="_blank" rel="noopener noreferrer">Blog archive at solidsystems.co.uk <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+      <a class="w-camp-link" href="https://www.youtube.com/@solidSystemsSA" target="_blank" rel="noopener noreferrer">YouTube channel <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>
+    </div>
+  </div>
+
+  <p style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.5rem;padding-top:1.5rem">Additional work</p>
+  <p style="font-size:13.5px;color:var(--m);font-weight:300;line-height:1.75;margin-bottom:4rem">GEPF &middot; SodaStream (PepsiCo) &middot; All Gold &middot; Mrs Balls &middot; Knorrox &middot; Nedbank &middot; Wits Business School &middot; Dermopal &middot; Puma Energy. Available on request.</p>
+</div>
+
+<!-- PUBLISHED WRITING -->
+<div class="w-written">
+  <div class="w-written-inner">
+    <p style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem">Published writing</p>
+    <h2 style="font-family:var(--syne);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:var(--off);margin-bottom:0.5rem">Thinking<br><em style="font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.28)">on the record.</em></h2>
+    <p style="font-size:13.5px;line-height:1.8;color:rgba(255,255,255,0.36);font-weight:300;max-width:440px">Strategy, culture, and brand thinking. Published on BizCommunity and The Media Online.</p>
+    <div class="ww-grid">
+      <a class="ww-card" href="https://www.bizcommunity.com/article/decoding-gen-z-the-first-post-brand-generation-174106a" target="_blank" rel="noopener noreferrer">
+        <span class="ww-tag">Youth Marketing &middot; BizCommunity</span>
+        <h3 class="ww-h">Decoding Gen Z: The first post-brand generation.</h3>
+        <p class="ww-desc">SA marketers confronting an uncomfortable truth: their most valuable future consumers do not trust them, do not watch their ads, and do not care about their brands.</p>
+        <span class="ww-meta">11 Nov 2025 &#8599;</span>
+      </a>
+      <a class="ww-card" href="https://www.bizcommunity.com/article/drake-dropped-brands-scrambled-but-one-nailed-it-401369a" target="_blank" rel="noopener noreferrer">
+        <span class="ww-tag">Cultural Marketing &middot; BizCommunity</span>
+        <h3 class="ww-h">Drake dropped. Brands scrambled. But one nailed it.</h3>
+        <p class="ww-desc">When Drake dropped three albums on the third Friday of May, SA brands responded predictably. One big media brand had to quietly delete their post.</p>
+        <span class="ww-meta">26 May 2026 &#8599;</span>
+      </a>
+      <a class="ww-card" href="https://www.bizcommunity.com/article/the-backroom-beat-that-shook-the-world-067215a" target="_blank" rel="noopener noreferrer">
+        <span class="ww-tag">Culture and Strategy &middot; BizCommunity</span>
+        <h3 class="ww-h">The backroom beat that shook the world.</h3>
+        <p class="ww-desc">What every marketer can learn from the unstoppable rise of Gqom. Authentic culture starts in communities, not boardrooms.</p>
+        <span class="ww-meta">3 June 2026 &#8599;</span>
+      </a>
+    </div>
+    <a class="ww-more" href="https://www.solidsystems.co.uk/blog" target="_blank" rel="noopener noreferrer">
+      Also: full blog archive at solidsystems.co.uk &#8599;
+    </a>
+  </div>
+</div>
 </main>
 <footer class="footer">
   <div class="footer-inner">
-    <span class="footer-copy">&copy; 2026 Juff Manda</span>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/home/" class="footer-link">Home</a>
+    <span class="footer-copy">&#169; 2026 Juff Manda &middot; South Africa</span>
+    <div class="footer-links">
       <a href="/work/" class="footer-link">Work</a>
       <a href="/insights/" class="footer-link">Insights</a>
       <a href="/work-with-me/" class="footer-link">Work with me</a>
-      <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        LinkedIn
-      </a>
-    </nav>
+      <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" class="footer-li"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> LinkedIn</a>
+    </div>
   </div>
 </footer>
-<script>function toggleMenu(){
-  const menu=document.getElementById('mob-menu');
-  const ham=document.getElementById('ham');
-  const open=menu.classList.toggle('open');
-  ham.classList.toggle('open',open);
-  ham.setAttribute('aria-expanded',open?'true':'false');
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mob-menu'),h=document.getElementById('ham');
+  var o=m.classList.toggle('open');
+  h.classList.toggle('open',o);
+  h.setAttribute('aria-expanded',o?'true':'false');
 }
-function closeMenu(){
-  document.getElementById('mob-menu').classList.remove('open');
-  const ham=document.getElementById('ham');
-  ham.classList.remove('open');
-  ham.setAttribute('aria-expanded','false');
-}
-function openMail(e){
-  e.preventDefault();
-  var u='juffmanda',d='gmail.com';
-  var s='Let%27s%20Work%20Together';
-  var b='Hi%20Juff%2C%0A%0AI%27d%20like%20to%20discuss%20a%20potential%20engagement.';
-  window.location.href='mailto:'+u+'@'+d+'?subject='+s+'&body='+b;
-}</script>
+document.querySelectorAll('.mob-menu a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('mob-menu').classList.remove('open');
+    var h=document.getElementById('ham');
+    h.classList.remove('open');
+    h.setAttribute('aria-expanded','false');
+  });
+});
+</script>
+<script>
+(function() {
+  function loadIG() {
+    if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+    var s = document.createElement('script');
+    s.src = 'https://www.instagram.com/embed.js';
+    s.onload = function() { if (window.instgrm) window.instgrm.Embeds.process(); };
+    document.body.appendChild(s);
+  }
+  function loadTT() {
+    if (window.__ttEmbed) return;
+    var s = document.createElement('script');
+    s.src = 'https://www.tiktok.com/embed.js';
+    document.body.appendChild(s);
+    window.__ttEmbed = true;
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { loadIG(); loadTT(); });
+  } else { loadIG(); loadTT(); }
+})();
+</script>
 </body>
 </html>
