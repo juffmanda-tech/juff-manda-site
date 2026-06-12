@@ -484,24 +484,24 @@ body{padding-top:58px}
 .art-content a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color 0.2s}
 .art-content a:hover{color:var(--accent);text-decoration-color:var(--accent)}
    ============================================================ */
-.wwm-hero{background:var(--ink);padding:3.5rem var(--px)}
+.wwm-hero{background:var(--off);padding:3.5rem var(--px)}
 @media(min-width:640px){.wwm-hero{padding:5rem var(--px)}}
 .wwm-inner{max-width:var(--max);margin:0 auto}
 .wwm-h{
   font-family:var(--syne);
   font-size:clamp(2.2rem,6vw,4.5rem);
   font-weight:800;letter-spacing:-0.03em;line-height:0.95;
-  color:var(--off);margin-bottom:1.5rem;
+  color:var(--ink); //or:var(--off);margin-bottom:1.5rem;
 }
-.wwm-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.3)}
-.wwm-sub{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:500px}
+.wwm-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(13,13,11,0.25)}
+.wwm-sub{font-size:15px;line-height:1.75;color:var(--m);font-weight:300;max-width:500px}
 .offers{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
 @media(min-width:640px){.offers{padding:4rem var(--px)}}
 .offer-grid{
   display:grid;grid-template-columns:1fr;
   gap:1px;background:var(--bd);border:1px solid var(--bd);
 }
-@media(min-width:640px){.offer-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:640px){.offer-grid{grid-template-columns:1fr 1fr}}@media(min-width:900px){.offer-grid{grid-template-columns:repeat(3,1fr)}}
 .offer{background:var(--off);padding:2rem 1.75rem;transition:background 0.2s}
 @media(min-width:640px){.offer{padding:2.5rem}}
 .offer:hover{background:var(--mid)}
@@ -1912,6 +1912,79 @@ body{padding-top:58px}
 .tt-section { background: var(--mid); border-radius: 4px; overflow: hidden; }
 .tt-section .tt-pair { background: transparent; }
 
+
+/* Work with me hero   light background fix */
+.wwm-hero { background: var(--off) !important; }
+.wwm-h { color: var(--ink) !important; }
+.wwm-h em { color: rgba(13,13,11,0.28) !important; }
+.wwm-sub { color: var(--m) !important; }
+
+/* Tighten gap between hero and services */
+.wwm-hero { padding-bottom: 2.5rem !important; }
+.wwm-engage { padding-top: 2rem !important; }
+
+
+/* WWM original layout CSS */
+.wwm-hero{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.wwm-hero{padding:5rem var(--px)}}
+.wwm-inner{max-width:var(--max);margin:0 auto}
+.wwm-h{
+  font-family:var(--syne);
+  font-size:clamp(2.2rem,6vw,4.5rem);
+  font-weight:800;letter-spacing:-0.03em;line-height:0.95;
+  color:var(--off);margin-bottom:1.5rem;
+}
+.wwm-h em{font-family:var(--serif);font-weight:400;font-style:italic;color:rgba(255,255,255,0.3)}
+.wwm-sub{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:500px}
+.offers{max-width:var(--max);margin:0 auto;padding:3rem var(--px)}
+@media(min-width:640px){.offers{padding:4rem var(--px)}}
+.offer-grid{
+  display:grid;grid-template-columns:1fr;
+  gap:1px;background:var(--bd);border:1px solid var(--bd);
+}
+@media(min-width:640px){.offer-grid{grid-template-columns:1fr 1fr}}@media(min-width:900px){.offer-grid{grid-template-columns:repeat(3,1fr)}}
+.offer{background:var(--off);padding:2rem 1.75rem;transition:background 0.2s}
+@media(min-width:640px){.offer{padding:2.5rem}}
+.offer:hover{background:var(--mid)}
+.offer-num{
+  font-family:var(--syne);font-size:11px;font-weight:700;
+  color:var(--accent);background:var(--ink);
+  display:inline-block;padding:3px 8px;border-radius:2px;margin-bottom:1rem;
+}
+.offer-name{font-family:var(--syne);font-size:1.05rem;font-weight:800;letter-spacing:-0.01em;margin-bottom:0.65rem;color:var(--ink)}
+.offer-desc{font-size:14px;line-height:1.75;color:var(--m);font-weight:300}
+.not-box{max-width:var(--max);margin:0 auto;padding:0 var(--px) 3rem}
+@media(min-width:640px){.not-box{padding:0 var(--px) 4rem}}
+.not-inner{
+  background:var(--mid);border-radius:4px;
+  padding:1.75rem 2rem;border-left:4px solid var(--accent);
+}
+.not-label{
+  font-family:var(--syne);font-size:10px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink);margin-bottom:0.65rem;display:block;
+}
+.not-text{font-size:14px;line-height:1.75;color:var(--m);font-weight:300}
+.contact-band{background:var(--ink);padding:3.5rem var(--px)}
+@media(min-width:640px){.contact-band{padding:4rem var(--px)}}
+
+/* Hero light override */
+.wwm-hero { background: var(--off) !important; }
+.wwm-h { color: var(--ink) !important; }
+.wwm-h em { color: rgba(13,13,11,0.28) !important; }
+.wwm-sub { color: var(--m) !important; }
+
+/* 3-column offer grid */
+@media(min-width:900px) {
+  .offer-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+
+/* Tighten hero-to-grid gap and widen paragraph */
+.wwm-hero { padding-bottom: 2rem !important; }
+.wwm-sub { max-width: 100% !important; }
+.offers { padding-top: 1.5rem !important; }
+
 </style>
 </head>
 <body>
@@ -1939,48 +2012,72 @@ body{padding-top:58px}
   </nav>
 </header>
 <main>
-<section class="wwm-hero">
-    <div class="wwm-inner">
-      <h1 class="wwm-h">Working<br><em>together.</em></h1>
-      <p class="wwm-sub">The organisations I work well with have a gap somewhere in the chain between strategy, output quality, and team capability. That is where this work sits.</p>
-    </div>
-  </section>
 
-  <section class="offers" aria-label="Services offered">
-      <div class="offer-grid">
-        <div class="offer"><div class="offer-num">01</div><h2 class="offer-name">Digital and social strategy</h2><p class="offer-desc">For organisations that need a governing framework, not a content plan. Audience insight, strategic direction, channel logic, creative criteria, and the document that keeps the work coherent when briefs change and teams turn over.</p></div>
-        <div class="offer"><div class="offer-num">02</div><h2 class="offer-name">Creative direction and content oversight</h2><p class="offer-desc">For brands where the strategy exists but the output is not landing. Idea evaluation, hook development, platform-specific creative direction, and involvement in what gets made and why. Close to the work without replacing the team.</p></div>
-        <div class="offer"><div class="offer-num">03</div><h2 class="offer-name">Team building and capability development</h2><p class="offer-desc">For digital operations that need structure, clearer roles, and people who can make better decisions independently. Team design, workflow development, mentorship, and building the shared understanding of what good looks like.</p></div>
-        <div class="offer"><div class="offer-num">04</div><h2 class="offer-name">Senior strategic oversight</h2><p class="offer-desc">Ongoing strategic leadership applied to digital and social operations at Head of Department level. Inside an existing team structure or as a defined external scope. Strategy, creative accountability, and team direction combined.</p></div>
-        <div class="offer"><div class="offer-num">05</div><h2 class="offer-name">Influencer strategy</h2><p class="offer-desc">For brands that want influencer programmes built on strategic and creative logic rather than reach metrics. Partner selection, collaboration structure, brief development, creative direction, and performance accountability.</p></div>
-        <div class="offer"><div class="offer-num">06</div><h2 class="offer-name">Content system design</h2><p class="offer-desc">For brands producing content at volume without a clear operational structure. Framework development, workflow design, team configuration, platform logic, and AI integration that scales delivery without scaling confusion.</p></div>
-      </div>
-  </section>
-
-  <div class="not-box">
-    <div class="not-inner">
-      <span class="not-label">What I do not take on</span>
-      <p class="not-text">If the strategy, systems, and team are all functioning and the need is purely for content production or channel management, this is not the right fit. The value here sits at the level of direction, quality oversight, and capability building. If what you actually need is hands-on production, I will say so directly and point you somewhere more useful.</p>
-    </div>
+<div class="wwm-hero">
+  <div class="wwm-inner">
+    <p class="sec-tag">Work with me</p>
+    <h1 class="wwm-h">Working<br><em>together.</em></h1>
+    <p class="wwm-sub">The organisations I work best with have a gap somewhere between strategy and what actually gets made. That is where I come in. Most leadership can do one well. Either they think or they make. I do both. I came up through execution, writing hooks, cutting videos, directing shoots, designing assets. That did not stop when the title changed. I still make things. So when I work with you, I am not advising from a distance. I know what it takes to produce good work under pressure, at volume, with limited resources. That is the difference.</p>
   </div>
+</div>
 
-  <div class="contact-band">
-    <div class="wwm-inner">
-      <h2 class="contact-heading">Get in touch.</h2>
-      <p class="contact-sub">Tell me what you are working on and where the operation is not performing as it should. Strategy, creative, team, or a combination of all three. If there is a fit, we will speak. Engagements are taken on selectively.</p>
 
-      <div class="contact-cta-row">
-        <!-- Email: address assembled by JS to deter scrapers -->
-        <a class="email-btn" id="email-cta" href="#" aria-label="Send email to Juff Manda" onclick="openMail(event)">Send an email</a>
-        <a class="li-link" href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer">
-          <svg class="li-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Connect on LinkedIn
-        </a>
-      </div>
-
-      <p class="contact-note">Based in Johannesburg, South Africa. Select remote engagements considered.</p>
-    </div>
+<!-- OFFERS --><!-- OFFERS -->
+<div class="offers">
+  <div class="offer-grid">
+    <div class="offer">
+  <span class="offer-num">01</span>
+  <h2 class="offer-name">Digital and social strategy</h2>
+  <p class="offer-desc">For organisations that need a governing framework, not a content calendar. Audience insight, strategic direction, channel logic, creative criteria, and the document that keeps the work coherent when briefs change and teams turn over.</p>
+</div><div class="offer">
+  <span class="offer-num">02</span>
+  <h2 class="offer-name">Creative direction and content oversight</h2>
+  <p class="offer-desc">For brands where the strategy exists but the output is not landing. Idea evaluation, hook development, platform-specific creative direction, and involvement in what gets made and why. Close to the work without replacing the team.</p>
+</div><div class="offer">
+  <span class="offer-num">03</span>
+  <h2 class="offer-name">Hands-on content creation</h2>
+  <p class="offer-desc">For projects that need the thinking and the making in the same person. Script writing, video production, copywriting, graphic design, social content, and on-camera delivery. Built from the ground up using a phone and the Adobe suite when the budget requires it, or a full production setup when it does not.</p>
+</div><div class="offer">
+  <span class="offer-num">04</span>
+  <h2 class="offer-name">Influencer strategy and programme management</h2>
+  <p class="offer-desc">For brands that want influencer programmes built on strategic and creative logic rather than reach metrics. Brief-first casting, collaboration structure, creative direction across a diverse creator set, and performance accountability from brief to report.</p>
+</div><div class="offer">
+  <span class="offer-num">05</span>
+  <h2 class="offer-name">Social media audits and platform strategy</h2>
+  <p class="offer-desc">For organisations that need to understand where they are before deciding where to go. Platform-by-platform performance audit, audience analysis, content gap assessment, and a prioritised action plan. Delivered as a standalone document or as the entry point to an ongoing engagement.</p>
+</div><div class="offer">
+  <span class="offer-num">06</span>
+  <h2 class="offer-name">Paid media oversight and performance</h2>
+  <p class="offer-desc">For brands running paid social that is not converting or scaling. Meta campaign architecture, audience strategy, creative direction for paid formats, and reporting frameworks that connect spend to outcomes. Oversight level or hands-on depending on the need.</p>
+</div><div class="offer">
+  <span class="offer-num">07</span>
+  <h2 class="offer-name">Team building and capability development</h2>
+  <p class="offer-desc">For digital operations that need structure, clearer roles, and people who can make better decisions independently. Team design, workflow development, mentorship, and building the shared understanding of what good looks like.</p>
+</div><div class="offer">
+  <span class="offer-num">08</span>
+  <h2 class="offer-name">AI integration and workflow design</h2>
+  <p class="offer-desc">For teams that have AI tools but no system for using them well. Workflow design, prompt architecture, custom GPT development, and the operational logic that turns a collection of tools into a functioning production system. Reduces turnaround time without reducing quality.</p>
+</div><div class="offer">
+  <span class="offer-num">09</span>
+  <h2 class="offer-name">Senior strategic oversight</h2>
+  <p class="offer-desc">Ongoing strategic leadership applied to digital and social operations at Head of Department level. Inside an existing team structure or as a defined external scope. Strategy, creative accountability, and team direction combined.</p>
+</div>
   </div>
+</div>
+
+<!-- CTA -->
+<div class="contact-band">
+  <div style="max-width:var(--max);margin:0 auto">
+    <h2 style="font-family:var(--syne);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;color:var(--off);margin-bottom:1rem">Get in touch.</h2>
+    <p style="font-size:14.5px;line-height:1.8;color:rgba(255,255,255,0.5);font-weight:300;max-width:500px;margin-bottom:2rem">Tell me what you are working on and where the operation is not performing as it should. Strategy, creative, team, or a combination of all three. If there is a fit, we will speak. Engagements are taken on selectively.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1.5rem">
+      <a href="mailto:juffmanda@gmail.com" style="font-family:var(--syne);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent);color:var(--ink);padding:13px 24px;border-radius:2px;text-decoration:none;display:inline-block">Send an email</a>
+      <a href="https://www.linkedin.com/in/japhet-juff-manda-a1775b4a/" target="_blank" rel="noopener noreferrer" style="font-family:var(--syne);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.2);color:var(--off);padding:13px 24px;border-radius:2px;text-decoration:none;display:inline-block">Connect on LinkedIn</a>
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,0.35);font-family:var(--syne);letter-spacing:0.04em">Based in Johannesburg, South Africa. Remote engagements welcome.</p>
+  </div>
+</div>
+
 </main>
 <footer class="footer">
   <div class="footer-inner">
