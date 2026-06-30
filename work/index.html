@@ -760,7 +760,105 @@ body{padding-top:58px}
 .w-camp-link:hover{color:var(--ink)}
 .w-camp-link svg{width:10px;height:10px;flex-shrink:0}
 
+/* ============================================================
+   WORK MODE TOGGLE (Digital / Design) -- prominent control
+   ============================================================ */
+.w-toggle-wrap{
+  margin-bottom:2.75rem;
+}
+.w-toggle-label{
+  font-family:var(--syne);font-size:10px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--h);display:block;margin-bottom:0.7rem;
+}
+.w-toggle{
+  display:inline-flex;gap:0;
+  background:var(--off);
+  border:1.5px solid var(--ink);
+  border-radius:5px;padding:4px;
+  position:relative;
+}
+.w-toggle-btn{
+  font-family:var(--syne);font-size:12px;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--ink);
+  padding:11px 26px;border-radius:3px;
+  background:transparent;transition:color 0.2s;
+  white-space:nowrap;position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.w-toggle-btn .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:currentColor;opacity:0.4;transition:opacity 0.2s;
+}
+.w-toggle-btn[aria-selected="true"]{
+  background:var(--accent);color:var(--ink);
+  box-shadow:0 1px 0 rgba(13,13,11,0.18);
+}
+.w-toggle-btn[aria-selected="true"] .dot{opacity:1}
+.w-toggle-btn:hover:not([aria-selected="true"]){color:var(--m)}
+.w-toggle-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.w-toggle-hint{
+  font-size:12px;color:var(--h);font-weight:300;
+  margin-top:0.7rem;
+}
+
+.w-mode{display:none}
+.w-mode.is-active{display:block}
+
+/* ============================================================
+   DESIGN WORK -- slide-by-slide pieces (reuses w-camp shell)
+   ============================================================ */
+.dz-piece{margin-bottom:0.5rem}
+.dz-shot{
+  margin:0 0 0.85rem;border:1px solid var(--bd);
+  border-radius:3px;overflow:hidden;background:var(--mid);
+}
+.dz-shot img{width:100%;height:auto;display:block}
+.dz-caption{
+  font-size:13px;line-height:1.7;color:var(--m);
+  font-weight:300;max-width:620px;margin-bottom:2rem;
+}
+.dz-inline{
+  color:var(--ink);font-weight:400;
+  border-bottom:1px solid var(--ink);
+  transition:opacity 0.2s;
+}
+.dz-inline:hover{opacity:0.55}
+
+/* Video play overlay */
+.dz-shot-video{position:relative}
+.dz-play{display:block;position:relative}
+.dz-play img{display:block;width:100%;height:auto}
+.dz-play-btn{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(13,13,11,0.78);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s,transform 0.2s;
+}
+.dz-play:hover .dz-play-btn{
+  background:var(--accent);transform:translate(-50%,-50%) scale(1.06);
+}
+.dz-play-btn svg{width:26px;height:26px;color:#fff;margin-left:3px}
+.dz-play:hover .dz-play-btn svg{color:var(--ink)}
+
+/* Vimeo responsive 16:9 */
+.vimeo-wrap{
+  position:relative;width:100%;
+  padding-bottom:56.25%;height:0;overflow:hidden;
+  border-radius:3px;background:#000;
+}
+.vimeo-wrap iframe{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;border:0;
+}
+.dz-embed{width:100%;overflow:hidden}
+.dz-embed .twitter-tweet{margin:0 !important;width:100% !important}
+
 /* Written work */
+
 .w-written{background:var(--ink);padding:3rem var(--px)}
 @media(min-width:640px){.w-written{padding:4rem var(--px)}}
 .w-written-inner{max-width:var(--max);margin:0 auto}
@@ -2027,7 +2125,19 @@ body{padding-top:58px}
 </div>
 
 <div class="w-campaigns">
-  <p class="sec-tag" style="padding-top:3.5rem">Selected campaign work</p>
+  <p class="sec-tag" style="padding-top:3.5rem">Selected work</p>
+
+  <div class="w-toggle-wrap">
+    <span class="w-toggle-label">Choose what to view</span>
+    <div class="w-toggle" role="tablist" aria-label="Filter work by type">
+      <button class="w-toggle-btn" role="tab" id="tab-digital" aria-controls="mode-digital" aria-selected="true"><span class="dot"></span>Digital Work</button>
+      <button class="w-toggle-btn" role="tab" id="tab-design" aria-controls="mode-design" aria-selected="false"><span class="dot"></span>Design Work</button>
+    </div>
+    <p class="w-toggle-hint">Digital is campaign and social work. Design is art direction, branding, and print.</p>
+  </div>
+
+  <!-- ═══ DIGITAL MODE ═════════════════════════════════════════ -->
+  <div class="w-mode is-active" id="mode-digital" role="tabpanel" aria-labelledby="tab-digital">
 
   <!-- ═══ MASTERCHEF ═══════════════════════════════════════════ -->
   <div class="w-camp">
@@ -2290,6 +2400,288 @@ body{padding-top:58px}
     </div>
   </div>
 
+  </div><!-- /mode-digital -->
+
+  <!-- ═══ DESIGN MODE ══════════════════════════════════════════ -->
+  <div class="w-mode" id="mode-design" role="tabpanel" aria-labelledby="tab-design" hidden>
+
+  <!-- ═══ NEDBANK ══════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Nedbank &middot; Commercial Banking</span>
+        <h2 class="w-camp-name">Nedbank</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Art Direction</span>
+          <span class="w-camp-role">Concept</span>
+          <span class="w-camp-role">Campaign Design</span>
+          <span class="w-camp-role">Motion</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Brand Campaigns</span>
+    </div>
+    <p class="w-camp-summary">A run of campaign work for one of South Africa&#8217;s big four banks, anchored by a single creative idea: the chess move as a metaphor for the right financial decision. The thread runs from the country&#8217;s largest agricultural show through to internal culture campaigns, on screen and in market.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Nampo, agri banking</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/nedbank-nampo-agri.jpg" alt="Nedbank Nampo 2023 agri banking campaign, tractor lifting a chess knight" loading="lazy"></figure>
+      <p class="dz-caption">Nampo is the largest agricultural show on the continent, so the work had to speak to farmers in their own language. The tractor lifting a chess knight makes the strategic point without a word of jargon: the right partner is your next big move. Built for out-of-home and press at the show.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Platinum Collection Team</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/nedbank-platinum-collection-wall.jpg" alt="Nedbank Platinum Collection Team out-of-home, astronaut concept, Show Us The Money" loading="lazy"></figure>
+      <p class="dz-caption">An internal campaign that turned a debt-resolution team into something people wanted to belong to. The astronaut idea framed the Platinum Collection Team as an elite unit closing the impairments gap, with a rallying line, #ShowUsTheMoney, that gave the work a voice.</p>
+    </div>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/nedbank-platinum-collection-badges.jpg" alt="Nedbank Platinum Collection Team identity badges and lanyards" loading="lazy"></figure>
+      <p class="dz-caption">The identity extended to physical kit. Team and agent badges carried the same astronaut world onto lanyards, making the campaign something you wore, not just something you saw.</p>
+    </div>
+
+    <p class="w-piece-tag">Campaign reel</p>
+    <div class="w-eg c2">
+      <div class="dz-embed"><div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/943541686?title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>
+      <div class="dz-embed"><div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/943827456?title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>
+      <div class="dz-embed"><div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/943825037?title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>
+      <div class="dz-embed"><div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/943828581?title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>
+    </div>
+    <p class="dz-caption">Motion work across the Nedbank campaigns, from agri to the Platinum Collection world.</p>
+  </div>
+
+  <!-- ═══ TELKOM ═══════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Telkom</span>
+        <h2 class="w-camp-name">Telkom</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Social Content</span>
+          <span class="w-camp-role">Art Direction</span>
+          <span class="w-camp-role">Campaign Design</span>
+          <span class="w-camp-role">Web</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Social &amp; Web</span>
+    </div>
+    <p class="w-camp-summary">Always-on social and campaign work for one of the country&#8217;s major networks. The brief was range: move from pop-culture moments like Comic Con to prepaid value messaging to interactive mechanics, all unmistakably Telkom, all built to perform in a fast feed.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Comic Con Africa</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/telkom-comic-con.jpg" alt="Telkom Comic Con Africa awareness post, pop art POW comic panel" loading="lazy"></figure>
+      <p class="dz-caption">As a Comic Con Africa partner, Telkom needed to show up in the language of the event, not as a sponsor logo. The pop-art panel borrows the codes of the comic page so the brand feels native to the fan, not bolted on.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Prepaid value</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/telkom-sip-snap-share.jpg" alt="Telkom Sip Snap and Share summer prepaid campaign" loading="lazy"></figure>
+      <p class="dz-caption">Prepaid data is a commodity, so the work has to sell a feeling. Sip, Snap &amp; Share turned a summer data deal into a mood, social as a seasonal cocktail, with a clear *180# call to action doing the heavy lifting underneath.</p>
+    </div>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/telkom-dial-180.jpg" alt="Telkom Dial 180 to unleash, prepaid campaign with dancer" loading="lazy"></figure>
+      <p class="dz-caption">Same campaign, different cut. Dial *180# to unleash the dancer, creator, and entertainer in you leans into local energy and the word umgosi to keep it culturally rooted rather than generic telco.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 3 &middot; Interactive mechanics</p>
+    <div class="w-eg c2">
+      <figure class="dz-shot"><img src="images/telkom-maze.jpg" alt="Telkom Get to the centre of the maze interactive post" loading="lazy"></figure>
+      <figure class="dz-shot"><img src="images/telkom-spot-the-difference.jpg" alt="Telkom Spot the difference interactive post" loading="lazy"></figure>
+    </div>
+    <p class="dz-caption">Engagement built into the creative itself. Get to the centre of the maze and Spot the difference are designed to earn comments and dwell time, turning a passive scroll into participation.</p>
+
+    <p class="w-piece-tag">Piece 4 &middot; In market on X</p>
+    <div class="w-eg c3">
+      <div class="dz-embed"><blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/TelkomZA/status/1757328816546943223"></a></blockquote></div>
+      <div class="dz-embed"><blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/TelkomZA/status/1705129911214592335"></a></blockquote></div>
+      <div class="dz-embed"><blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/TelkomZA/status/1705491541089734860"></a></blockquote></div>
+    </div>
+    <p class="dz-caption">The work live on Telkom&#8217;s own channel, in the feed it was built for.</p>
+
+    <p class="w-piece-tag">Piece 5 &middot; Website</p>
+    <div class="dz-piece">
+      <div class="dz-embed"><div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/943820407?title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p class="dz-caption">Walkthrough of the Telkom website work, where the same brand discipline carries from a single social post through to the full digital experience.</p>
+    </div>
+  </div>
+
+  <!-- ═══ GARNIER ══════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Publicis Machine</span>
+        <h2 class="w-camp-name">Garnier</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Art Direction</span>
+          <span class="w-camp-role">TVC</span>
+          <span class="w-camp-role">Print &amp; OOH</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">TVC &amp; Print</span>
+    </div>
+    <p class="w-camp-summary">My first television commercial was for Garnier, recutting a one-minute Pure Active ad to thirty seconds for national flighting. Editing for broadcast teaches you to protect the idea while cutting everything that is not the idea. I also worked across the brand&#8217;s out-of-home and print.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Television commercial</p>
+    <div class="yt-series-item">
+      <div class="yt-series-text">
+        <div class="yt-series-label">Garnier Pure Active &middot; TVC</div>
+        <span class="yt-series-thinking">The thinking</span>
+        <p class="yt-series-body">My first television commercial. The job was to recut a one-minute Pure Active ad to thirty seconds for national flighting without losing the idea. Editing for broadcast is a discipline of subtraction: protect the story beat, cut everything that is not it, and keep the brand landing in the final frame. It aired on the country&#8217;s most prominent stations.</p>
+      </div>
+      <div class="yt-series-video"><div class="yt-wrap"><iframe src="https://www.youtube.com/embed/Ap_apoQ541M" title="Garnier Pure Active television commercial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+    </div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Out-of-home</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/garnier-protection5-billboard.jpg" alt="Garnier Men Protection 5 billboard, Five Actions One Deodorant" loading="lazy"></figure>
+      <p class="dz-caption">Protection 5 billboard, flighted across Bryanston and Sandton. One number, one promise, read at speed from a moving car.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 3 &middot; Print</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/garnier-skinactive-glamour.jpg" alt="Garnier SkinActive Micellar Water print advert featured in Glamour magazine" loading="lazy"></figure>
+      <p class="dz-caption">SkinActive Micellar Water, featured in Glamour. Beauty press demands craft at full-page scale, where every detail is under the reader&#8217;s eye.</p>
+    </div>
+  </div>
+
+  <!-- ═══ DARK & LOVELY ════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Publicis Machine</span>
+        <h2 class="w-camp-name">Dark &amp; Lovely</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Art Direction</span>
+          <span class="w-camp-role">Brand Identity</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Brand Book</span>
+    </div>
+    <p class="w-camp-summary">A brand book is the backbone of every successful brand, the document every future execution answers to. I had the honour of creating one for Dark and Lovely, setting the tone, visual identity, and creative direction for a new era of the brand.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Brand book</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/dark-and-lovely-brand-book.jpg" alt="Dark and Lovely Brand Book, purple covers with Brand Book and Brand House spreads" loading="lazy"></figure>
+      <p class="dz-caption">The brand book and brand house, defining how Dark and Lovely looks, speaks, and shows up, down to the pack library that keeps the range coherent across every product.</p>
+    </div>
+  </div>
+
+  <!-- ═══ HUAWEI ═══════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Huawei</span>
+        <h2 class="w-camp-name">Huawei Retail</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Print Design</span>
+          <span class="w-camp-role">Retail POS</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Print</span>
+    </div>
+    <p class="w-camp-summary">Print and point-of-sale across the retail store network, spanning devices, wearables, and seasonal campaigns. Retail design is discipline at scale: one system, many products, every poster pulling its weight on the shop floor.</p>
+
+    <div class="w-eg c3">
+      <figure class="dz-shot"><img src="images/huawei-watch-gt2.jpg" alt="Huawei Watch GT 2 retail poster" loading="lazy"></figure>
+      <figure class="dz-shot"><img src="images/huawei-y7p.jpg" alt="Huawei Y7p retail poster" loading="lazy"></figure>
+      <figure class="dz-shot"><img src="images/huawei-together-2020.jpg" alt="Huawei Together 2020 All for Love retail poster" loading="lazy"></figure>
+    </div>
+    <p class="dz-caption">Watch GT 2, Y7p, and the Together 2020 festive campaign, produced for in-store display across the network.</p>
+  </div>
+
+  <!-- ═══ AUTO PEDIGREE ════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Nerdware</span>
+        <h2 class="w-camp-name">Auto Pedigree</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Social Content</span>
+          <span class="w-camp-role">Art Direction</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Social</span>
+    </div>
+    <p class="w-camp-summary">I created and guided the look and feel for Auto Pedigree across social, building a consistent visual language for an always-on used-car account that had to feel approachable, local, and trustworthy.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Social campaign</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/auto-pedigree-social.jpg" alt="Auto Pedigree social media posts, three Facebook creative concepts" loading="lazy"></figure>
+      <p class="dz-caption">A run of social creative built for the feed, from a buy-now-pay-later mechanic to the Gusheshe heritage piece that taps straight into local car culture. <a class="dz-inline" href="https://vimeo.com/681217376" target="_blank" rel="noopener noreferrer">Watch the campaign film</a>.</p>
+    </div>
+  </div>
+
+    <!-- ═══ SANRAL ═══════════════════════════════════════════════ -->
+  <div class="w-camp">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">SANRAL</span>
+        <h2 class="w-camp-name">SANRAL</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Digital Design</span>
+          <span class="w-camp-role">Microsite</span>
+          <span class="w-camp-role">Social Content</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Digital</span>
+    </div>
+    <p class="w-camp-summary">Public-service communication for the national roads authority, where the work has to inform without lecturing. The Travel Safe campaign turned festive-season road safety into something people would actually engage with, across a microsite, social, and on-the-ground digital.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Travel Safe microsite</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sanral-travel-safe-microsite.jpg" alt="SANRAL Travel Safe festive season microsite on mobile" loading="lazy"></figure>
+      <p class="dz-caption">A mobile-first microsite built around the festive travel rush, bundling travel tips, a don&#8217;t drink and drive message, a quiz, and a virtual photo booth into one experience. Utility and engagement in the same place, so a safety message earns its own audience.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Social</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sanral-story.jpg" alt="SANRAL social story, mobility and the national road network" loading="lazy"></figure>
+      <p class="dz-caption">Story-format social framing roads as more than tar: mobility that connects people to jobs, services, and each other. The wider brand story behind the safety push.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 3 &middot; Digital activation</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sanral-kiosk.jpg" alt="SANRAL digital kiosk, follow us and scan to open website" loading="lazy"></figure>
+      <p class="dz-caption">On-the-ground digital screen driving follows and scans, closing the loop between a physical touchpoint and the campaign&#8217;s online home.</p>
+    </div>
+  </div>
+
+  <!-- ═══ SAMA ═════════════════════════════════════════════════ -->
+  <div class="w-camp" style="border-bottom:none;margin-bottom:0">
+    <div class="w-camp-head">
+      <div>
+        <span class="w-camp-client">Blue Skys</span>
+        <h2 class="w-camp-name">SA Medical Association</h2>
+        <div class="w-camp-roles">
+          <span class="w-camp-role">Brand Identity</span>
+          <span class="w-camp-role">Art Direction</span>
+          <span class="w-camp-role">Stationery</span>
+        </div>
+      </div>
+      <span class="w-camp-badge">Visual Guide</span>
+    </div>
+    <p class="w-camp-summary">I conceptualised and created the brand book, corporate stationery, and art direction for all photography and videography for the SAMA fitness brand, building the identity from the ground up.</p>
+
+    <p class="w-piece-tag">Piece 1 &middot; Brand guidelines</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sama-brand-guidelines.jpg" alt="SAMA Fitness brand guidelines book, cover and inside spreads" loading="lazy"></figure>
+      <p class="dz-caption">Guidelines covering logo, colour, typography, image style, and brand elements, the rules that keep everything that follows on-brand.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 2 &middot; Stationery</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sama-stationery.jpg" alt="SAMA Fitness corporate stationery, business cards and letterhead" loading="lazy"></figure>
+      <p class="dz-caption">The corporate stationery system, where the identity has to work at the smallest, most practical scale.</p>
+    </div>
+
+    <p class="w-piece-tag">Piece 3 &middot; Out-of-home</p>
+    <div class="dz-piece">
+      <figure class="dz-shot"><img src="images/sama-billboard.jpg" alt="SAMA Fitness billboard, Fitness from a Medical Lens" loading="lazy"></figure>
+      <p class="dz-caption">Fitness from a Medical Lens, the campaign line carried to billboard, art-directed end to end.</p>
+    </div>
+  </div>
+
+</div><!-- /mode-design -->
+
+
   <p style="font-family:var(--syne);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.5rem;padding-top:1.5rem">Additional work</p>
   <p style="font-size:13.5px;color:var(--m);font-weight:300;line-height:1.75;margin-bottom:4rem">GEPF &middot; SodaStream (PepsiCo) &middot; All Gold &middot; Mrs Balls &middot; Knorrox &middot; Nedbank &middot; Wits Business School &middot; Dermopal &middot; Puma Energy. Available on request.</p>
 </div>
@@ -2372,6 +2764,46 @@ document.querySelectorAll('.mob-menu a').forEach(function(a){
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() { loadIG(); loadTT(); });
   } else { loadIG(); loadTT(); }
+})();
+</script>
+<script>
+(function(){
+  var tabs=[document.getElementById('tab-digital'),document.getElementById('tab-design')];
+  var panels={
+    'tab-digital':document.getElementById('mode-digital'),
+    'tab-design':document.getElementById('mode-design')
+  };
+  function select(tab){
+    tabs.forEach(function(t){
+      var on=(t===tab);
+      t.setAttribute('aria-selected',on?'true':'false');
+      var p=panels[t.id];
+      p.classList.toggle('is-active',on);
+      if(on){p.removeAttribute('hidden');}else{p.setAttribute('hidden','');}
+    });
+    if(tab.id==='tab-digital'&&window.instgrm){window.instgrm.Embeds.process();}
+    if(tab.id==='tab-design'){loadDesignEmbeds();}
+  }
+  var ttLoaded=false;
+  function loadDesignEmbeds(){
+    if(ttLoaded){if(window.twttr&&window.twttr.widgets){window.twttr.widgets.load();}return;}
+    var s=document.createElement('script');
+    s.src='https://platform.twitter.com/widgets.js';
+    s.charset='utf-8';
+    document.body.appendChild(s);
+    ttLoaded=true;
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){select(t);});
+    t.addEventListener('keydown',function(e){
+      var i=tabs.indexOf(t);
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        e.preventDefault();
+        var n=e.key==='ArrowRight'?(i+1)%tabs.length:(i-1+tabs.length)%tabs.length;
+        tabs[n].focus();select(tabs[n]);
+      }
+    });
+  });
 })();
 </script>
 </body>
