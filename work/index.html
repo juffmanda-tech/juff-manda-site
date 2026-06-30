@@ -767,40 +767,44 @@ body{padding-top:58px}
   margin-bottom:2.75rem;
 }
 .w-toggle-label{
-  font-family:var(--syne);font-size:10px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--h);display:block;margin-bottom:0.7rem;
+  font-family:var(--syne);font-size:13px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--ink);display:block;margin-bottom:0.85rem;
 }
 .w-toggle{
-  display:inline-flex;gap:0;
-  background:var(--off);
-  border:1.5px solid var(--ink);
-  border-radius:5px;padding:4px;
+  display:flex;width:100%;max-width:560px;gap:0;
+  background:var(--ink);
+  border:2px solid var(--ink);
+  border-radius:6px;padding:5px;
   position:relative;
 }
 .w-toggle-btn{
-  font-family:var(--syne);font-size:12px;font-weight:700;
+  font-family:var(--syne);font-size:13px;font-weight:700;
   letter-spacing:0.06em;text-transform:uppercase;
-  color:var(--ink);
-  padding:11px 26px;border-radius:3px;
-  background:transparent;transition:color 0.2s;
+  color:rgba(245,243,238,0.7);
+  flex:1;padding:14px 20px;border-radius:4px;
+  background:transparent;transition:color 0.2s,background 0.2s;
   white-space:nowrap;position:relative;z-index:1;
-  display:inline-flex;align-items:center;gap:7px;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
 }
 .w-toggle-btn .dot{
-  width:6px;height:6px;border-radius:50%;
-  background:currentColor;opacity:0.4;transition:opacity 0.2s;
+  width:7px;height:7px;border-radius:50%;
+  background:currentColor;opacity:0.5;transition:opacity 0.2s;
 }
 .w-toggle-btn[aria-selected="true"]{
   background:var(--accent);color:var(--ink);
-  box-shadow:0 1px 0 rgba(13,13,11,0.18);
+  box-shadow:0 1px 2px rgba(0,0,0,0.25);
 }
 .w-toggle-btn[aria-selected="true"] .dot{opacity:1}
-.w-toggle-btn:hover:not([aria-selected="true"]){color:var(--m)}
-.w-toggle-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.w-toggle-btn:hover:not([aria-selected="true"]){color:var(--off)}
+.w-toggle-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .w-toggle-hint{
-  font-size:12px;color:var(--h);font-weight:300;
-  margin-top:0.7rem;
+  font-size:13px;color:var(--m);font-weight:300;
+  margin-top:0.85rem;max-width:560px;
+}
+@media(max-width:520px){
+  .w-toggle{max-width:100%}
+  .w-toggle-btn{padding:14px 12px;font-size:12px}
 }
 
 .w-mode{display:none}
@@ -2103,7 +2107,7 @@ body{padding-top:58px}
 <div class="w-hero">
   <p class="sec-tag">Work and involvement</p>
   <h1 class="sec-h">Strategy, craft,<br><em>and what shipped.</em></h1>
-  <p style="font-size:14px;line-height:1.85;color:var(--m);font-weight:300;max-width:520px;margin-top:1rem">Each piece shows where and how I was involved. Strategy lead, creative director, content producer, or all three. Work under NDA is available on request.</p>
+  <p style="font-size:14px;line-height:1.85;color:var(--m);font-weight:300;max-width:520px;margin-top:1rem">Each piece shows where and how I was involved. Strategy lead, creative director, content producer, or all three. Additional work is available on request.</p>
 </div>
 
 <!-- SKILLS -->
