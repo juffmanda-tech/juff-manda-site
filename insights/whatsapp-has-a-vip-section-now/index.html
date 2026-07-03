@@ -87,8 +87,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .art-lede{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.7rem);line-height:1.4;color:var(--ink);margin-bottom:2rem}
 .art-body{font-size:16px;line-height:1.85;color:#26251f;font-weight:400}
 .art-body p{margin-bottom:1.4rem}
-.art-body a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px;transition:color 0.2s}
-.art-body a:hover{color:#5a5a54}
+.art-body a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--h);text-decoration-thickness:1px;text-underline-offset:3px;transition:color 0.2s,text-decoration-color 0.2s}
+.art-body a:hover{color:#5a5a54;text-decoration-color:var(--m)}
 .art-h2{font-family:var(--syne);font-weight:700;font-size:clamp(1.25rem,3vw,1.55rem);line-height:1.22;letter-spacing:-0.01em;margin:2.6rem 0 1rem}
 .art-body strong{font-weight:600;color:var(--ink)}
 .art-stats{display:grid;grid-template-columns:1fr;gap:1.25rem;background:var(--ink);color:var(--off);padding:1.75rem;margin:2rem 0}
@@ -103,13 +103,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-primary:hover{background:var(--accent);color:var(--ink)}
 .btn-ghost{font-family:var(--syne);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);transition:color 0.2s}
 .btn-ghost:hover{color:var(--ink)}
-.art-related{max-width:760px;margin:0 auto;padding:1rem var(--px) 3.5rem}
-.art-related-label{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--h);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
-.art-related-label::before{content:'';width:20px;height:1px;background:var(--h);display:inline-block}
-.art-rel-link{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid var(--bd);padding:1.1rem 0;font-family:var(--syne);font-weight:600;font-size:15px;line-height:1.35;color:var(--ink);transition:color 0.2s}
-.art-rel-link:last-child{border-bottom:1px solid var(--bd)}
-.art-rel-link:hover{color:var(--m)}
-.art-rel-link span.arw{color:var(--h);font-size:14px}
+.more-thinking{max-width:var(--max);margin:0 auto;padding:2.5rem var(--px) 4rem;border-top:1px solid var(--bd)}
+.mt-label{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--h);display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem}
+.mt-label::before{content:'';width:20px;height:1px;background:var(--h)}
+.mt-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:640px){.mt-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
+.mt-card{display:flex;flex-direction:column;border:1px solid var(--bd);padding:1.5rem;background:var(--off);transition:border-color 0.2s,transform 0.2s}
+.mt-card:hover{border-color:var(--ink);transform:translateY(-2px)}
+.mt-tag{font-family:var(--syne);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.6rem}
+.mt-h{font-family:var(--syne);font-size:1rem;font-weight:700;line-height:1.32;color:var(--ink);margin-bottom:0.9rem}
+.mt-date{font-family:var(--syne);font-size:11px;letter-spacing:0.06em;color:var(--h);margin-top:auto}
 
 /* FOOTER */
 .footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem var(--px)}
@@ -177,19 +180,38 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <p class="art-cta-q">The question is not whether South Africa will pay. It is what we will make visible, and what we will quietly make people pay to keep up with.</p>
       <div class="art-cta-row">
         <a href="/work-with-me/" class="btn-primary">Work with me</a>
-        <a href="/insights/" class="btn-ghost">More insights &rarr;</a>
+        <a href="/insights/" class="btn-ghost">More thinking &rarr;</a>
       </div>
     </div>
   </div>
 </div>
 </article>
 
-<div class="art-related">
-  <p class="art-related-label">Related reading</p>
-  <a href="/insights/meta-just-passed-google-in-ad-revenue/" class="art-rel-link"><span>Meta just passed Google in ad revenue. First time in history.</span><span class="arw">&#8599;</span></a>
-  <a href="/insights/tiktok-is-not-an-entertainment-app-it-is-a-shop/" class="art-rel-link"><span>TikTok is not an entertainment app. It is a shop.</span><span class="arw">&#8599;</span></a>
-  <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" class="art-rel-link"><span>SA brands are drowning in data. Starving for humanity.</span><span class="arw">&#8599;</span></a>
-</div>
+<section class="more-thinking">
+  <p class="mt-label">More thinking</p>
+  <div class="mt-grid">
+    <a href="/insights/meta-just-passed-google-in-ad-revenue/" class="mt-card">
+      <span class="mt-tag">Media strategy</span>
+      <span class="mt-h">Meta just passed Google in ad revenue. First time in history.</span>
+      <span class="mt-date">16 May 2026 &middot; Juff Manda</span>
+    </a>
+    <a href="/insights/tiktok-is-not-an-entertainment-app-it-is-a-shop/" class="mt-card">
+      <span class="mt-tag">Social commerce</span>
+      <span class="mt-h">TikTok is not an entertainment app. It is a shop.</span>
+      <span class="mt-date">14 May 2026 &middot; Juff Manda</span>
+    </a>
+    <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" class="mt-card">
+      <span class="mt-tag">Strategy</span>
+      <span class="mt-h">SA brands are drowning in data. Starving for humanity.</span>
+      <span class="mt-date">15 May 2026 &middot; Juff Manda</span>
+    </a>
+    <a href="/insights/your-phone-is-vertical-your-content-is-not/" class="mt-card">
+      <span class="mt-tag">Content strategy</span>
+      <span class="mt-h">Your phone is vertical. Your content is not.</span>
+      <span class="mt-date">23 May 2026 &middot; Juff Manda</span>
+    </a>
+  </div>
+</section>
 </main>
 
 <footer class="footer"><div class="footer-inner">
