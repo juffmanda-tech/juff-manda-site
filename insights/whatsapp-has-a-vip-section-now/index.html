@@ -60,7 +60,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .nl{font-family:var(--syne);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--m);transition:color 0.2s}
 .nl:hover,.nl.on{color:var(--ink)}
 .nav-cta{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--ink);color:var(--off);padding:9px 18px;border-radius:2px;transition:background 0.2s}
-.nav-cta:hover{background:var(--accent);color:var(--ink)}
+.nav-cta:hover{background:#2f2e29;color:var(--off)}
 .nav-li-link{display:flex;align-items:center;color:var(--m);transition:color 0.2s;text-decoration:none}
 .nav-li-link:hover{color:var(--ink)}
 .ham{display:flex;flex-direction:column;gap:5px;padding:4px}
@@ -99,10 +99,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .art-cta{border-top:1px solid var(--bd);margin-top:2.75rem;padding-top:2rem}
 .art-cta-q{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.45;color:var(--ink);margin-bottom:1.5rem}
 .art-cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-.btn-primary{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--ink);color:var(--off);padding:12px 22px;border-radius:2px;transition:all 0.2s}
-.btn-primary:hover{background:var(--accent);color:var(--ink)}
-.btn-ghost{font-family:var(--syne);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);transition:color 0.2s}
-.btn-ghost:hover{color:var(--ink)}
+/* CTA buttons scoped so the .art-body link rule cannot bleed underline/colour onto them */
+.art-cta-row .btn-primary{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:11px 22px;border-radius:2px;text-decoration:none;transition:all 0.2s}
+.art-cta-row .btn-primary:hover{background:var(--ink);color:var(--off);text-decoration:none}
+.art-cta-row .btn-ghost{font-family:var(--syne);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);text-decoration:none;transition:color 0.2s}
+.art-cta-row .btn-ghost:hover{color:var(--ink);text-decoration:none}
 .more-thinking{max-width:var(--max);margin:0 auto;padding:2.5rem var(--px) 4rem;border-top:1px solid var(--bd)}
 .mt-label{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--h);display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem}
 .mt-label::before{content:'';width:20px;height:1px;background:var(--h)}
