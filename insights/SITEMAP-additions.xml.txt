@@ -1,0 +1,15 @@
+<!-- Paste these two <url> blocks into your existing /sitemap.xml, -->
+<!-- just before the closing </urlset> tag. Do not create a second sitemap file. -->
+
+  <url>
+    <loc>https://www.juffmanda.com/insights/whatsapp-has-a-vip-section-now/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.juffmanda.com/insights/the-polygamist-social-is-the-new-billboard/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
