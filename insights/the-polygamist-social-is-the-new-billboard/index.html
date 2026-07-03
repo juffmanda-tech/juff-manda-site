@@ -102,13 +102,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-primary:hover{background:var(--accent);color:var(--ink)}
 .btn-ghost{font-family:var(--syne);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--m);transition:color 0.2s}
 .btn-ghost:hover{color:var(--ink)}
-.art-related{max-width:760px;margin:0 auto;padding:1rem var(--px) 3.5rem}
-.art-related-label{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--h);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
-.art-related-label::before{content:'';width:20px;height:1px;background:var(--h);display:inline-block}
-.art-rel-link{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid var(--bd);padding:1.1rem 0;font-family:var(--syne);font-weight:600;font-size:15px;line-height:1.35;color:var(--ink);transition:color 0.2s}
-.art-rel-link:last-child{border-bottom:1px solid var(--bd)}
-.art-rel-link:hover{color:var(--m)}
-.art-rel-link span.arw{color:var(--h);font-size:14px}
+.more-thinking{max-width:var(--max);margin:0 auto;padding:2.5rem var(--px) 4rem;border-top:1px solid var(--bd)}
+.mt-label{font-family:var(--syne);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--h);display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem}
+.mt-label::before{content:'';width:20px;height:1px;background:var(--h)}
+.mt-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:640px){.mt-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
+.mt-card{display:flex;flex-direction:column;border:1px solid var(--bd);padding:1.5rem;background:var(--off);transition:border-color 0.2s,transform 0.2s}
+.mt-card:hover{border-color:var(--ink);transform:translateY(-2px)}
+.mt-tag{font-family:var(--syne);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--h);margin-bottom:0.6rem}
+.mt-h{font-family:var(--syne);font-size:1rem;font-weight:700;line-height:1.32;color:var(--ink);margin-bottom:0.9rem}
+.mt-date{font-family:var(--syne);font-size:11px;letter-spacing:0.06em;color:var(--h);margin-top:auto}
 
 /* FOOTER */
 .footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem var(--px)}
@@ -178,12 +181,31 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 </article>
 
-<div class="art-related">
-  <p class="art-related-label">Related reading</p>
-  <a href="/insights/amapiano-went-global-no-brand-strategy-built-that/" class="art-rel-link"><span>Amapiano went global. No brand strategy built that.</span><span class="arw">&#8599;</span></a>
-  <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" class="art-rel-link"><span>SA brands are drowning in data. Starving for humanity.</span><span class="arw">&#8599;</span></a>
-  <a href="/insights/why-south-african-brands-produce-content-nobody-asked-for/" class="art-rel-link"><span>Why most SA brands are producing content nobody asked for</span><span class="arw">&#8599;</span></a>
-</div>
+<section class="more-thinking">
+  <p class="mt-label">More thinking</p>
+  <div class="mt-grid">
+    <a href="/insights/amapiano-went-global-no-brand-strategy-built-that/" class="mt-card">
+      <span class="mt-tag">Culture</span>
+      <span class="mt-h">Amapiano went global. No brand strategy built that.</span>
+      <span class="mt-date">14 May 2026 &middot; Juff Manda</span>
+    </a>
+    <a href="/insights/sa-brands-drowning-in-data-starving-for-humanity/" class="mt-card">
+      <span class="mt-tag">Strategy</span>
+      <span class="mt-h">SA brands are drowning in data. Starving for humanity.</span>
+      <span class="mt-date">15 May 2026 &middot; Juff Manda</span>
+    </a>
+    <a href="/insights/why-south-african-brands-produce-content-nobody-asked-for/" class="mt-card">
+      <span class="mt-tag">Strategy</span>
+      <span class="mt-h">Why most SA brands are producing content nobody asked for</span>
+      <span class="mt-date">June 2025</span>
+    </a>
+    <a href="/insights/tiktok-is-not-an-entertainment-app-it-is-a-shop/" class="mt-card">
+      <span class="mt-tag">Social commerce</span>
+      <span class="mt-h">TikTok is not an entertainment app. It is a shop.</span>
+      <span class="mt-date">14 May 2026 &middot; Juff Manda</span>
+    </a>
+  </div>
+</section>
 </main>
 
 <footer class="footer"><div class="footer-inner">
